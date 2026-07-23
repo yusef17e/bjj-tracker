@@ -1,0 +1,508 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.tab-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.tab{padding:6px 14px;border-radius:8px;border:0.5px solid var(--color-border-secondary);background:var(--color-background-secondary);color:var(--color-text-secondary);font-size:13px;cursor:pointer;transition:all .15s;font-family:inherit}
+.tab.active{background:var(--color-background-tertiary);color:var(--color-text-primary);border-color:var(--color-border-primary);font-weight:500}
+.legend{display:flex;gap:14px;font-size:11px;color:var(--color-text-secondary);margin-bottom:10px;flex-wrap:wrap}
+.ld{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.detail{border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:14px 18px;margin-top:12px;background:var(--color-background-secondary);font-size:13px;color:var(--color-text-secondary);line-height:1.65;min-height:60px}
+.detail .dt{font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
+.detail .dv{font-size:11px;color:var(--color-text-secondary);font-weight:400}
+svg{display:block;width:100%}
+</style>
+
+<div class="tab-bar">
+  <button class="tab active" onclick="showView('setups',this)">Setups</button>
+  <button class="tab" onclick="showView('mechanics',this)">Mechanics</button>
+  <button class="tab" onclick="showView('reactions',this)">Defensive reactions</button>
+  <button class="tab" onclick="showView('relations',this)">Relationships</button>
+</div>
+
+<div class="legend">
+  <span><span class="ld" style="background:#888780"></span>Start position</span>
+  <span><span class="ld" style="background:#534AB7"></span>Core principle</span>
+  <span><span class="ld" style="background:#0F6E56"></span>Technique / setup</span>
+  <span><span class="ld" style="background:#185FA5"></span>Defense / response</span>
+  <span><span class="ld" style="background:#993C1D"></span>Submission / score</span>
+</div>
+
+<!-- SETUPS -->
+<div id="view-setups">
+<svg viewBox="0 0 680 700" role="img">
+<title>Ude gatame setups</title>
+<desc>Three primary setups based on opponent's distance and posture</desc>
+<defs><marker id="as" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="sd('s_start')" style="cursor:pointer">
+  <rect x="180" y="14" width="320" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#444441" x="340" y="36" text-anchor="middle" dominant-baseline="central">Bottom position vs kneeling opponent</text>
+</g>
+<line x1="340" y1="58" x2="340" y2="84" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#as)"/>
+
+<g onclick="sd('s_goal')" style="cursor:pointer">
+  <rect x="100" y="84" width="480" height="62" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="104" text-anchor="middle" dominant-baseline="central">Goal — get hand on the mat</text>
+  <text font-size="12" fill="#534AB7" x="340" y="124" text-anchor="middle" dominant-baseline="central">Weight-bearing arm becomes straight</text>
+  <text font-size="12" fill="#534AB7" x="340" y="139" text-anchor="middle" dominant-baseline="central">Already at breaking point — fastest armlock</text>
+</g>
+
+<line x1="340" y1="146" x2="340" y2="178" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g onclick="sd('s_distance')" style="cursor:pointer">
+  <rect x="180" y="178" width="320" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#444441" x="340" y="200" text-anchor="middle" dominant-baseline="central">Pick setup by distance to opponent</text>
+</g>
+
+<line x1="240" y1="222" x2="120" y2="260" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#as)"/>
+<line x1="340" y1="222" x2="340" y2="260" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#as)"/>
+<line x1="440" y1="222" x2="560" y2="260" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#as)"/>
+
+<g onclick="sd('s_close')" style="cursor:pointer">
+  <rect x="20" y="260" width="220" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#0C447C" x="130" y="280" text-anchor="middle" dominant-baseline="central">Close — head touches</text>
+  <text font-size="12" fill="#185FA5" x="130" y="298" text-anchor="middle" dominant-baseline="central">Forehead to collarbones</text>
+</g>
+<g onclick="sd('s_mid')" style="cursor:pointer">
+  <rect x="260" y="260" width="160" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#0C447C" x="340" y="280" text-anchor="middle" dominant-baseline="central">Medium distance</text>
+  <text font-size="12" fill="#185FA5" x="340" y="298" text-anchor="middle" dominant-baseline="central">Forehead to forehead</text>
+</g>
+<g onclick="sd('s_far')" style="cursor:pointer">
+  <rect x="440" y="260" width="220" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#0C447C" x="550" y="280" text-anchor="middle" dominant-baseline="central">Far — low and away</text>
+  <text font-size="12" fill="#185FA5" x="550" y="298" text-anchor="middle" dominant-baseline="central">Can't get underneath</text>
+</g>
+
+<line x1="130" y1="316" x2="130" y2="346" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#as)"/>
+<line x1="340" y1="316" x2="340" y2="346" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#as)"/>
+<line x1="550" y1="316" x2="550" y2="346" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#as)"/>
+
+<g onclick="sd('s_dbl')" style="cursor:pointer">
+  <rect x="20" y="346" width="220" height="74" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="130" y="365" text-anchor="middle" dominant-baseline="central">Double triceps elevator</text>
+  <text font-size="12" fill="#0F6E56" x="130" y="384" text-anchor="middle" dominant-baseline="central">Push head in, grab triceps</text>
+  <text font-size="12" fill="#0F6E56" x="130" y="402" text-anchor="middle" dominant-baseline="central">Lift to force hands to mat</text>
+</g>
+<g onclick="sd('s_under')" style="cursor:pointer">
+  <rect x="260" y="346" width="160" height="74" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="340" y="365" text-anchor="middle" dominant-baseline="central">Underhook setup</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="384" text-anchor="middle" dominant-baseline="central">Snatch underhook</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="402" text-anchor="middle" dominant-baseline="central">+ collar tie, lift</text>
+</g>
+<g onclick="sd('s_arm')" style="cursor:pointer">
+  <rect x="440" y="346" width="220" height="74" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="550" y="365" text-anchor="middle" dominant-baseline="central">Arm drag</text>
+  <text font-size="12" fill="#0F6E56" x="550" y="384" text-anchor="middle" dominant-baseline="central">Foot inside knee</text>
+  <text font-size="12" fill="#0F6E56" x="550" y="402" text-anchor="middle" dominant-baseline="central">Snap wrist to floor</text>
+</g>
+
+<line x1="130" y1="420" x2="130" y2="454" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="340" y1="420" x2="340" y2="454" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="550" y1="420" x2="550" y2="454" stroke="#B4B2A9" stroke-width="0.5"/>
+<path d="M130 454 L340 454" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M550 454 L340 454" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="454" x2="340" y2="486" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#as)"/>
+
+<g onclick="sd('s_shift')" style="cursor:pointer">
+  <rect x="180" y="486" width="320" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="506" text-anchor="middle" dominant-baseline="central">Forward shift to opposite side</text>
+  <text font-size="12" fill="#534AB7" x="340" y="524" text-anchor="middle" dominant-baseline="central">Head higher than his · hand inside bicep</text>
+</g>
+<line x1="340" y1="542" x2="340" y2="568" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#as)"/>
+
+<g onclick="sd('s_attack')" style="cursor:pointer">
+  <rect x="180" y="568" width="320" height="56" rx="8" fill="#0F6E56" fill-opacity="0.12" stroke="#0F6E56" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#085041" x="340" y="588" text-anchor="middle" dominant-baseline="central">Sit up — attacking position</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="606" text-anchor="middle" dominant-baseline="central">Move to mechanics phase</text>
+</g>
+<text font-size="11" fill="#888780" x="20" y="40">Vol 1</text>
+<text font-size="11" fill="#888780" x="20" y="115">Vol 1</text>
+<text font-size="11" fill="#888780" x="20" y="280">Vol 1</text>
+<text font-size="11" fill="#888780" x="20" y="384">Vol 1</text>
+<text font-size="11" fill="#888780" x="20" y="595">Vol 1</text>
+</svg>
+</div>
+
+<!-- MECHANICS -->
+<div id="view-mechanics" style="display:none">
+<svg viewBox="0 0 680 740" role="img">
+<title>Ude gatame mechanics</title>
+<desc>Upper body and lower body mechanics for breaking the arm</desc>
+<defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="sd('m_start')" style="cursor:pointer">
+  <rect x="180" y="14" width="320" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#444441" x="340" y="36" text-anchor="middle" dominant-baseline="central">In attacking position, arm exposed</text>
+</g>
+<line x1="340" y1="58" x2="340" y2="84" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#am)"/>
+
+<g onclick="sd('m_battle')" style="cursor:pointer">
+  <rect x="80" y="84" width="520" height="62" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="104" text-anchor="middle" dominant-baseline="central">Battle for head height</text>
+  <text font-size="12" fill="#534AB7" x="340" y="124" text-anchor="middle" dominant-baseline="central">Your head higher than his = win</text>
+  <text font-size="12" fill="#534AB7" x="340" y="139" text-anchor="middle" dominant-baseline="central">His head higher than yours = he pulls arm free</text>
+</g>
+<line x1="340" y1="146" x2="340" y2="172" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#am)"/>
+
+<g onclick="sd('m_upper')" style="cursor:pointer">
+  <rect x="180" y="172" width="320" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#444441" x="340" y="194" text-anchor="middle" dominant-baseline="central">Upper body — 3 elements</text>
+</g>
+
+<line x1="240" y1="216" x2="130" y2="256" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#am)"/>
+<line x1="340" y1="216" x2="340" y2="256" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#am)"/>
+<line x1="440" y1="216" x2="550" y2="256" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#am)"/>
+
+<g onclick="sd('m_arrow')" style="cursor:pointer">
+  <rect x="20" y="256" width="220" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="130" y="278" text-anchor="middle" dominant-baseline="central">Arrowhead elbow</text>
+  <text font-size="12" fill="#0F6E56" x="130" y="296" text-anchor="middle" dominant-baseline="central">Sharp bend, point to ear</text>
+  <text font-size="12" fill="#0F6E56" x="130" y="314" text-anchor="middle" dominant-baseline="central">Pull elbow with free hand</text>
+</g>
+<g onclick="sd('m_precise')" style="cursor:pointer">
+  <rect x="260" y="256" width="160" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="340" y="278" text-anchor="middle" dominant-baseline="central">Precise placement</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="296" text-anchor="middle" dominant-baseline="central">Crook of elbow on</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="314" text-anchor="middle" dominant-baseline="central">his elbow exactly</text>
+</g>
+<g onclick="sd('m_ear')" style="cursor:pointer">
+  <rect x="440" y="256" width="220" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="550" y="278" text-anchor="middle" dominant-baseline="central">Ear to elbow</text>
+  <text font-size="12" fill="#0F6E56" x="550" y="296" text-anchor="middle" dominant-baseline="central">Ear over his forearm</text>
+  <text font-size="12" fill="#0F6E56" x="550" y="314" text-anchor="middle" dominant-baseline="central">Head off center line</text>
+</g>
+
+<line x1="130" y1="332" x2="130" y2="362" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="340" y1="332" x2="340" y2="362" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="550" y1="332" x2="550" y2="362" stroke="#B4B2A9" stroke-width="0.5"/>
+<path d="M130 362 L550 362" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="362" x2="340" y2="394" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#am)"/>
+
+<g onclick="sd('m_shift')" style="cursor:pointer">
+  <rect x="180" y="394" width="320" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="414" text-anchor="middle" dominant-baseline="central">Explosive side-to-side shift</text>
+  <text font-size="12" fill="#534AB7" x="340" y="432" text-anchor="middle" dominant-baseline="central">Torque body weight across center line</text>
+</g>
+<line x1="340" y1="450" x2="340" y2="476" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#am)"/>
+
+<g onclick="sd('m_lower')" style="cursor:pointer">
+  <rect x="180" y="476" width="320" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#444441" x="340" y="498" text-anchor="middle" dominant-baseline="central">Lower body — 2 options</text>
+</g>
+
+<line x1="280" y1="520" x2="200" y2="556" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#am)"/>
+<line x1="400" y1="520" x2="480" y2="556" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#am)"/>
+
+<g onclick="sd('m_torso')" style="cursor:pointer">
+  <rect x="60" y="556" width="280" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="200" y="578" text-anchor="middle" dominant-baseline="central">Legs around torso</text>
+  <text font-size="12" fill="#0F6E56" x="200" y="596" text-anchor="middle" dominant-baseline="central">Fast, common in competition</text>
+  <text font-size="12" fill="#0F6E56" x="200" y="614" text-anchor="middle" dominant-baseline="central">Mostly upper body finish</text>
+</g>
+<g onclick="sd('m_shoulders')" style="cursor:pointer">
+  <rect x="340" y="556" width="280" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="480" y="578" text-anchor="middle" dominant-baseline="central">Knee on each shoulder</text>
+  <text font-size="12" fill="#0F6E56" x="480" y="596" text-anchor="middle" dominant-baseline="central">Stronger but slower</text>
+  <text font-size="12" fill="#0F6E56" x="480" y="614" text-anchor="middle" dominant-baseline="central">Controls head height</text>
+</g>
+
+<line x1="200" y1="632" x2="200" y2="660" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="480" y1="632" x2="480" y2="660" stroke="#B4B2A9" stroke-width="0.5"/>
+<path d="M200 660 L480 660" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="660" x2="340" y2="686" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#am)"/>
+
+<g onclick="sd('m_finish')" style="cursor:pointer">
+  <rect x="180" y="686" width="320" height="40" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#712B13" x="340" y="706" text-anchor="middle" dominant-baseline="central">Forehead to mat — submission or score</text>
+</g>
+<text font-size="11" fill="#888780" x="20" y="115">Vol 1</text>
+<text font-size="11" fill="#888780" x="20" y="295">Vol 1</text>
+<text font-size="11" fill="#888780" x="20" y="416">Vol 1</text>
+<text font-size="11" fill="#888780" x="20" y="595">Vol 2</text>
+</svg>
+</div>
+
+<!-- DEFENSIVE REACTIONS -->
+<div id="view-reactions" style="display:none">
+<svg viewBox="0 0 680 880" role="img">
+<title>Defensive reactions to ude gatame</title>
+<desc>The three most common defensive reactions and the counter-attacks they enable</desc>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="sd('r_value')" style="cursor:pointer">
+  <rect x="80" y="14" width="520" height="62" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="34" text-anchor="middle" dominant-baseline="central">The real value of ude gatame</text>
+  <text font-size="12" fill="#534AB7" x="340" y="54" text-anchor="middle" dominant-baseline="central">Snappy attack creates strong defensive reactions</text>
+  <text font-size="12" fill="#534AB7" x="340" y="69" text-anchor="middle" dominant-baseline="central">Predict and capitalize for positional scores</text>
+</g>
+<line x1="340" y1="76" x2="340" y2="102" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_goal')" style="cursor:pointer">
+  <rect x="80" y="102" width="520" height="44" rx="8" fill="#534AB7" fill-opacity="0.15" stroke="#534AB7" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="124" text-anchor="middle" dominant-baseline="central">Unspoken goal — put his forehead on the mat</text>
+</g>
+<line x1="340" y1="146" x2="340" y2="178" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_attack')" style="cursor:pointer">
+  <rect x="180" y="178" width="320" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#444441" x="340" y="200" text-anchor="middle" dominant-baseline="central">Initial ude gatame attempt</text>
+</g>
+
+<line x1="220" y1="222" x2="130" y2="262" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+<line x1="340" y1="222" x2="340" y2="262" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+<line x1="460" y1="222" x2="550" y2="262" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_yank')" style="cursor:pointer">
+  <rect x="20" y="262" width="220" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#0C447C" x="130" y="282" text-anchor="middle" dominant-baseline="central">1. Head up, yank arm</text>
+  <text font-size="12" fill="#185FA5" x="130" y="300" text-anchor="middle" dominant-baseline="central">Most common reaction</text>
+</g>
+<g onclick="sd('r_pull')" style="cursor:pointer">
+  <rect x="260" y="262" width="160" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#0C447C" x="340" y="282" text-anchor="middle" dominant-baseline="central">2. Pull back away</text>
+  <text font-size="12" fill="#185FA5" x="340" y="300" text-anchor="middle" dominant-baseline="central">Shorten the arms</text>
+</g>
+<g onclick="sd('r_roll')" style="cursor:pointer">
+  <rect x="440" y="262" width="220" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#0C447C" x="550" y="282" text-anchor="middle" dominant-baseline="central">3. Roll out of lock</text>
+  <text font-size="12" fill="#185FA5" x="550" y="300" text-anchor="middle" dominant-baseline="central">After forehead is down</text>
+</g>
+
+<line x1="130" y1="318" x2="130" y2="348" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+<line x1="340" y1="318" x2="340" y2="348" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+<line x1="550" y1="318" x2="550" y2="348" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_sumi')" style="cursor:pointer">
+  <rect x="20" y="348" width="220" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="130" y="370" text-anchor="middle" dominant-baseline="central">Sumi gaeshi sweep</text>
+  <text font-size="12" fill="#0F6E56" x="130" y="388" text-anchor="middle" dominant-baseline="central">Clamp forearm to chest</text>
+  <text font-size="12" fill="#0F6E56" x="130" y="406" text-anchor="middle" dominant-baseline="central">Knees to chest, tilt over</text>
+</g>
+<g onclick="sd('r_torque')" style="cursor:pointer">
+  <rect x="260" y="348" width="160" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="340" y="370" text-anchor="middle" dominant-baseline="central">Torque turn</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="388" text-anchor="middle" dominant-baseline="central">Ear over his elbow</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="406" text-anchor="middle" dominant-baseline="central">Explosive shift opposite</text>
+</g>
+<g onclick="sd('r_pursuit')" style="cursor:pointer">
+  <rect x="440" y="348" width="220" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="550" y="370" text-anchor="middle" dominant-baseline="central">Pursuit by shoulder</text>
+  <text font-size="12" fill="#0F6E56" x="550" y="388" text-anchor="middle" dominant-baseline="central">Watch which shoulder</text>
+  <text font-size="12" fill="#0F6E56" x="550" y="406" text-anchor="middle" dominant-baseline="central">he rolls over</text>
+</g>
+
+<line x1="130" y1="424" x2="130" y2="448" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="340" y1="424" x2="340" y2="448" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="550" y1="424" x2="550" y2="448" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g onclick="sd('r_sumi2')" style="cursor:pointer">
+  <rect x="20" y="448" width="220" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#712B13" x="130" y="468" text-anchor="middle" dominant-baseline="central">→ top position</text>
+  <text font-size="12" fill="#993C1D" x="130" y="486" text-anchor="middle" dominant-baseline="central">2 points positional</text>
+</g>
+<g onclick="sd('r_torque2')" style="cursor:pointer">
+  <rect x="260" y="448" width="160" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#712B13" x="340" y="468" text-anchor="middle" dominant-baseline="central">→ submission</text>
+  <text font-size="12" fill="#993C1D" x="340" y="486" text-anchor="middle" dominant-baseline="central">Or forehead to mat</text>
+</g>
+<g onclick="sd('r_pursuit2')" style="cursor:pointer">
+  <rect x="440" y="448" width="220" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#712B13" x="550" y="468" text-anchor="middle" dominant-baseline="central">→ mount / side / back</text>
+  <text font-size="12" fill="#993C1D" x="550" y="486" text-anchor="middle" dominant-baseline="central">Wrestling up if needed</text>
+</g>
+
+<line x1="550" y1="504" x2="550" y2="544" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g onclick="sd('r_shoulder')" style="cursor:pointer">
+  <rect x="80" y="544" width="520" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#444441" x="340" y="566" text-anchor="middle" dominant-baseline="central">Reaction 3 expanded — which shoulder rolls?</text>
+</g>
+
+<line x1="260" y1="588" x2="160" y2="624" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+<line x1="420" y1="588" x2="520" y2="624" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_inside')" style="cursor:pointer">
+  <rect x="40" y="624" width="240" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#0C447C" x="160" y="644" text-anchor="middle" dominant-baseline="central">Inside shoulder — slow roll</text>
+  <text font-size="12" fill="#185FA5" x="160" y="662" text-anchor="middle" dominant-baseline="central">Rolls into you</text>
+</g>
+<g onclick="sd('r_outside')" style="cursor:pointer">
+  <rect x="400" y="624" width="240" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#0C447C" x="520" y="644" text-anchor="middle" dominant-baseline="central">Outside shoulder — away</text>
+  <text font-size="12" fill="#185FA5" x="520" y="662" text-anchor="middle" dominant-baseline="central">Smart opponents</text>
+</g>
+
+<line x1="160" y1="680" x2="160" y2="710" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+<line x1="520" y1="680" x2="520" y2="710" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_mount')" style="cursor:pointer">
+  <rect x="40" y="710" width="240" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text font-size="13" font-weight="500" fill="#712B13" x="160" y="730" text-anchor="middle" dominant-baseline="central">Easy mount or break</text>
+  <text font-size="12" fill="#993C1D" x="160" y="748" text-anchor="middle" dominant-baseline="central">Foot across his hips</text>
+</g>
+<g onclick="sd('r_split')" style="cursor:pointer">
+  <rect x="400" y="710" width="240" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#444441" x="520" y="730" text-anchor="middle" dominant-baseline="central">Forward roll or sideways</text>
+  <text font-size="12" fill="#5F5E5A" x="520" y="748" text-anchor="middle" dominant-baseline="central">Be ready for both</text>
+</g>
+
+<line x1="520" y1="766" x2="520" y2="796" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_kob')" style="cursor:pointer">
+  <rect x="400" y="796" width="240" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text font-size="13" font-weight="500" fill="#712B13" x="520" y="816" text-anchor="middle" dominant-baseline="central">Side or knee on belly</text>
+  <text font-size="12" fill="#993C1D" x="520" y="834" text-anchor="middle" dominant-baseline="central">Or double leg / snap behind</text>
+</g>
+<text font-size="11" fill="#888780" x="20" y="40">Vol 3</text>
+<text font-size="11" fill="#888780" x="20" y="124">Vol 3</text>
+<text font-size="11" fill="#888780" x="20" y="280">Vol 3</text>
+<text font-size="11" fill="#888780" x="20" y="380">Vol 3</text>
+<text font-size="11" fill="#888780" x="20" y="640">Vol 3</text>
+</svg>
+</div>
+
+<!-- RELATIONSHIPS -->
+<div id="view-relations" style="display:none">
+<svg viewBox="0 0 680 700" role="img">
+<title>Ude gatame relationships with other submissions</title>
+<desc>How ude gatame chains with juji gatame, kimura, te gatame, and ashi garami</desc>
+<defs><marker id="ax" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="sd('x_center')" style="cursor:pointer">
+  <rect x="240" y="280" width="200" height="80" rx="12" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="304" text-anchor="middle" dominant-baseline="central">Ude gatame</text>
+  <text font-size="12" fill="#534AB7" x="340" y="324" text-anchor="middle" dominant-baseline="central">Fast, snappy armlock</text>
+  <text font-size="12" fill="#534AB7" x="340" y="342" text-anchor="middle" dominant-baseline="central">Center of the system</text>
+</g>
+
+<g onclick="sd('x_juji')" style="cursor:pointer">
+  <rect x="60" y="60" width="220" height="76" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#712B13" x="170" y="82" text-anchor="middle" dominant-baseline="central">Juji gatame</text>
+  <text font-size="12" fill="#993C1D" x="170" y="100" text-anchor="middle" dominant-baseline="central">When arm rotates out</text>
+  <text font-size="12" fill="#993C1D" x="170" y="118" text-anchor="middle" dominant-baseline="central">Rolling juji + shoulder crunch</text>
+</g>
+<path d="M240 300 C 180 230, 160 180, 200 136" stroke="#B4B2A9" stroke-width="0.5" fill="none" marker-end="url(#ax)"/>
+<path d="M236 100 C 280 180, 280 240, 280 280" stroke="#B4B2A9" stroke-width="0.5" fill="none" marker-end="url(#ax)"/>
+
+<g onclick="sd('x_kimura')" style="cursor:pointer">
+  <rect x="400" y="60" width="220" height="76" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#712B13" x="510" y="82" text-anchor="middle" dominant-baseline="central">Kimura</text>
+  <text font-size="12" fill="#993C1D" x="510" y="100" text-anchor="middle" dominant-baseline="central">When arm bends to relieve</text>
+  <text font-size="12" fill="#993C1D" x="510" y="118" text-anchor="middle" dominant-baseline="central">Hand-over-hand bridge</text>
+</g>
+<path d="M440 300 C 500 230, 520 180, 480 136" stroke="#B4B2A9" stroke-width="0.5" fill="none" marker-end="url(#ax)"/>
+<path d="M444 100 C 400 180, 400 240, 400 280" stroke="#B4B2A9" stroke-width="0.5" fill="none" marker-end="url(#ax)"/>
+
+<g onclick="sd('x_te')" style="cursor:pointer">
+  <rect x="60" y="504" width="220" height="76" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#712B13" x="170" y="526" text-anchor="middle" dominant-baseline="central">Te gatame</text>
+  <text font-size="12" fill="#993C1D" x="170" y="544" text-anchor="middle" dominant-baseline="central">Overhook variation</text>
+  <text font-size="12" fill="#993C1D" x="170" y="562" text-anchor="middle" dominant-baseline="central">Break with hips and legs</text>
+</g>
+<path d="M240 340 C 180 410, 160 460, 200 504" stroke="#B4B2A9" stroke-width="0.5" fill="none" marker-end="url(#ax)"/>
+
+<g onclick="sd('x_ashi')" style="cursor:pointer">
+  <rect x="400" y="504" width="220" height="76" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#712B13" x="510" y="526" text-anchor="middle" dominant-baseline="central">Ashi garami</text>
+  <text font-size="12" fill="#993C1D" x="510" y="544" text-anchor="middle" dominant-baseline="central">When knee comes off mat</text>
+  <text font-size="12" fill="#993C1D" x="510" y="562" text-anchor="middle" dominant-baseline="central">Upper / lower body pairing</text>
+</g>
+<path d="M440 340 C 500 410, 520 460, 480 504" stroke="#B4B2A9" stroke-width="0.5" fill="none" marker-end="url(#ax)"/>
+<path d="M444 540 C 400 460, 400 400, 400 340" stroke="#B4B2A9" stroke-width="0.5" fill="none" marker-end="url(#ax)"/>
+
+<g onclick="sd('x_top')" style="cursor:pointer">
+  <rect x="240" y="60" width="200" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="340" y="80" text-anchor="middle" dominant-baseline="central">From top position</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="98" text-anchor="middle" dominant-baseline="central">Tricep tendon break</text>
+</g>
+<line x1="340" y1="116" x2="340" y2="280" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ax)"/>
+
+<g onclick="sd('x_bottom')" style="cursor:pointer">
+  <rect x="240" y="540" width="200" height="40" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#444441" x="340" y="560" text-anchor="middle" dominant-baseline="central">95% from bottom position</text>
+</g>
+<line x1="340" y1="360" x2="340" y2="540" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ax)"/>
+
+<text font-size="11" fill="#888780" x="20" y="98">Vol 4</text>
+<text font-size="11" fill="#888780" x="20" y="544">Vol 5</text>
+<text font-size="11" fill="#888780" x="20" y="98" text-anchor="start"></text>
+</svg>
+</div>
+
+<div class="detail" id="detail-box">
+  <div style="color:var(--color-text-secondary)">Click any node to see details from the transcripts.</div>
+</div>
+
+<script>
+const D = {
+  // SETUPS
+  s_start:{t:"Bottom position vs kneeling opponent",v:"Vol 1",d:"Ude gatame is overwhelmingly a bottom-position attack. 95% of its applications come from underneath. The natural starting context is butterfly guard or open guard with the opponent on his knees in front of you, looking to engage."},
+  s_goal:{t:"Goal — get hand on the mat",v:"Vol 1 Ch 2",d:"The single best setup is getting opponent's hand to the floor. Why? Because ude gatame is a STRAIGHT armlock — when his arm bears weight, it's already at breaking point. The range of motion from start to finish is tiny compared to juji gatame. No big angles, no leg movement over the head — just one motion in and you're attacking."},
+  s_distance:{t:"Pick setup by distance",v:"Vol 1 Ch 2-4",d:"Three setups, three distances. Each is selected based on how close the opponent is willing to come to you. The closer he is, the easier the setup. The farther he plays, the more wrist control you need."},
+  s_close:{t:"Close — head touches collarbones",v:"Vol 1 Ch 2",d:"Best case scenario — opponent lets you get your forehead into his collarbones. This gives you the easiest path to the most reliable setup: the double triceps elevator."},
+  s_mid:{t:"Medium distance",v:"Vol 1 Ch 3",d:"Forehead to forehead but no further. Opponent won't let you get in deep. Underhook setup territory — work inside position rather than outside."},
+  s_far:{t:"Far — low and away",v:"Vol 1 Ch 2",d:"Opponent hunkers down low, far from you. Going underneath feels impossible. This calls for wrist controls and an arm drag."},
+  s_dbl:{t:"Double triceps elevator",v:"Vol 1 Ch 2",d:"The number one setup. Push head into opponent — he MUST put hands on your shoulders to push you back (or accept double underhooks). Grab both triceps. Lift — forces both hands to the mat. Even if he had inside hand position, you can pull his arms out anytime by lifting. Hand inside bicep, forward shift opposite the attacked arm."},
+  s_under:{t:"Underhook setup",v:"Vol 1 Ch 3",d:"When you can't get forehead to collarbones. Put hands inside elbows, bang down on his head, snatch underhook + collar tie. Keep your elbow high (so he can't palm it out). Lift — forces hands back to mat in the same position as the double elevator finish. Then shift out."},
+  s_arm:{t:"Arm drag",v:"Vol 1 Ch 4",d:"Far distance setup. Foot on opposite knee. Snap his wrist down to floor with an arm drag. As he tries to recover the arm, catch and lock. Different mechanic — using wrist control instead of underhooks — but lands you in the same attacking position."},
+  s_shift:{t:"Forward shift to opposite side",v:"Vol 1 Ch 2",d:"Critical mechanic that all three setups end with. Once hands are on mat, shift forward — NOT straight down his body — to the OPPOSITE side of the attacked arm. Hand inside the bicep on the far side, elbow-to-elbow on the near side. Head higher than his head. Without this, he turns his thumb and pulls out."},
+  s_attack:{t:"Sit up — attacking position",v:"Vol 1 Ch 2",d:"You're now sitting up with proper alignment: head high, his hand on mat, your hand inside his bicep, your elbow over his elbow. Ready to apply mechanics. This is the gate between setup and finishing phase."},
+
+  // MECHANICS
+  m_start:{t:"In attacking position, arm exposed",v:"Vol 1",d:"You've successfully set up the lock. His hand is on the mat (or you have wrist control). Your body is shifted. Now the question becomes: how do you finish? Two layers — upper body mechanics for the arm itself, and lower body mechanics for controlling his torso."},
+  m_battle:{t:"Battle for head height",v:"Vol 1 Ch 5",d:"The central principle of ude gatame. If YOUR head is higher than HIS, you win every time. If HIS head is higher than yours, he pulls his arm free every time. All upper body mechanics ultimately serve this single goal."},
+  m_upper:{t:"Upper body — 3 elements",v:"Vol 1 Ch 5-7",d:"Three mechanical elements work together: arrowhead elbow, precise placement, ear-to-elbow positioning. Plus the explosive side-to-side shift that activates them. All four must be present for a working ude gatame."},
+  m_arrow:{t:"Arrowhead elbow",v:"Vol 1 Ch 5",d:"Your arm must form an arrowhead pointed at his ear. Sharply bent. The more your elbow points at his ear, the tighter the lock. The more it points away, the easier for him to raise his head and pommel out. Easiest way to enforce — use your free hand to physically grab your own elbow and pull it toward his ear."},
+  m_precise:{t:"Precise placement",v:"Vol 1 Ch 5",d:"Don't put your elbow ANYWHERE on his arm — the crook of your elbow must be EXACTLY on his elbow. 2-3 inches off and the lock fails completely. This isn't splitting hairs — it's the difference between a working lock and one he twists out of. Grabbing your own elbow helps maintain this precision."},
+  m_ear:{t:"Ear to elbow",v:"Vol 1 Ch 6",d:"Your head must be OFF the center line — your ear positioned directly over his forearm/elbow. If your head stays aligned with your spine on the center line, an aggressive yank breaks contact. Misalign your head — touch ear to your own shoulder — and his yank can't displace you."},
+  m_shift:{t:"Explosive side-to-side shift",v:"Vol 1 Ch 7",d:"The torque that activates everything. As you feel opponent yanking back, shift your body weight EXPLOSIVELY from one side across the other. Like the torque of an engine. Doesn't need to be crazy explosive but it can't be slow — sharp, decisive movement. This shift puts pressure back on his elbow and brings his forehead to the mat."},
+  m_lower:{t:"Lower body — 2 options",v:"Vol 2",d:"Two main leg configurations. The classic (legs around torso) is faster and more common in top-level competition. The advanced (knee on each shoulder) is slower to enter but provides much stronger head control. Pick based on how much time the opponent's giving you."},
+  m_torso:{t:"Legs around torso",v:"Vol 2 Ch 1",d:"Least controlling but easiest and fastest. Throw your leg over his body, his torso between your two knees. Foot under far leg, other knee mid-back (or foot on far hip). This puts the upper-body burden on the elbow position — your legs only need to give a slight angle. Most competition ude gatames use this."},
+  m_shoulders:{t:"Knee on each shoulder",v:"Vol 2 Ch 2",d:"Stronger but slower to enter. Wedge knees AROUND both shoulders — one in front of far shoulder, one behind near shoulder. When he tries to pull arm out, your knee stops him. When he tries to raise head, your other knee stops him. Excellent head height control. Direct control of the shoulder you're attacking."},
+  m_finish:{t:"Forehead to mat",v:"Vol 3 Ch 5",d:"The unspoken goal of every good ude gatame attack. If you can put his forehead on the mat, you either get an immediate submission or such an extreme defensive reaction that you score positionally. Either outcome is a win — this becomes the bridge to the defensive reactions module."},
+
+  // DEFENSIVE REACTIONS
+  r_value:{t:"The real value of ude gatame",v:"Vol 3 Ch 1",d:"Ude gatame doesn't score the most submissions in top-level competition — kimura, juji, RNC, guillotine all outscore it. Its real value is creating strong, PREDICTABLE defensive reactions. Your opponent can't ignore an ude gatame attempt — he must react. And you can capitalize on the reaction for positional scores."},
+  r_goal:{t:"Unspoken goal — forehead to mat",v:"Vol 3 Ch 5",d:"Danaher's personal insight that he says he's never heard anyone else articulate. The criterion that distinguishes successful ude gatames from failed ones is whether you can put opponent's forehead on the mat. Once forehead is down, only extreme defensive reactions can save him — and those reactions hand you positional scores."},
+  r_attack:{t:"Initial ude gatame attempt",v:"Vol 3",d:"You launch your attack with the proper mechanics: arrowhead elbow, ear over elbow, explosive shift. Opponent now has to choose one of three defensive reactions. Each one opens a different counter."},
+  r_yank:{t:"Reaction 1 — head up, yank arm",v:"Vol 3 Ch 1",d:"BY FAR the most common reaction. Once you've hit a couple of successful ude gatames, opponents start bringing head up, turning thumb up, twisting arm out and yanking. Standard escape — and it gives you the entry to sumi gaeshi."},
+  r_pull:{t:"Reaction 2 — pull back away",v:"Vol 3 Ch 6",d:"Once you have a reputation for ude gatame, opponents will try to pull their back off the ground, lift you backwards, shorten the arms — generate distance. The reaction Danaher considers the 'heart and soul' of the video. Counter is the torque turn."},
+  r_roll:{t:"Reaction 3 — roll out of lock",v:"Vol 3 Ch 7",d:"When you successfully put forehead on mat, opponent's only remaining option is to roll out. He must choose: inside shoulder (rolls into you) or outside shoulder (rolls away). Most pick outside. The rolling reaction gives you the best positional opportunities."},
+  r_sumi:{t:"Sumi gaeshi sweep",v:"Vol 3 Ch 2",d:"Counter to the yank. When he yanks his arm and you feel the lock failing, CLAMP his forearm to your chest. Elbow over the forearm, other hand on his lat. Bring knees to chest — lifts him into the air so he can't base. Then tilt over with sumi gaeshi. Failed submission → successful sweep."},
+  r_torque:{t:"Torque turn",v:"Vol 3 Ch 6",d:"Counter to the pull-back. Your elbow must be HIGHER than his shoulder (not just higher than his elbow). When he pulls you up, get your ear OVER his elbow — head goes off center line, locks on the arm. Now explode the opposite way, torquing his head back down to the mat. Failed defense → submission."},
+  r_pursuit:{t:"Pursuit by shoulder",v:"Vol 3 Ch 7",d:"Counter to the roll-out. Watch which shoulder he rolls over. Inside shoulder rolls bring him into you (easy follow-up). Outside shoulder rolls take him away. Either way, since his head is now lower than yours, you have the angle advantage to take top position."},
+  r_sumi2:{t:"→ Top position (2 points)",v:"Vol 3 Ch 1",d:"After sumi gaeshi, you end up on top of him in a scrambled but dominant position. 2 positional points. Better still — your sumi gaeshi forces his hand back to the mat, restarting the ude gatame attack. One-two punch."},
+  r_torque2:{t:"→ Submission (or forehead on mat)",v:"Vol 3 Ch 6",d:"The torque turn brings his head back to the mat with you in better position than the original attempt. Either he taps immediately, or he tries reaction 3 (rolling) — and you flow into pursuit."},
+  r_pursuit2:{t:"→ Mount / side / back",v:"Vol 3 Ch 7",d:"After the roll, follow him. Foot across hips for mount. Or knee on belly / side control if he rolled across shoulders away. Against elite opponents, wrestle your way up — double leg if his head is higher, snap down and go behind if his head is lower. The cue is always: forehead on mat → he rolls → you take position."},
+  r_shoulder:{t:"Reaction 3 expanded — which shoulder rolls?",v:"Vol 3 Ch 7",d:"Once forehead is on mat, opponent must roll. He has TWO shoulders to choose from. Your response differs significantly depending on which one. Knowing both options in advance lets you score against either choice."},
+  r_inside:{t:"Inside shoulder — slow roll",v:"Vol 3 Ch 7",d:"He rolls over the inside shoulder (the one closer to you). Always a slower roll because he tends to get bound up on it. Rolls INTO you. Easy break if he's willing to take it — even if not, easy to throw a leg over his hips to mount."},
+  r_outside:{t:"Outside shoulder — away",v:"Vol 3 Ch 7",d:"Smart opponents pick this — generates distance. Either a forward roll (more distance) or a sideways roll across the shoulder blades. You can't predict which, so be ready for both. His head is now lower than yours — angle advantage stays with you."},
+  r_mount:{t:"Easy mount or break",v:"Vol 3 Ch 7",d:"Against the inside shoulder roll, you stay tight and either finish the broken arm or simply mount up. He rolled toward you, so the leg has minimal distance to travel. Highest-percentage positional outcome."},
+  r_split:{t:"Forward roll or sideways",v:"Vol 3 Ch 7",d:"Outside shoulder roll splits into two sub-paths. Forward roll = more distance for you to chase. Sideways across shoulder blades = he ends up flat on his back further away. Both lead to you taking dominant position but via different routes."},
+  r_kob:{t:"Side or knee on belly",v:"Vol 3 Ch 7",d:"After he completes the outside roll: come up to side control or knee on belly on the far side of his body. Against elite opponents who manage to scramble up before you can pin, switch to wrestling — double leg if head is higher, snap-down and back take if head is lower."},
+
+  // RELATIONSHIPS
+  x_center:{t:"Ude gatame — center of the system",v:"All volumes",d:"Ude gatame isn't a standalone technique — it's the hub of an interconnected system. Every other arm attack and even leg attacks chain into and out of it. Master ude gatame and you master a half-dozen related submissions simultaneously."},
+  x_juji:{t:"Juji gatame",v:"Vol 4 Ch 1-3",d:"When your opponent's arm rotates out of ude gatame to escape, the rotation feeds directly into juji gatame. Three main bridges: ude gatame from half guard → juji, ude gatame into rolling juji gatame, ude gatame into shoulder crunch juji. Ude gatame is straight, juji is the same arm at a different angle — the transition is seamless."},
+  x_kimura:{t:"Kimura",v:"Vol 4 Ch 5-7",d:"When opponent's arm BENDS under ude gatame pressure (a natural defensive reaction to relieve straight-arm tension), it bends right into kimura position. Hand-over-hand ude gatame is the bridge variation — somewhere between an ude gatame and a kimura. The two locks share so much positioning that switching mid-attack is effortless."},
+  x_te:{t:"Te gatame",v:"Vol 4 Ch 8 + Vol 5",d:"A sub-variation of ude gatame using overhook control instead of underhook. The hand is caught high in your armpit (find the bony growth — not low on wrist). Break the elbow with your HIPS and LEGS rather than upper body. Hand functions as a wedge in your hip pocket. Different mechanics, same goal — straight armlock."},
+  x_ashi:{t:"Ashi garami",v:"Vol 6 Ch 2",d:"The upper body/lower body pairing that lets you dominate match tempo. Rule: when opponent's HANDS go on the mat, attack ude gatame. When his KNEES come off the mat, attack ashi garami. Each defense of one gives you the other. Distance-of-hips also dictates choice — hips far from yours = ude gatame, hips over yours = ashi garami."},
+  x_top:{t:"From top position",v:"Vol 6 Ch 1",d:"95% of ude gatames come from bottom. The exception: from chest-to-chest top side control, when opponent defends with forearm in your hip and posted hand. Shift chest-to-stomach, get elbow next to his elbow, capture the tricep tendon. Deep-V grip or figure-4 grip. Only top ude gatame Danaher recommends — most others sacrifice chest-to-chest contact and aren't worth the risk."},
+  x_bottom:{t:"95% from bottom position",v:"Vol 6 Ch 1",d:"Danaher's philosophy: ude gatame is fundamentally a bottom-position attack. Setups are easy from below (just need a hand on the mat), execution is fast, and the move scares opponents from even reaching toward you. Most top-position ude gatames are Hail Mary moves — stick with juji gatame, strangles, back attacks, guillotines from top."},
+};
+
+function sd(id){
+  const d=D[id];if(!d)return;
+  document.getElementById('detail-box').innerHTML=`<div class="dt">${d.t} <span class="dv">${d.v}</span></div><div>${d.d}</div>`;
+}
+
+function showView(v,btn){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  ['setups','mechanics','reactions','relations'].forEach(id=>{
+    document.getElementById('view-'+id).style.display=id===v?'block':'none';
+  });
+  document.getElementById('detail-box').innerHTML='<div style="color:var(--color-text-secondary)">Click any node to see details from the transcripts.</div>';
+}
+</script>

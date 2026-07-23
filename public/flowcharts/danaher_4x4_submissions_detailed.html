@@ -1,0 +1,542 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.tab-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.tab{padding:6px 14px;border-radius:8px;border:0.5px solid var(--color-border-secondary);background:var(--color-background-secondary);color:var(--color-text-secondary);font-size:13px;cursor:pointer;transition:all .15s;font-family:inherit}
+.tab.active{background:var(--color-background-tertiary);color:var(--color-text-primary);border-color:var(--color-border-primary);font-weight:500}
+.legend{display:flex;gap:14px;font-size:11px;color:var(--color-text-secondary);margin-bottom:10px;flex-wrap:wrap}
+.ld{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.detail{border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:14px 18px;margin-top:12px;background:var(--color-background-secondary);font-size:13px;color:var(--color-text-secondary);line-height:1.65;min-height:60px}
+.detail .dt{font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
+.detail .dv{font-size:11px;color:var(--color-text-secondary);font-weight:400}
+svg{display:block;width:100%}
+</style>
+
+<div class="tab-bar">
+  <button class="tab active" onclick="showView('kata',this)">Kata gatame</button>
+  <button class="tab" onclick="showView('rear',this)">Rear strangle</button>
+  <button class="tab" onclick="showView('juji',this)">Juji gatame</button>
+  <button class="tab" onclick="showView('tri',this)">Mounted triangle</button>
+</div>
+
+<div class="legend">
+  <span><span class="ld" style="background:#888780"></span>Setup</span>
+  <span><span class="ld" style="background:#534AB7"></span>Mechanic / principle</span>
+  <span><span class="ld" style="background:#0F6E56"></span>Action step</span>
+  <span><span class="ld" style="background:#185FA5"></span>Defense / counter</span>
+  <span><span class="ld" style="background:#993C1D"></span>Finish</span>
+</div>
+
+<!-- KATA GATAME -->
+<div id="view-kata">
+<svg viewBox="0 0 680 1060" role="img">
+<title>Kata gatame submission flowchart</title>
+<desc>Complete kata gatame system from entry through mechanics, defenses, and recovery</desc>
+<defs><marker id="ak" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="sd('k_start')" style="cursor:pointer">
+  <rect x="200" y="14" width="280" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#444441" x="340" y="36" text-anchor="middle" dominant-baseline="central">Single chest wrap established</text>
+</g>
+<line x1="340" y1="58" x2="340" y2="84" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ak)"/>
+
+<g onclick="sd('k_shrug')" style="cursor:pointer">
+  <rect x="180" y="84" width="320" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="104" text-anchor="middle" dominant-baseline="central">Shoulder shrug</text>
+  <text font-size="12" fill="#534AB7" x="340" y="122" text-anchor="middle" dominant-baseline="central">Look away, push center line, clear arm forward</text>
+</g>
+<line x1="340" y1="140" x2="340" y2="166" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ak)"/>
+
+<g onclick="sd('k_high')" style="cursor:pointer">
+  <rect x="180" y="166" width="320" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#085041" x="340" y="186" text-anchor="middle" dominant-baseline="central">Slide feet to high mount</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="204" text-anchor="middle" dominant-baseline="central">Compress breathing, kill elbow escape</text>
+</g>
+<line x1="340" y1="222" x2="340" y2="248" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ak)"/>
+
+<g onclick="sd('k_jaw')" style="cursor:pointer">
+  <rect x="180" y="248" width="320" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#085041" x="340" y="268" text-anchor="middle" dominant-baseline="central">Trap tricep with jaw</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="286" text-anchor="middle" dominant-baseline="central">Look back, hook jaw outside tricep</text>
+</g>
+<line x1="340" y1="304" x2="340" y2="330" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ak)"/>
+
+<g onclick="sd('k_lift')" style="cursor:pointer">
+  <rect x="100" y="330" width="480" height="62" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="350" text-anchor="middle" dominant-baseline="central">Lift opponent's head off the mat</text>
+  <text font-size="12" fill="#534AB7" x="340" y="370" text-anchor="middle" dominant-baseline="central">Universal key — pump flex or elbow pull to thread elbow behind spine</text>
+</g>
+
+<line x1="220" y1="392" x2="160" y2="430" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ak)"/>
+<line x1="460" y1="392" x2="520" y2="430" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ak)"/>
+
+<g onclick="sd('k_pump')" style="cursor:pointer">
+  <rect x="40" y="430" width="240" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#085041" x="160" y="450" text-anchor="middle" dominant-baseline="central">Pump flex method</text>
+  <text font-size="12" fill="#0F6E56" x="160" y="468" text-anchor="middle" dominant-baseline="central">Flex bicep, walk elbow around</text>
+</g>
+<g onclick="sd('k_pull')" style="cursor:pointer">
+  <rect x="400" y="430" width="240" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#085041" x="520" y="450" text-anchor="middle" dominant-baseline="central">Elbow pull method</text>
+  <text font-size="12" fill="#0F6E56" x="520" y="468" text-anchor="middle" dominant-baseline="central">Grab own elbow, pull into place</text>
+</g>
+
+<path d="M160 486 L160 514 L340 514" fill="none" stroke="#B4B2A9" stroke-width="0.5"/>
+<path d="M520 486 L520 514 L340 514" fill="none" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="340" y1="514" x2="340" y2="540" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ak)"/>
+
+<g onclick="sd('k_3keys')" style="cursor:pointer">
+  <rect x="80" y="540" width="520" height="80" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="560" text-anchor="middle" dominant-baseline="central">Three mechanical positions</text>
+  <text font-size="12" fill="#534AB7" x="340" y="580" text-anchor="middle" dominant-baseline="central">1. Elbow behind spine  ·  2. Thumb above shoulder</text>
+  <text font-size="12" fill="#534AB7" x="340" y="598" text-anchor="middle" dominant-baseline="central">3. Forehead temple to temple</text>
+</g>
+<line x1="340" y1="620" x2="340" y2="646" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ak)"/>
+
+<g onclick="sd('k_shoulder')" style="cursor:pointer">
+  <rect x="180" y="646" width="320" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="666" text-anchor="middle" dominant-baseline="central">Shoulder below chin</text>
+  <text font-size="12" fill="#534AB7" x="340" y="684" text-anchor="middle" dominant-baseline="central">Aim right shoulder into right armpit</text>
+</g>
+<line x1="340" y1="702" x2="340" y2="728" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ak)"/>
+
+<g onclick="sd('k_dismount')" style="cursor:pointer">
+  <rect x="180" y="728" width="320" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#085041" x="340" y="748" text-anchor="middle" dominant-baseline="central">Dismount when forehead is on mat</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="766" text-anchor="middle" dominant-baseline="central">Knee wedge to hip, sprawl leg out</text>
+</g>
+<line x1="340" y1="784" x2="340" y2="810" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ak)"/>
+
+<g onclick="sd('k_direction')" style="cursor:pointer">
+  <rect x="180" y="810" width="320" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#712B13" x="340" y="830" text-anchor="middle" dominant-baseline="central">Rotational finish</text>
+  <text font-size="12" fill="#993C1D" x="340" y="848" text-anchor="middle" dominant-baseline="central">Drive in direction his elbow points · pull right elbow up</text>
+</g>
+
+<line x1="340" y1="866" x2="340" y2="900" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="220" y1="900" x2="160" y2="930" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ak)"/>
+<line x1="460" y1="900" x2="520" y2="930" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ak)"/>
+
+<g onclick="sd('k_defense')" style="cursor:pointer">
+  <rect x="40" y="930" width="240" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#0C447C" x="160" y="950" text-anchor="middle" dominant-baseline="central">If defended</text>
+  <text font-size="12" fill="#185FA5" x="160" y="968" text-anchor="middle" dominant-baseline="central">Bulldoze through 4 defenses</text>
+</g>
+<g onclick="sd('k_fail')" style="cursor:pointer">
+  <rect x="400" y="930" width="240" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#0C447C" x="520" y="950" text-anchor="middle" dominant-baseline="central">If failed</text>
+  <text font-size="12" fill="#185FA5" x="520" y="968" text-anchor="middle" dominant-baseline="central">Tripod up, walk back to mount</text>
+</g>
+<text font-size="11" fill="#888780" x="20" y="40">Vol 4</text>
+<text font-size="11" fill="#888780" x="20" y="370">Vol 4</text>
+<text font-size="11" fill="#888780" x="20" y="580">Vol 4</text>
+<text font-size="11" fill="#888780" x="20" y="950">Vol 4</text>
+</svg>
+</div>
+
+<!-- REAR STRANGLE -->
+<div id="view-rear" style="display:none">
+<svg viewBox="0 0 680 780" role="img">
+<title>Rear strangle from far trap underhook</title>
+<desc>Transition from mount to rear mount via far trap underhook when shoulder shrug fails</desc>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="sd('r_start')" style="cursor:pointer">
+  <rect x="200" y="14" width="280" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#444441" x="340" y="36" text-anchor="middle" dominant-baseline="central">Single chest wrap attempted</text>
+</g>
+<line x1="340" y1="58" x2="340" y2="84" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_fail')" style="cursor:pointer">
+  <rect x="180" y="84" width="320" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#0C447C" x="340" y="104" text-anchor="middle" dominant-baseline="central">Shrug fails — arm too long</text>
+  <text font-size="12" fill="#185FA5" x="340" y="122" text-anchor="middle" dominant-baseline="central">Switch to far trap underhook system</text>
+</g>
+<line x1="340" y1="140" x2="340" y2="166" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_grip')" style="cursor:pointer">
+  <rect x="180" y="166" width="320" height="56" rx="8" fill="#0F6E56" fill-opacity="0.12" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#085041" x="340" y="186" text-anchor="middle" dominant-baseline="central">Grip far trapezius / neck muscle</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="204" text-anchor="middle" dominant-baseline="central">Anchor to head, deflect out</text>
+</g>
+<line x1="340" y1="222" x2="340" y2="248" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_roll')" style="cursor:pointer">
+  <rect x="180" y="248" width="320" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#085041" x="340" y="268" text-anchor="middle" dominant-baseline="central">Roll across his tricep</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="286" text-anchor="middle" dominant-baseline="central">Chest behind tricep, partial back exposure</text>
+</g>
+<line x1="340" y1="304" x2="340" y2="330" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_wrist')" style="cursor:pointer">
+  <rect x="180" y="330" width="320" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#085041" x="340" y="350" text-anchor="middle" dominant-baseline="central">Seize wrist, pull forward</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="368" text-anchor="middle" dominant-baseline="central">Chest seals on back of tricep — turning back becomes impossible</text>
+</g>
+
+<line x1="340" y1="386" x2="340" y2="420" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="200" y1="420" x2="120" y2="450" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+<line x1="480" y1="420" x2="560" y2="450" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_bridge')" style="cursor:pointer">
+  <rect x="30" y="450" width="240" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#0C447C" x="150" y="470" text-anchor="middle" dominant-baseline="central">Opponent bridges away</text>
+  <text font-size="12" fill="#185FA5" x="150" y="488" text-anchor="middle" dominant-baseline="central">Their only escape attempt</text>
+</g>
+<g onclick="sd('r_stay')" style="cursor:pointer">
+  <rect x="410" y="450" width="240" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#0C447C" x="530" y="470" text-anchor="middle" dominant-baseline="central">Opponent stays flat</text>
+  <text font-size="12" fill="#185FA5" x="530" y="488" text-anchor="middle" dominant-baseline="central">Maintain pressure, advance</text>
+</g>
+
+<path d="M150 506 L150 540 L340 540" fill="none" stroke="#B4B2A9" stroke-width="0.5"/>
+<path d="M530 506 L530 540 L340 540" fill="none" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="340" y1="540" x2="340" y2="566" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_claw')" style="cursor:pointer">
+  <rect x="180" y="566" width="320" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#085041" x="340" y="586" text-anchor="middle" dominant-baseline="central">Take claw grip on neck</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="604" text-anchor="middle" dominant-baseline="central">Head to head — head DOWN, foot in hip, knees fill space</text>
+</g>
+<line x1="340" y1="622" x2="340" y2="648" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_lock')" style="cursor:pointer">
+  <rect x="180" y="648" width="320" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#712B13" x="340" y="668" text-anchor="middle" dominant-baseline="central">Lock figure-4 / body triangle</text>
+  <text font-size="12" fill="#993C1D" x="340" y="686" text-anchor="middle" dominant-baseline="central">Or foot-to-foot if thick waist · standard rear mount otherwise</text>
+</g>
+<line x1="340" y1="704" x2="340" y2="730" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#ar)"/>
+
+<g onclick="sd('r_finish')" style="cursor:pointer">
+  <rect x="180" y="730" width="320" height="40" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#712B13" x="340" y="750" text-anchor="middle" dominant-baseline="central">Rear strangle finish</text>
+</g>
+<text font-size="11" fill="#888780" x="20" y="40">Vol 5</text>
+<text font-size="11" fill="#888780" x="20" y="186">Vol 5</text>
+<text font-size="11" fill="#888780" x="20" y="586">Vol 5</text>
+<text font-size="11" fill="#888780" x="20" y="668">Vol 5</text>
+</svg>
+</div>
+
+<!-- JUJI GATAME -->
+<div id="view-juji" style="display:none">
+<svg viewBox="0 0 680 920" role="img">
+<title>Juji gatame from mount</title>
+<desc>Juji gatame entry, configurations, and magnum finishes for high-level resistance</desc>
+<defs><marker id="aj" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="sd('j_start')" style="cursor:pointer">
+  <rect x="200" y="14" width="280" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#444441" x="340" y="36" text-anchor="middle" dominant-baseline="central">Double arm wrap from mount</text>
+</g>
+<line x1="340" y1="58" x2="340" y2="84" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#aj)"/>
+
+<g onclick="sd('j_lift')" style="cursor:pointer">
+  <rect x="180" y="84" width="320" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="104" text-anchor="middle" dominant-baseline="central">Lift the head first</text>
+  <text font-size="12" fill="#534AB7" x="340" y="122" text-anchor="middle" dominant-baseline="central">Universal entry key — exposes the arm</text>
+</g>
+<line x1="340" y1="140" x2="340" y2="166" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#aj)"/>
+
+<g onclick="sd('j_rule')" style="cursor:pointer">
+  <rect x="100" y="166" width="480" height="62" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="186" text-anchor="middle" dominant-baseline="central">Right-right-right rule</text>
+  <text font-size="12" fill="#534AB7" x="340" y="206" text-anchor="middle" dominant-baseline="central">His right elbow over your right hip</text>
+  <text font-size="12" fill="#534AB7" x="340" y="221" text-anchor="middle" dominant-baseline="central">His right hand over your right shoulder</text>
+</g>
+<line x1="340" y1="228" x2="340" y2="262" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g onclick="sd('j_configs')" style="cursor:pointer">
+  <rect x="180" y="262" width="320" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#444441" x="340" y="284" text-anchor="middle" dominant-baseline="central">Multiple juji configurations</text>
+</g>
+
+<line x1="240" y1="306" x2="160" y2="350" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#aj)"/>
+<line x1="440" y1="306" x2="520" y2="350" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#aj)"/>
+
+<g onclick="sd('j_open')" style="cursor:pointer">
+  <rect x="40" y="350" width="240" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#085041" x="160" y="372" text-anchor="middle" dominant-baseline="central">Open juji</text>
+  <text font-size="12" fill="#0F6E56" x="160" y="390" text-anchor="middle" dominant-baseline="central">Standard — feet around</text>
+  <text font-size="12" fill="#0F6E56" x="160" y="408" text-anchor="middle" dominant-baseline="central">secondary arm</text>
+</g>
+<g onclick="sd('j_closed')" style="cursor:pointer">
+  <rect x="400" y="350" width="240" height="76" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#085041" x="520" y="372" text-anchor="middle" dominant-baseline="central">Closed juji</text>
+  <text font-size="12" fill="#0F6E56" x="520" y="390" text-anchor="middle" dominant-baseline="central">Knees flared, feet pull back</text>
+  <text font-size="12" fill="#0F6E56" x="520" y="408" text-anchor="middle" dominant-baseline="central">Traps turning escape</text>
+</g>
+
+<path d="M160 426 L160 460 L340 460" fill="none" stroke="#B4B2A9" stroke-width="0.5"/>
+<path d="M520 426 L520 460 L340 460" fill="none" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="340" y1="460" x2="340" y2="486" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#aj)"/>
+
+<g onclick="sd('j_force')" style="cursor:pointer">
+  <rect x="180" y="486" width="320" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#712B13" x="340" y="506" text-anchor="middle" dominant-baseline="central">Standard pull finish</text>
+  <text font-size="12" fill="#993C1D" x="340" y="524" text-anchor="middle" dominant-baseline="central">Pull wrist toward shoulder · elbow over fulcrum</text>
+</g>
+
+<line x1="340" y1="542" x2="340" y2="576" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g onclick="sd('j_magnum')" style="cursor:pointer">
+  <rect x="180" y="576" width="320" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="598" text-anchor="middle" dominant-baseline="central">If opponent won't tap → magnum finishes</text>
+</g>
+
+<line x1="240" y1="620" x2="160" y2="660" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#aj)"/>
+<line x1="440" y1="620" x2="520" y2="660" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#aj)"/>
+
+<g onclick="sd('j_push')" style="cursor:pointer">
+  <rect x="40" y="660" width="240" height="76" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#712B13" x="160" y="682" text-anchor="middle" dominant-baseline="central">Pushing finish</text>
+  <text font-size="12" fill="#993C1D" x="160" y="700" text-anchor="middle" dominant-baseline="central">Turn to single hip</text>
+  <text font-size="12" fill="#993C1D" x="160" y="718" text-anchor="middle" dominant-baseline="central">Push elbow over hip bone</text>
+</g>
+<g onclick="sd('j_lat')" style="cursor:pointer">
+  <rect x="400" y="660" width="240" height="76" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#712B13" x="520" y="682" text-anchor="middle" dominant-baseline="central">Lat grip finish</text>
+  <text font-size="12" fill="#993C1D" x="520" y="700" text-anchor="middle" dominant-baseline="central">Wrist behind lat muscle</text>
+  <text font-size="12" fill="#993C1D" x="520" y="718" text-anchor="middle" dominant-baseline="central">Lock thumb, raise hip</text>
+</g>
+
+<line x1="160" y1="736" x2="160" y2="770" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="520" y1="736" x2="520" y2="770" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g onclick="sd('j_pushdetail')" style="cursor:pointer">
+  <rect x="40" y="770" width="240" height="62" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#712B13" x="160" y="790" text-anchor="middle" dominant-baseline="central">Knee closes over arm</text>
+  <text font-size="12" fill="#993C1D" x="160" y="810" text-anchor="middle" dominant-baseline="central">Hip bone = fulcrum</text>
+</g>
+<g onclick="sd('j_latdetail')" style="cursor:pointer">
+  <rect x="400" y="770" width="240" height="62" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#712B13" x="520" y="790" text-anchor="middle" dominant-baseline="central">Robs his defenses</text>
+  <text font-size="12" fill="#993C1D" x="520" y="810" text-anchor="middle" dominant-baseline="central">Can't rejoin hands</text>
+</g>
+<text font-size="11" fill="#888780" x="20" y="106">Vol 5</text>
+<text font-size="11" fill="#888780" x="20" y="206">Vol 5</text>
+<text font-size="11" fill="#888780" x="20" y="396">Vol 6</text>
+<text font-size="11" fill="#888780" x="20" y="700">Vol 6</text>
+</svg>
+</div>
+
+<!-- MOUNTED TRIANGLE -->
+<div id="view-tri" style="display:none">
+<svg viewBox="0 0 680 1060" role="img">
+<title>Mounted triangle system</title>
+<desc>Four keys, three rules of risk, and primary entry methods for mounted triangle</desc>
+<defs><marker id="at" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="sd('t_start')" style="cursor:pointer">
+  <rect x="200" y="14" width="280" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#444441" x="340" y="36" text-anchor="middle" dominant-baseline="central">Mounted, ready to attack triangle</text>
+</g>
+<line x1="340" y1="58" x2="340" y2="84" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+
+<g onclick="sd('t_4keys')" style="cursor:pointer">
+  <rect x="80" y="84" width="520" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="106" text-anchor="middle" dominant-baseline="central">4 keys to a strong mounted triangle</text>
+</g>
+
+<line x1="200" y1="128" x2="120" y2="160" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+<line x1="290" y1="128" x2="270" y2="160" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+<line x1="390" y1="128" x2="410" y2="160" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+<line x1="480" y1="128" x2="560" y2="160" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+
+<g onclick="sd('t_k1')" style="cursor:pointer">
+  <rect x="30" y="160" width="170" height="64" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#3C3489" x="115" y="180" text-anchor="middle" dominant-baseline="central">1. Hand assist</text>
+  <text font-size="12" fill="#534AB7" x="115" y="198" text-anchor="middle" dominant-baseline="central">Grab own ankle</text>
+  <text font-size="12" fill="#534AB7" x="115" y="214" text-anchor="middle" dominant-baseline="central">Foot in front of deltoid</text>
+</g>
+<g onclick="sd('t_k2')" style="cursor:pointer">
+  <rect x="210" y="160" width="170" height="64" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#3C3489" x="295" y="180" text-anchor="middle" dominant-baseline="central">2. Forward bias</text>
+  <text font-size="12" fill="#534AB7" x="295" y="198" text-anchor="middle" dominant-baseline="central">Lean forward, not back</text>
+  <text font-size="12" fill="#534AB7" x="295" y="214" text-anchor="middle" dominant-baseline="central">Lifts head + foot</text>
+</g>
+<g onclick="sd('t_k3')" style="cursor:pointer">
+  <rect x="390" y="160" width="170" height="64" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#3C3489" x="475" y="180" text-anchor="middle" dominant-baseline="central">3. Head off mat ×2</text>
+  <text font-size="12" fill="#534AB7" x="475" y="198" text-anchor="middle" dominant-baseline="central">Once to enter</text>
+  <text font-size="12" fill="#534AB7" x="475" y="214" text-anchor="middle" dominant-baseline="central">Once to lock</text>
+</g>
+<g onclick="sd('t_k4')" style="cursor:pointer">
+  <rect x="500" y="240" width="160" height="64" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#3C3489" x="580" y="260" text-anchor="middle" dominant-baseline="central">4. Rules of risk</text>
+  <text font-size="12" fill="#534AB7" x="580" y="278" text-anchor="middle" dominant-baseline="central">3 safe-to-go-down</text>
+  <text font-size="12" fill="#534AB7" x="580" y="294" text-anchor="middle" dominant-baseline="central">conditions</text>
+</g>
+
+<line x1="580" y1="304" x2="580" y2="340" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+<line x1="580" y1="340" x2="240" y2="340" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="120" y1="224" x2="120" y2="340" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="295" y1="224" x2="295" y2="340" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="475" y1="224" x2="475" y2="340" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="340" y1="340" x2="340" y2="366" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+
+<g onclick="sd('t_methods')" style="cursor:pointer">
+  <rect x="180" y="366" width="320" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#444441" x="340" y="388" text-anchor="middle" dominant-baseline="central">Entry methods</text>
+</g>
+
+<line x1="240" y1="410" x2="120" y2="450" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+<line x1="440" y1="410" x2="560" y2="450" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+
+<g onclick="sd('t_pushdown')" style="cursor:pointer">
+  <rect x="20" y="450" width="220" height="80" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="130" y="472" text-anchor="middle" dominant-baseline="central">Push-down stepover</text>
+  <text font-size="12" fill="#0F6E56" x="130" y="490" text-anchor="middle" dominant-baseline="central">Top hand on wrist</text>
+  <text font-size="12" fill="#0F6E56" x="130" y="506" text-anchor="middle" dominant-baseline="central">Stuff to his chest</text>
+  <text font-size="12" fill="#0F6E56" x="130" y="522" text-anchor="middle" dominant-baseline="central">Step over · industry standard</text>
+</g>
+<g onclick="sd('t_pushout')" style="cursor:pointer">
+  <rect x="440" y="450" width="220" height="80" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#085041" x="550" y="472" text-anchor="middle" dominant-baseline="central">Push-out stepover</text>
+  <text font-size="12" fill="#0F6E56" x="550" y="490" text-anchor="middle" dominant-baseline="central">Inside hand position</text>
+  <text font-size="12" fill="#0F6E56" x="550" y="506" text-anchor="middle" dominant-baseline="central">Knee under armpit</text>
+  <text font-size="12" fill="#0F6E56" x="550" y="522" text-anchor="middle" dominant-baseline="central">Push wrist outward</text>
+</g>
+
+<path d="M130 530 L130 564 L340 564" fill="none" stroke="#B4B2A9" stroke-width="0.5"/>
+<path d="M550 530 L550 564 L340 564" fill="none" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="340" y1="564" x2="340" y2="590" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+
+<g onclick="sd('t_kneeslide')" style="cursor:pointer">
+  <rect x="180" y="590" width="320" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#085041" x="340" y="610" text-anchor="middle" dominant-baseline="central">Knee slide method (preferred)</text>
+  <text font-size="12" fill="#0F6E56" x="340" y="628" text-anchor="middle" dominant-baseline="central">Tighter than stepover · pivot knee slide is favorite</text>
+</g>
+<line x1="340" y1="646" x2="340" y2="672" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+
+<g onclick="sd('t_risk')" style="cursor:pointer">
+  <rect x="80" y="672" width="520" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#3C3489" x="340" y="694" text-anchor="middle" dominant-baseline="central">3 rules of risk — when it's safe to commit your back</text>
+</g>
+
+<line x1="200" y1="716" x2="130" y2="750" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+<line x1="340" y1="716" x2="340" y2="750" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+<line x1="480" y1="716" x2="550" y2="750" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+
+<g onclick="sd('t_r1')" style="cursor:pointer">
+  <rect x="20" y="750" width="220" height="76" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#0C447C" x="130" y="772" text-anchor="middle" dominant-baseline="central">Rule 1</text>
+  <text font-size="12" fill="#185FA5" x="130" y="790" text-anchor="middle" dominant-baseline="central">Full figure-4 locked</text>
+  <text font-size="12" fill="#185FA5" x="130" y="806" text-anchor="middle" dominant-baseline="central">Shoelaces in knee pocket</text>
+</g>
+<g onclick="sd('t_r2')" style="cursor:pointer">
+  <rect x="240" y="750" width="200" height="76" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#0C447C" x="340" y="772" text-anchor="middle" dominant-baseline="central">Rule 2</text>
+  <text font-size="12" fill="#185FA5" x="340" y="790" text-anchor="middle" dominant-baseline="central">Hand assist in place</text>
+  <text font-size="12" fill="#185FA5" x="340" y="806" text-anchor="middle" dominant-baseline="central">Closed wedge guaranteed</text>
+</g>
+<g onclick="sd('t_r3')" style="cursor:pointer">
+  <rect x="440" y="750" width="220" height="76" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text font-size="13" font-weight="500" fill="#0C447C" x="550" y="772" text-anchor="middle" dominant-baseline="central">Rule 3</text>
+  <text font-size="12" fill="#185FA5" x="550" y="790" text-anchor="middle" dominant-baseline="central">Lat grip on arm</text>
+  <text font-size="12" fill="#185FA5" x="550" y="806" text-anchor="middle" dominant-baseline="central">Triangle ↔ 3/4 juji</text>
+</g>
+
+<path d="M130 826 L130 860 L340 860" fill="none" stroke="#B4B2A9" stroke-width="0.5"/>
+<path d="M340 826 L340 860" fill="none" stroke="#B4B2A9" stroke-width="0.5"/>
+<path d="M550 826 L550 860 L340 860" fill="none" stroke="#B4B2A9" stroke-width="0.5"/>
+<line x1="340" y1="860" x2="340" y2="886" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+
+<g onclick="sd('t_lock')" style="cursor:pointer">
+  <rect x="180" y="886" width="320" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text font-size="14" font-weight="500" fill="#712B13" x="340" y="906" text-anchor="middle" dominant-baseline="central">Lock the figure-4 and finish</text>
+  <text font-size="12" fill="#993C1D" x="340" y="924" text-anchor="middle" dominant-baseline="central">Forehead to mat, back-heel both legs, strangle</text>
+</g>
+<line x1="340" y1="942" x2="340" y2="968" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#at)"/>
+
+<g onclick="sd('t_topbottom')" style="cursor:pointer">
+  <rect x="180" y="968" width="320" height="44" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text font-size="14" font-weight="500" fill="#712B13" x="340" y="990" text-anchor="middle" dominant-baseline="central">Roll forward if needed — never backward</text>
+</g>
+<text font-size="11" fill="#888780" x="20" y="106">Vol 7</text>
+<text font-size="11" fill="#888780" x="20" y="388">Vol 7</text>
+<text font-size="11" fill="#888780" x="20" y="694">Vol 7</text>
+<text font-size="11" fill="#888780" x="20" y="990">Vol 7</text>
+</svg>
+</div>
+
+<div class="detail" id="detail-box">
+  <div style="color:var(--color-text-secondary)">Click any node to see details from the transcripts.</div>
+</div>
+
+<script>
+const D = {
+  // KATA GATAME
+  k_start:{t:"Single chest wrap established",v:"Vol 3 → Vol 4",d:"Starting position for all kata gatame attempts. You have one of opponent's arms trapped chest-to-chest, but their hand is still behind your back. From here, the shoulder shrug converts the position into something workable. Kata gatame is always Danaher's first submission choice — least risk, highest percentage, body stays connected throughout."},
+  k_shrug:{t:"Shoulder shrug",v:"Vol 4 Ch 2",d:"Critical first move. Do NOT drive forward — that won't clear the arm. Instead: look to the OTHER side of his head, push toward the center line, drop your shoulder to the floor. This shrugs his hand from behind your back to in front of your face. Without this, no kata gatame is possible from chest wrap."},
+  k_high:{t:"Slide feet to high mount",v:"Vol 4 Ch 2",d:"After shrugging, slide feet up high on the body. This compresses opponent's breathing — they can't elbow escape effectively when oxygen is restricted. Even expert opponents make mistakes when they can't breathe. Critical: this is a temporary migration UP the body — you'll migrate back DOWN to finish."},
+  k_jaw:{t:"Trap tricep with jaw",v:"Vol 4 Ch 2",d:"Look BACK (not forward) to hook your jaw outside his tricep. Critical — if you look forward, you'll never trap the arm. Only after jaw is locked do you release your arms to thumb-post and lock the position. The jaw holds his arm in place while you set up the strangle."},
+  k_lift:{t:"Lift opponent's head off the mat",v:"Vol 4 Ch 4",d:"The single most important universal principle of the entire 4-submission system. When head is on mat, you cannot get optimal elbow position. Lifting creates space to shoot your elbow behind his neck. This applies to ALL 4 submissions, not just kata gatame."},
+  k_pump:{t:"Pump flex method",v:"Vol 4 Ch 4",d:"After lifting head: hold his shoulder, push with other hand on the floor, flex bicep to walk elbow further around. The pumping action progressively gets the elbow deeper behind the neck. Allows you to get your hand above his shoulder — critical, because if hands lock UNDER the shoulder, the strangle is always weak."},
+  k_pull:{t:"Elbow pull method",v:"Vol 4 Ch 4",d:"Alternative to pump flex. After lifting head, physically grab your own elbow with your other hand and pull it into position. Same goal — get the elbow behind the spine. Easier than pump flex for some body types. Both methods achieve identical end position."},
+  k_3keys:{t:"Three mechanical positions",v:"Vol 4 Ch 3",d:"The three non-negotiable positions for a working kata gatame: (1) Your elbow as far behind his spine as possible — the deeper, the tighter. (2) Your thumb high on top of his shoulder, near the front deltoid — not falling behind. (3) Your forehead glued temple-to-temple with his. Miss any of these and the strangle weakens."},
+  k_shoulder:{t:"Shoulder below chin",v:"Vol 4 Ch 3",d:"The MOST common kata gatame mistake: shoulder on cheek instead of under chin. Your shoulder must be BELOW the chin to make contact with the near carotid artery. Trick: aim your right shoulder INTO his right armpit. You can't actually get there, but trying naturally drops your shoulder below his jaw line."},
+  k_dismount:{t:"Dismount when forehead is on mat",v:"Vol 4 Ch 7",d:"The cue for safe dismount: your forehead must be on the mat. Why? Forehead pressure locks his elbow in place — he can't bridge or pull arm free. Without forehead on mat, bridging easily frees his elbow. Dismount: knee wedges at his hip (stops walking escape), other leg sprawls flat to bring weight down."},
+  k_direction:{t:"Rotational finish",v:"Vol 4 Ch 3",d:"Kata gatame is a ROTATIONAL strangle, not a linear push. Drive in the direction his elbow is pointing — like you're a clock hand turning around his neck. Pull YOUR right elbow up toward your sternum (the strangle power). Most people drive linearly down the centerline — that's a neck crank, not a strangle."},
+  k_defense:{t:"Bulldoze through 4 defenses",v:"Vol 4 Ch 5",d:"Four standard defenses, all defeated by proper mechanics: (1) hand on side of head — drive crown of head under his hand and rotate. (2) locked hands — plant head, raise elbow. (3) locked hands + bridge — drive across him to keep elbow under crown of head. (4) elbow above crown of head — get out to side first, drive across."},
+  k_fail:{t:"Recovery from failed kata gatame",v:"Vol 4 Ch 6",d:"Failures happen — recognize early signs: squeeze without effect, or elbow slipping over crown. Never abandon to a weird side position. Instead: tripod up, drive knee in front of his hip, walk across his body, slap back into mount. You lost the kata gatame but kept the mount — restart the entire attack sequence."},
+
+  // REAR STRANGLE
+  r_start:{t:"Single chest wrap attempted",v:"Vol 5 Ch 1",d:"You've gone through steps 1-3 of the 4×4 system and reached the single chest wrap. The natural next move is to shrug the arm forward into kata gatame position. But sometimes that shrug just doesn't work — opponent is too strong or arms too long. This is when the rear strangle path opens up."},
+  r_fail:{t:"Shrug fails — switch systems",v:"Vol 5 Ch 1",d:"When you've tried your best to shrug the arm forward and the opponent's arm is too long or they're flexing too hard, you don't force it. The system has a built-in alternative: convert the chest wrap into a far trap underhook. This redirects the entire attack toward rear mount instead of kata gatame."},
+  r_grip:{t:"Grip far trapezius / neck muscle",v:"Vol 5 Ch 1",d:"Remove the chest wrap and hook your training partner at the far trapezius and neck muscle, deflexing outward. You now have an underhook plus a grip anchored to his head. This combination is the foundation of the entire rear mount transition — your hand functions as a steering wheel for his upper body."},
+  r_roll:{t:"Roll across his tricep",v:"Vol 5 Ch 1",d:"With the far trap grip established, roll across his tricep. Your chest ends up behind his tricep. This puts mechanical pressure on him and forces partial turning of his back. If he tries to turn back into you from here, it's very difficult — the leverage is already against him."},
+  r_wrist:{t:"Seize wrist, pull forward",v:"Vol 5 Ch 1",d:"Lock onto his wrist and pull everything forward. Your chest seals against the back of his tricep. Now when he tries to bring his arm back to escape, it's well-nigh impossible. The combination of head control + wrist control + chest behind tricep creates a near-irreversible commitment to his back."},
+  r_bridge:{t:"Opponent bridges away",v:"Vol 5 Ch 1",d:"The only realistic escape attempt remaining: opponent bridges over their right shoulder, hoping to bring elbow back and recover. This isn't actually a problem — it's the move that completes the transition for you. Their bridge gives you the angle and momentum to fully take the back."},
+  r_stay:{t:"Opponent stays flat",v:"Vol 5 Ch 1",d:"Less common but possible — opponent doesn't bridge, just tries to hold position. Maintain the chest-behind-tricep pressure. Keep advancing the head control and wrist control. Eventually they must move, and any movement opens the path to the claw grip."},
+  r_claw:{t:"Take claw grip on neck",v:"Vol 5 Ch 1",d:"As he commits to the bridge/turn, slip your chest behind him and take a claw grip on his neck. Critical: head DOWN, not up. If your head is up while he gets his back to the floor, he can recover. Punch your foot up to his hip and fill the space with your knees to prevent him getting his back flat."},
+  r_lock:{t:"Lock figure-4 / body triangle",v:"Vol 5 Ch 1",d:"Once behind, pull down toward the mat and lock figure-4 with the legs (body triangle). If opponent is thick through the waist or your legs are short, go foot-to-foot instead. Conventional rear mount with seatbelt also works. The exact lower body lock depends on body proportions."},
+  r_finish:{t:"Rear strangle finish",v:"Vol 5",d:"From rear mount, finish with rear-naked strangle. The 'lifting the head' principle applies here too — lift his head off the floor during the seatbelt-to-strangle transition for a stronger grip and easier finish."},
+
+  // JUJI GATAME
+  j_start:{t:"Double arm wrap from mount",v:"Vol 5 Ch 8",d:"The double arm wrap is the BEST setup for mounted juji gatame. Better than single chest wrap because it puts both opponent's arms in a controlled pocket. From here you can attack either arm with juji, but typically focus on the arm with worse defensive position."},
+  j_lift:{t:"Lift the head first",v:"Vol 5 Ch 9",d:"Universal entry key — same as kata gatame. Lifting the head exposes the arm and gives you the room to swing your leg over to set up the armbar. When head is on the mat, you can only get duct-tape juji gatames — never proper position."},
+  j_rule:{t:"Right-right-right rule",v:"Vol 5 Ch 11",d:"The single most important positional rule for juji gatame. For a right-side armbar: his RIGHT elbow must be over your RIGHT hip, AND his right hand must be over your right shoulder. If either alignment is off, the lock will fail. The rule is symmetric — left-left-left for left-side armbars."},
+  j_configs:{t:"Multiple juji configurations",v:"Vol 6 Ch 3",d:"Danaher's central juji insight: it's not ONE armbar, it's a system of related armbars. Your opponent will defend in different ways — flex hard, turn out, sit up, run away. Each defense opens a different juji variation. Having only one juji = blue belt level. Multiple jujis = high-level competitor."},
+  j_open:{t:"Open juji",v:"Vol 6 Ch 3",d:"The standard juji gatame from day one of training. Feet open around his secondary arm. Good for most beginners and mid-skill opponents. The 'default' starting point of the juji system — when in doubt, start here."},
+  j_closed:{t:"Closed juji",v:"Vol 6 Ch 3",d:"Crucial variation. Draw his secondary arm in, lock your feet around it (like inside a closed guard). Knees FLARED (not squeezed — squeezing loses hip control). Feet pull back. Use when opponent goes to hit a turning escape — closed legs hold him in place. Also strong for hand-grip control and breaking pressure with the legs."},
+  j_force:{t:"Standard pull finish",v:"Vol 6 Ch 1",d:"Classic juji finish — grab opponent's wrist and pull it to your shoulder, elbow over the hip fulcrum. Works at most levels. But against tough, fire-and-brimstone opponents who refuse to tap, you'll run out of pulling range when his wrist hits your chest. Time to switch to magnum finishes."},
+  j_magnum:{t:"Magnum finishes",v:"Vol 6 Ch 1-2",d:"For opponents willing to take damage rather than tap. Two primary magnum methods: pushing finish and lat grip. Both amplify breaking power significantly beyond standard pulls. Use when standard finish produces 'pop' sounds but no tap, or when you can feel they're willing to suffer arm damage to escape."},
+  j_push:{t:"Pushing finish",v:"Vol 6 Ch 1",d:"Turn onto a single hip (easy — opponent usually rotates out anyway, follow them). Switch your grip from pulling to pushing. Close your knee down over his arm. Push his wrist over the fork of your hip. Pushing generates far more leverage than pulling because your own chest doesn't get in the way."},
+  j_lat:{t:"Lat grip finish",v:"Vol 6 Ch 2",d:"Take his hand BEHIND your back, locked into your lat muscle. Don't try to move his hand — move yourself in front of his fist. Pull his pinky to your shoulder, then lock his triceps behind your tricep. Hand locks to own side. Robs all his defenses — can't rejoin hands, can't rotate out."},
+  j_pushdetail:{t:"Knee closes over arm",v:"Vol 6 Ch 1",d:"After turning to single hip and getting the push position, close your knee down over his arm. As he tries to work out, push his wrist further over the fork of the hip. The hip BONE (not soft inner thigh) is the fulcrum — that's why hardness matters. Inner thighs are too soft to break against."},
+  j_latdetail:{t:"Robs his defenses",v:"Vol 6 Ch 2",d:"The lat grip is genuinely brutal because it removes both standard juji defenses simultaneously: opponent can't rejoin his hands (they're separated by your body) and can't rotate out (his hand is trapped behind your back). Lean into it for the break — minimal effort, maximum effect."},
+
+  // MOUNTED TRIANGLE
+  t_start:{t:"Mounted, ready to attack triangle",v:"Vol 7",d:"Hardest sell of the 4 submissions because you're trading dominant top position for potentially landing on bottom. Danaher's argument: long-term, your legs fighting his hands is the ultimate leverage advantage. The 4 keys and 3 rules of risk are designed to make this commitment safe."},
+  t_4keys:{t:"4 keys to a strong mounted triangle",v:"Vol 7 Ch 1-4",d:"All four must be present for confident attacks: hand assist, forward bias, head off mat twice, rules of risk. Missing any of these makes the move unreliable. This is the entire pre-game checklist before committing to any mounted triangle attempt."},
+  t_k1:{t:"Hand assist",v:"Vol 7 Ch 1",d:"Always lift his head and grab your own ankle when stepping over. Your hand replaces what will later become your leg — closes the wedge around his head and arm. Without it, he yanks his elbow free and your triangle is gone. With it, the wedge is closed even before you lock the figure-4. Also pulls your foot to the correct position (in FRONT of the deltoid, not over the shoulder blades)."},
+  t_k2:{t:"Forward bias",v:"Vol 7 Ch 2",d:"Never lean back when locking. Forward bias does two things: gets his head off the mat AND gets your foot off the mat — both critical for locking. If his head is on the mat and your foot is on the mat, locking the triangle is a nightmare. Lean forward, both come up naturally, locking becomes effortless."},
+  t_k3:{t:"Get opponent's head off the mat — twice",v:"Vol 7 Ch 3",d:"Two lifts required: first to enter (creates space to slip leg behind neck), second to lock (exposes your own foot to figure-4). Same universal principle as kata/juji/rear — head on mat = nothing works. Head off mat = everything works. Critical insight."},
+  t_k4:{t:"Rules of risk",v:"Vol 7 Ch 4",d:"Three specific positional conditions under which it's safe to commit your back to the ground. Without one of these conditions present, do NOT commit. With any one present, you can fearlessly go to your back because top-vs-bottom position becomes irrelevant — you'll finish either way."},
+  t_methods:{t:"Entry methods",v:"Vol 7 Ch 5-8",d:"Two main families: stepover methods (push-down and push-out variants — industry standard, fastest) and knee slide methods (Danaher's preferred — tighter in practice). Choose based on which family fits your body type and which opening the opponent gives you."},
+  t_pushdown:{t:"Push-down stepover",v:"Vol 7 Ch 5",d:"The most well-known and commonly used method. Take top hand position on opponent's wrist, stuff it down to his chest. Come up to high hip position. Throw leg over while pulling up on head. Lock figure-4. Used by virtually everyone teaching mounted triangle — solid foundational method."},
+  t_pushout:{t:"Push-out stepover",v:"Vol 7 Ch 6",d:"Take INSIDE hand position (between his head and arm). Lift opponent's elbow, push wrist OUTWARD instead of down. Works against weak rotator cuff muscles. Lift head, slide leg over the gap between his head and arm. Elbow goes behind his head before stepping over — without this, he bridges and your hand assist fails."},
+  t_kneeslide:{t:"Knee slide method (preferred)",v:"Vol 7 Ch 7",d:"Danaher's personal preference. Inherently tighter in practice than stepover methods. The pivot knee slide method is his favorite. Trade-off: slower setup, but resulting triangle is more secure with less risk of opponent escaping during the entry sequence."},
+  t_risk:{t:"3 rules of risk",v:"Vol 7 Ch 4",d:"The framework that makes mounted triangle psychologically safe to commit to. Each rule defines a specific position-state where falling to your back is fine. Outside these conditions, don't commit to your back. Inside any one of them, top-vs-bottom doesn't matter — finish is inevitable either way."},
+  t_r1:{t:"Rule 1: Full figure-4 locked",v:"Vol 7 Ch 4",d:"Highest confidence level. Shoelaces in the pocket of the knee, legs back-heeling strongly. If this is locked, you don't care if your back touches the ground — finish is guaranteed. Most opponents tap before you even need to roll. Standard for high-level competition."},
+  t_r2:{t:"Rule 2: Hand assist in place",v:"Vol 7 Ch 4",d:"Almost as good as Rule 1. You don't have figure-4 locked, but you're holding your own ankle. Closed wedge around his head and arm. If he takes you over, your hand keeps the structure intact long enough to lock the figure-4 from the bottom. High confidence to commit."},
+  t_r3:{t:"Rule 3: Lat grip on arm",v:"Vol 7 Ch 4",d:"No figure-4, no hand assist, maybe even head still on mat — but his arm is trapped behind your lat. Creates a perfect dilemma: if he stacks you, he gives you the triangle; if he yanks out, he gives you a lat 3/4 juji gatame. Either response feeds you a submission. Commit to back fearlessly."},
+  t_lock:{t:"Lock the figure-4 and finish",v:"Vol 7 Ch 5",d:"Once committed: forehead to mat (locks the structure, prevents bridge escape), back-heel both legs (tightens the triangle), strangle. If you're balanced over his chest and head with forward bias, the finish is mechanical — minimal effort required."},
+  t_topbottom:{t:"Roll forward if needed — never backward",v:"Vol 7 Ch 5",d:"If opponent is so explosive he rolls you, ALWAYS roll forward — never backward. Forward roll keeps the figure-4 intact and finishes you in side-control style top position. Backward roll loses everything. The forward bias from key #2 makes this natural — backward roll only happens if you violated forward bias."},
+};
+
+function sd(id){
+  const d=D[id];if(!d)return;
+  document.getElementById('detail-box').innerHTML=`<div class="dt">${d.t} <span class="dv">${d.v}</span></div><div>${d.d}</div>`;
+}
+
+function showView(v,btn){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  ['kata','rear','juji','tri'].forEach(id=>{
+    document.getElementById('view-'+id).style.display=id===v?'block':'none';
+  });
+  document.getElementById('detail-box').innerHTML='<div style="color:var(--color-text-secondary)">Click any node to see details from the transcripts.</div>';
+}
+</script>

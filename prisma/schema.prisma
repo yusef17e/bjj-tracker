@@ -1,0 +1,81 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Partner {
+  id             String   @id @default(uuid())
+  name           String
+  belt           String?
+  size           String?  // lighter, similar, heavier
+  physicalStyle  String?  // flexible, strong, explosive, defensive
+  guardRetention String?  // weak, moderate, strong
+  createdAt      DateTime @default(now())
+  rounds         Round[]
+}
+
+model Session {
+  id             String   @id @default(uuid())
+  date           DateTime @default(now())
+  classType      String   // Gi, No-Gi, Open Mat
+  trainingFocus  String?  // Mount, Half Guard Top, Leg Locks, etc.
+  notes          String?
+  createdAt      DateTime @default(now())
+  rounds         Round[]
+}
+
+model Goal {
+  id         String    @id @default(uuid())
+  title      String
+  targetDate DateTime?
+  isActive   Boolean   @default(true)
+  createdAt  DateTime  @default(now())
+  problems   Problem[]
+}
+
+model Problem {
+  id            String   @id @default(uuid())
+  goalId        String
+  goal          Goal     @relation(fields: [goalId], references: [id], onDelete: Cascade)
+  description   String
+  trainingFocus String?
+  priority      Int      @default(2) // 1=high 2=medium 3=low
+  createdAt     DateTime @default(now())
+  kpis          Kpi[]
+}
+
+model Kpi {
+  id           String   @id @default(uuid())
+  problemId    String
+  problem      Problem  @relation(fields: [problemId], references: [id], onDelete: Cascade)
+  label        String
+  metric       String   // sessions_on_focus | win_rate | win_rate_on_focus | guard_passes | sweeps | submissions_for | submissions_against | custom
+  target       Float
+  period       String   // monthly | per_10_rounds
+  customActual Float?
+  createdAt    DateTime @default(now())
+}
+
+model Round {
+  id                   String   @id @default(uuid())
+  sessionId            String
+  session              Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  partnerId            String
+  partner              Partner  @relation(fields: [partnerId], references: [id], onDelete: Cascade)
+  result               String   // Win, Loss, Draw
+  submissionFor        String?
+  submissionAgainst    String?
+  duration             Int?     // In minutes
+  positionPinned       String?  // Position you were pinned in most (e.g. Side Control, Mount)
+  positionBeforeSubbed String?  // Position you were in when you got subbed (if loss)
+  guardPasses          Int?     // Passes from top (you passed their guard)
+  timesPassed          Int?     // From bottom: times your guard was passed
+  sweeps               Int?     // Sweeps from bottom
+  passFromTop          String?  // Main pass used from top (e.g. Knee Cut)
+  guardPassedBottom    String?  // Which guard of yours got passed from bottom (e.g. Closed Guard)
+  sweepMain            String?  // Main sweep you hit (e.g. Scissor Sweep)
+}

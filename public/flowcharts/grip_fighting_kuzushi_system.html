@@ -1,0 +1,583 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.tabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px}
+.tab{padding:5px 12px;border-radius:8px;border:0.5px solid var(--color-border-secondary);background:var(--color-background-secondary);color:var(--color-text-secondary);font-size:12px;cursor:pointer;transition:all .15s;font-family:inherit}
+.tab.active{background:var(--color-background-tertiary);color:var(--color-text-primary);border-color:var(--color-border-primary);font-weight:500}
+.leg{display:flex;gap:12px;font-size:11px;color:var(--color-text-secondary);margin-bottom:10px;flex-wrap:wrap}
+.ld{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.dp{border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:12px 16px;margin-top:10px;background:var(--color-background-secondary);font-size:13px;color:var(--color-text-secondary);line-height:1.65;min-height:52px}
+.dp .dt{font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:3px}
+.dp .dv{font-size:11px;color:var(--color-text-secondary)}
+svg{display:block;width:100%}
+</style>
+
+<div class="tabs">
+  <button class="tab active" onclick="sv('concepts',this)">Concepts</button>
+  <button class="tab" onclick="sv('grips',this)">Grip sequences</button>
+  <button class="tab" onclick="sv('kuzushi',this)">Kuzushi — seated</button>
+  <button class="tab" onclick="sv('closed',this)">Closed guard</button>
+  <button class="tab" onclick="sv('training',this)">Training methods</button>
+</div>
+
+<div class="leg">
+  <span><span class="ld" style="background:#888780"></span>Concept / phase</span>
+  <span><span class="ld" style="background:#534AB7"></span>Principle</span>
+  <span><span class="ld" style="background:#0F6E56"></span>Technique</span>
+  <span><span class="ld" style="background:#185FA5"></span>Opponent reaction</span>
+  <span><span class="ld" style="background:#993C1D"></span>Outcome / score</span>
+</div>
+
+<div id="v-concepts">
+<svg viewBox="0 0 680 740" role="img">
+<title>Grip fighting and kuzushi — core concepts</title>
+<desc>Conceptual framework: alignment theory, engagement phase, range battles, leverage</desc>
+<defs><marker id="a0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node" onclick="sd('c_why')" style="cursor:pointer">
+  <rect x="120" y="14" width="440" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central" fill="#444441">Why grip fighting matters</text>
+  <text class="ts" x="340" y="54" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Without it you're defensive from the start — not playing guard</text>
+</g>
+<line x1="340" y1="70" x2="340" y2="96" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+
+<g class="node" onclick="sd('c_engage')" style="cursor:pointer">
+  <rect x="80" y="96" width="520" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="116" text-anchor="middle" dominant-baseline="central" fill="#3C3489">The engagement phase</text>
+  <text class="ts" x="340" y="136" text-anchor="middle" dominant-baseline="central" fill="#534AB7">First contact before grips — winner dictates offense or defense</text>
+</g>
+<line x1="340" y1="152" x2="340" y2="184" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+
+<g class="node" onclick="sd('c_align')" style="cursor:pointer">
+  <rect x="80" y="184" width="520" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="204" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Alignment theory</text>
+  <text class="ts" x="340" y="224" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Read opponent's vulnerability — kuzushi breaks alignment to create it</text>
+</g>
+<line x1="340" y1="240" x2="340" y2="272" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g class="node" onclick="sd('c_pillars')" style="cursor:pointer">
+  <rect x="160" y="272" width="360" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="294" text-anchor="middle" dominant-baseline="central" fill="#444441">Three core principles</text>
+</g>
+
+<line x1="220" y1="316" x2="120" y2="356" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+<line x1="340" y1="316" x2="340" y2="356" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+<line x1="460" y1="316" x2="560" y2="356" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+
+<g class="node" onclick="sd('c_range')" style="cursor:pointer">
+  <rect x="20" y="356" width="200" height="68" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="120" y="376" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Range battles</text>
+  <text class="ts" x="120" y="396" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Winner advances · loser retreats</text>
+  <text class="ts" x="120" y="412" text-anchor="middle" dominant-baseline="central" fill="#534AB7">re-engage on own terms</text>
+</g>
+<g class="node" onclick="sd('c_lever')" style="cursor:pointer">
+  <rect x="240" y="356" width="200" height="68" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="376" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Lever access</text>
+  <text class="ts" x="340" y="396" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Collar accesses spine</text>
+  <text class="ts" x="340" y="412" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Wrist accesses elbow</text>
+</g>
+<g class="node" onclick="sd('c_cog')" style="cursor:pointer">
+  <rect x="460" y="356" width="200" height="68" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="560" y="376" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Centre of gravity</text>
+  <text class="ts" x="560" y="396" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Outside base = vulnerable</text>
+  <text class="ts" x="560" y="412" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Kuzushi moves it there</text>
+</g>
+
+<path d="M120 424 L120 460 L340 460" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M340 424 L340 460" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M560 424 L560 460 L340 460" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="460" x2="340" y2="486" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+
+<g class="node" onclick="sd('c_kuz')" style="cursor:pointer">
+  <rect x="80" y="486" width="520" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="506" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Kuzushi — two functions</text>
+  <text class="ts" x="340" y="526" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Probing attack (knocks over bad opponents) · draws reaction from good ones</text>
+</g>
+
+<line x1="250" y1="542" x2="160" y2="582" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+<line x1="430" y1="542" x2="520" y2="582" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+
+<g class="node" onclick="sd('c_sweep')" style="cursor:pointer">
+  <rect x="30" y="582" width="260" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="160" y="602" text-anchor="middle" dominant-baseline="central" fill="#712B13">Direct sweep / score</text>
+  <text class="ts" x="160" y="620" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Against lower-skill opponents</text>
+</g>
+<g class="node" onclick="sd('c_react')" style="cursor:pointer">
+  <rect x="390" y="582" width="260" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="520" y="602" text-anchor="middle" dominant-baseline="central" fill="#085041">Reaction → follow-up</text>
+  <text class="ts" x="520" y="620" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Against skilled opponents</text>
+</g>
+
+<path d="M160 638 L160 672 L340 672" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M520 638 L520 672 L340 672" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="672" x2="340" y2="696" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+
+<g class="node" onclick="sd('c_pull')" style="cursor:pointer">
+  <rect x="120" y="696" width="440" height="36" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="340" y="714" text-anchor="middle" dominant-baseline="central" fill="#085041">Pull forward + push/side — alternate directions</text>
+</g>
+<text class="ts" x="20" y="40" fill="#888780">Vol 1</text>
+<text class="ts" x="20" y="120" fill="#888780">Vol 4</text>
+<text class="ts" x="20" y="390" fill="#888780">Vol 1-2</text>
+<text class="ts" x="20" y="510" fill="#888780">Vol 3</text>
+</svg>
+</div>
+
+<div id="v-grips" style="display:none">
+<svg viewBox="0 0 680 820" role="img">
+<title>Grip fighting sequences — gi and no-gi</title>
+<desc>Optimal grips, two-on-one sequences, breaking grips, and defensive grip fighting</desc>
+<defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node" onclick="sd('g_start')" style="cursor:pointer">
+  <rect x="160" y="14" width="360" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="36" text-anchor="middle" dominant-baseline="central" fill="#444441">Initial contact — no grips yet</text>
+</g>
+<line x1="340" y1="58" x2="340" y2="84" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+
+<g class="node" onclick="sd('g_optimal')" style="cursor:pointer">
+  <rect x="80" y="84" width="520" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="104" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Optimal grip hierarchy</text>
+  <text class="ts" x="340" y="124" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Two-on-one best · wrist next · collar tie last · never individual fingers</text>
+</g>
+
+<line x1="220" y1="140" x2="130" y2="180" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+<line x1="340" y1="140" x2="340" y2="180" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+<line x1="460" y1="140" x2="550" y2="180" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+
+<g class="node" onclick="sd('g_2on1')" style="cursor:pointer">
+  <rect x="20" y="180" width="210" height="68" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="125" y="200" text-anchor="middle" dominant-baseline="central" fill="#085041">Two-on-one</text>
+  <text class="ts" x="125" y="218" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Angle + catch wrist</text>
+  <text class="ts" x="125" y="234" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">or re-grip after they angle</text>
+</g>
+<g class="node" onclick="sd('g_wrist')" style="cursor:pointer">
+  <rect x="240" y="180" width="200" height="68" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="340" y="200" text-anchor="middle" dominant-baseline="central" fill="#085041">Wrist control</text>
+  <text class="ts" x="340" y="218" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Gap = thumb-forefinger</text>
+  <text class="ts" x="340" y="234" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Rotate against the thumb</text>
+</g>
+<g class="node" onclick="sd('g_collar')" style="cursor:pointer">
+  <rect x="450" y="180" width="210" height="68" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="555" y="200" text-anchor="middle" dominant-baseline="central" fill="#085041">Collar tie counter</text>
+  <text class="ts" x="555" y="218" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Intercept reach</text>
+  <text class="ts" x="555" y="234" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Y-block / C-clamp tricep</text>
+</g>
+
+<line x1="125" y1="248" x2="125" y2="288" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+<line x1="340" y1="248" x2="340" y2="288" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+<line x1="555" y1="248" x2="555" y2="288" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+
+<g class="node" onclick="sd('g_2on1seq')" style="cursor:pointer">
+  <rect x="20" y="288" width="210" height="80" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="125" y="308" text-anchor="middle" dominant-baseline="central" fill="#085041">2-on-1 sequence</text>
+  <text class="ts" x="125" y="326" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Pull down · angle out</text>
+  <text class="ts" x="125" y="344" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Attack back / collar drag</text>
+  <text class="ts" x="125" y="360" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">or leg attack entry</text>
+</g>
+<g class="node" onclick="sd('g_break')" style="cursor:pointer">
+  <rect x="240" y="288" width="200" height="80" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="340" y="308" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Breaking grips</text>
+  <text class="ts" x="340" y="326" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Circle vs thumb — not main focus</text>
+  <text class="ts" x="340" y="344" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Block + circle or open range</text>
+  <text class="ts" x="340" y="360" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Re-engage on own terms</text>
+</g>
+<g class="node" onclick="sd('g_collarseq')" style="cursor:pointer">
+  <rect x="450" y="288" width="210" height="80" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="555" y="308" text-anchor="middle" dominant-baseline="central" fill="#085041">Collar tie defence</text>
+  <text class="ts" x="555" y="326" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Immediately re-grip 2-on-1</text>
+  <text class="ts" x="555" y="344" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">or Y-block if elbow covered</text>
+  <text class="ts" x="555" y="360" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Block wrist to follow</text>
+</g>
+
+<path d="M125 368 L125 414 L340 414" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M340 368 L340 414" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M555 368 L555 414 L340 414" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="414" x2="340" y2="440" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+
+<g class="node" onclick="sd('g_gi')" style="cursor:pointer">
+  <rect x="80" y="440" width="520" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="462" text-anchor="middle" dominant-baseline="central" fill="#444441">Gi-specific sequences</text>
+</g>
+
+<line x1="220" y1="484" x2="130" y2="524" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+<line x1="460" y1="484" x2="550" y2="524" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+
+<g class="node" onclick="sd('g_collar_drag')" style="cursor:pointer">
+  <rect x="20" y="524" width="260" height="80" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="150" y="544" text-anchor="middle" dominant-baseline="central" fill="#085041">Collar drag</text>
+  <text class="ts" x="150" y="562" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Pants grip → take cross collar</text>
+  <text class="ts" x="150" y="580" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Shift hips · drag forwards</text>
+  <text class="ts" x="150" y="596" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Unanswered = easy score</text>
+</g>
+<g class="node" onclick="sd('g_pants')" style="cursor:pointer">
+  <rect x="400" y="524" width="260" height="80" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="530" y="544" text-anchor="middle" dominant-baseline="central" fill="#085041">Pants / sleeve control</text>
+  <text class="ts" x="530" y="562" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">All kuzushis amplified by gi</text>
+  <text class="ts" x="530" y="580" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Collar drag after every kuzushi</text>
+  <text class="ts" x="530" y="596" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Forward–back alternation</text>
+</g>
+
+<path d="M150 604 L150 644 L340 644" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M530 604 L530 644 L340 644" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="644" x2="340" y2="670" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+
+<g class="node" onclick="sd('g_outcome')" style="cursor:pointer">
+  <rect x="120" y="670" width="440" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text class="th" x="340" y="690" text-anchor="middle" dominant-baseline="central" fill="#712B13">Win the hand fight → play guard offensively</text>
+  <text class="ts" x="340" y="710" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Lose → guard retention mode until re-established</text>
+</g>
+<text class="ts" x="20" y="40" fill="#888780">Vol 1-2</text>
+<text class="ts" x="20" y="210" fill="#888780">Vol 1</text>
+<text class="ts" x="20" y="320" fill="#888780">Vol 2</text>
+<text class="ts" x="20" y="560" fill="#888780">Vol 2</text>
+</svg>
+</div>
+
+<div id="v-kuzushi" style="display:none">
+<svg viewBox="0 0 680 900" role="img">
+<title>Kuzushi from seated and recumbent guard</title>
+<desc>Off-balancing sequences from butterfly and open guard against kneeling and standing passers</desc>
+<defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node" onclick="sd('k_entry')" style="cursor:pointer">
+  <rect x="120" y="14" width="440" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central" fill="#444441">Seated / butterfly guard</text>
+  <text class="ts" x="340" y="54" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Kneeling or standing passer in front</text>
+</g>
+
+<line x1="260" y1="70" x2="160" y2="106" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="420" y1="70" x2="520" y2="106" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+
+<g class="node" onclick="sd('k_square')" style="cursor:pointer">
+  <rect x="20" y="106" width="280" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="160" y="126" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Square stance</text>
+  <text class="ts" x="160" y="146" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Both heels accessible directly</text>
+</g>
+<g class="node" onclick="sd('k_stagger')" style="cursor:pointer">
+  <rect x="380" y="106" width="280" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="520" y="126" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Staggered stance</text>
+  <text class="ts" x="520" y="146" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Must cut angle to reach back heel</text>
+</g>
+
+<line x1="160" y1="162" x2="160" y2="198" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="520" y1="162" x2="520" y2="198" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+
+<g class="node" onclick="sd('k_idiot')" style="cursor:pointer">
+  <rect x="20" y="198" width="280" height="68" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+  <text class="th" x="160" y="218" text-anchor="middle" dominant-baseline="central" fill="#085041">Idiot sweep</text>
+  <text class="ts" x="160" y="238" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Push knees · CoG outside base</text>
+  <text class="ts" x="160" y="254" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Instant score if uncountered</text>
+</g>
+<g class="node" onclick="sd('k_angle')" style="cursor:pointer">
+  <rect x="380" y="198" width="280" height="68" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="520" y="218" text-anchor="middle" dominant-baseline="central" fill="#085041">Cut angle first</text>
+  <text class="ts" x="520" y="238" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Then heel sweep or knee tap</text>
+  <text class="ts" x="520" y="254" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">or ankle pick</text>
+</g>
+
+<path d="M160 266 L160 306 L340 306" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M520 266 L520 306 L340 306" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="306" x2="340" y2="332" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+
+<g class="node" onclick="sd('k_react')" style="cursor:pointer">
+  <rect x="120" y="332" width="440" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="354" text-anchor="middle" dominant-baseline="central" fill="#444441">Opponent defensive reactions</text>
+</g>
+
+<line x1="200" y1="376" x2="120" y2="412" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="280" y1="376" x2="255" y2="412" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="400" y1="376" x2="425" y2="412" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="480" y1="376" x2="560" y2="412" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+
+<g class="node" onclick="sd('k_stepback')" style="cursor:pointer">
+  <rect x="20" y="412" width="140" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="90" y="432" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Steps back</text>
+  <text class="ts" x="90" y="450" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Creates distance</text>
+</g>
+<g class="node" onclick="sd('k_stepover')" style="cursor:pointer">
+  <rect x="170" y="412" width="160" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="250" y="432" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Steps over leg</text>
+  <text class="ts" x="250" y="450" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Hops to avoid</text>
+</g>
+<g class="node" onclick="sd('k_sprawl')" style="cursor:pointer">
+  <rect x="340" y="412" width="160" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="420" y="432" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Sprawls fwd</text>
+  <text class="ts" x="420" y="450" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Pressure on legs</text>
+</g>
+<g class="node" onclick="sd('k_pullback')" style="cursor:pointer">
+  <rect x="510" y="412" width="150" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="585" y="432" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Pulls away</text>
+  <text class="ts" x="585" y="450" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Opens range</text>
+</g>
+
+<line x1="90" y1="468" x2="90" y2="504" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="250" y1="468" x2="250" y2="504" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="420" y1="468" x2="420" y2="504" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="585" y1="468" x2="585" y2="504" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+
+<g class="node" onclick="sd('k_anklepick')" style="cursor:pointer">
+  <rect x="20" y="504" width="140" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="90" y="524" text-anchor="middle" dominant-baseline="central" fill="#712B13">Ankle pick</text>
+  <text class="ts" x="90" y="542" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Wrestling up</text>
+</g>
+<g class="node" onclick="sd('k_recompose')" style="cursor:pointer">
+  <rect x="170" y="504" width="160" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="250" y="524" text-anchor="middle" dominant-baseline="central" fill="#085041">Recompose angle</text>
+  <text class="ts" x="250" y="542" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Follow hip, re-sweep</text>
+</g>
+<g class="node" onclick="sd('k_kneepush')" style="cursor:pointer">
+  <rect x="340" y="504" width="160" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="420" y="524" text-anchor="middle" dominant-baseline="central" fill="#085041">Punch backward</text>
+  <text class="ts" x="420" y="542" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Collar → step back again</text>
+</g>
+<g class="node" onclick="sd('k_collar_follow')" style="cursor:pointer">
+  <rect x="510" y="504" width="150" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="585" y="524" text-anchor="middle" dominant-baseline="central" fill="#085041">Collar drag</text>
+  <text class="ts" x="585" y="542" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Exploit retreat</text>
+</g>
+
+<path d="M90 560 L90 600 L340 600" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M250 560 L250 600" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M420 560 L420 600 L340 600" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M585 560 L585 600 L340 600" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="600" x2="340" y2="626" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+
+<g class="node" onclick="sd('k_recumbent')" style="cursor:pointer">
+  <rect x="80" y="626" width="520" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="646" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Recumbent guard kuzushi</text>
+  <text class="ts" x="340" y="666" text-anchor="middle" dominant-baseline="central" fill="#534AB7">De la Riva / outside hook — disruptive from initial position</text>
+</g>
+<line x1="340" y1="682" x2="340" y2="708" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+
+<g class="node" onclick="sd('k_spider')" style="cursor:pointer">
+  <rect x="80" y="708" width="520" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="340" y="728" text-anchor="middle" dominant-baseline="central" fill="#085041">Spider / lasso entry — tomoe nage variation</text>
+  <text class="ts" x="340" y="748" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Foot on elbow → draw knee to chest → sweep over head</text>
+</g>
+<text class="ts" x="20" y="40" fill="#888780">Vol 3</text>
+<text class="ts" x="20" y="130" fill="#888780">Vol 3</text>
+<text class="ts" x="20" y="435" fill="#888780">Vol 3</text>
+<text class="ts" x="20" y="730" fill="#888780">Vol 3</text>
+</svg>
+</div>
+
+<div id="v-closed" style="display:none">
+<svg viewBox="0 0 680 680" role="img">
+<title>Closed guard kuzushi</title>
+<desc>Off-balancing from closed guard — pulling forward, posture break, submissions setup</desc>
+<defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node" onclick="sd('cl_entry')" style="cursor:pointer">
+  <rect x="120" y="14" width="440" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central" fill="#444441">Closed guard — opponent kneeling/posturing</text>
+  <text class="ts" x="340" y="54" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Movement restricted — different mechanics apply</text>
+</g>
+<line x1="340" y1="70" x2="340" y2="96" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+
+<g class="node" onclick="sd('cl_pull')" style="cursor:pointer">
+  <rect x="80" y="96" width="520" height="68" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="116" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Pulling forward with knees — most important movement</text>
+  <text class="ts" x="340" y="136" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Climb guard high · knees under armpits</text>
+  <text class="ts" x="340" y="152" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Heel bite · create lever from their spine</text>
+</g>
+<line x1="340" y1="164" x2="340" y2="196" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+
+<g class="node" onclick="sd('cl_posture')" style="cursor:pointer">
+  <rect x="120" y="196" width="440" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="216" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Posture break → head down</text>
+  <text class="ts" x="340" y="236" text-anchor="middle" dominant-baseline="central" fill="#534AB7">One arm clears → submission or sweep opens</text>
+</g>
+<line x1="340" y1="252" x2="340" y2="284" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g class="node" onclick="sd('cl_danger')" style="cursor:pointer">
+  <rect x="120" y="284" width="440" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="306" text-anchor="middle" dominant-baseline="central" fill="#444441">Counters to closed guard kuzushi</text>
+</g>
+
+<line x1="240" y1="328" x2="160" y2="364" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+<line x1="440" y1="328" x2="520" y2="364" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+
+<g class="node" onclick="sd('cl_post')" style="cursor:pointer">
+  <rect x="20" y="364" width="280" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="160" y="384" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Posts on chest / stiff arms</text>
+  <text class="ts" x="160" y="402" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Blocks the pull forward</text>
+</g>
+<g class="node" onclick="sd('cl_stand')" style="cursor:pointer">
+  <rect x="380" y="364" width="280" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="520" y="384" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Tries to stand / open guard</text>
+  <text class="ts" x="520" y="402" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Breaks posture to reset</text>
+</g>
+
+<line x1="160" y1="420" x2="160" y2="460" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+<line x1="520" y1="420" x2="520" y2="460" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+
+<g class="node" onclick="sd('cl_pull2')" style="cursor:pointer">
+  <rect x="20" y="460" width="280" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="160" y="480" text-anchor="middle" dominant-baseline="central" fill="#085041">Pull + redirect sideways</text>
+  <text class="ts" x="160" y="498" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Slight angle — avoid headbutt risk</text>
+</g>
+<g class="node" onclick="sd('cl_ankle')" style="cursor:pointer">
+  <rect x="380" y="460" width="280" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="520" y="480" text-anchor="middle" dominant-baseline="central" fill="#085041">Ankle sweep / double ankle</text>
+  <text class="ts" x="520" y="498" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Feet on hips — tomoe nage style</text>
+</g>
+
+<path d="M160 516 L160 556 L340 556" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M520 516 L520 556 L340 556" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="556" x2="340" y2="582" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+
+<g class="node" onclick="sd('cl_score')" style="cursor:pointer">
+  <rect x="120" y="582" width="440" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text class="th" x="340" y="602" text-anchor="middle" dominant-baseline="central" fill="#712B13">Posture broken → attack opens</text>
+  <text class="ts" x="340" y="622" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Triangle · armbar · sweep · omoplata</text>
+</g>
+<text class="ts" x="20" y="40" fill="#888780">Vol 4</text>
+<text class="ts" x="20" y="120" fill="#888780">Vol 4</text>
+<text class="ts" x="20" y="390" fill="#888780">Vol 4</text>
+<text class="ts" x="20" y="600" fill="#888780">Vol 4</text>
+</svg>
+</div>
+
+<div id="v-training" style="display:none">
+<svg viewBox="0 0 680 600" role="img">
+<title>Training methods — developing intangible skills</title>
+<desc>Fuck Your Jiu-Jitsu method and engagement phase games for developing grip fighting</desc>
+<defs><marker id="a4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node" onclick="sd('t_problem')" style="cursor:pointer">
+  <rect x="80" y="14" width="520" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central" fill="#3C3489">The problem — intangible skills</text>
+  <text class="ts" x="340" y="54" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Grip fighting and kuzushi aren't drilled — they're considered invisible</text>
+</g>
+<line x1="340" y1="70" x2="340" y2="96" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a4)"/>
+
+<g class="node" onclick="sd('t_fyjj')" style="cursor:pointer">
+  <rect x="80" y="96" width="520" height="68" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="116" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Fuck Your Jiu-Jitsu (FYJJ)</text>
+  <text class="ts" x="340" y="136" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Constrained sparring — opponent told to defend one specific thing</text>
+  <text class="ts" x="340" y="152" text-anchor="middle" dominant-baseline="central" fill="#534AB7">You must solve it. Scales difficulty to skill gap.</text>
+</g>
+<line x1="340" y1="164" x2="340" y2="196" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a4)"/>
+
+<g class="node" onclick="sd('t_engage')" style="cursor:pointer">
+  <rect x="80" y="196" width="520" height="68" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+  <text class="th" x="340" y="216" text-anchor="middle" dominant-baseline="central" fill="#085041">Engagement phase game</text>
+  <text class="ts" x="340" y="236" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Spar with win condition = win the grip fight</text>
+  <text class="ts" x="340" y="252" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Winner of hand fight then plays that guard position</text>
+</g>
+<line x1="340" y1="264" x2="340" y2="296" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a4)"/>
+
+<g class="node" onclick="sd('t_scale')" style="cursor:pointer">
+  <rect x="80" y="296" width="520" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="318" text-anchor="middle" dominant-baseline="central" fill="#444441">Scaling difficulty to level</text>
+</g>
+
+<line x1="220" y1="340" x2="140" y2="376" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a4)"/>
+<line x1="460" y1="340" x2="540" y2="376" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a4)"/>
+
+<g class="node" onclick="sd('t_beginner')" style="cursor:pointer">
+  <rect x="20" y="376" width="260" height="68" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="150" y="396" text-anchor="middle" dominant-baseline="central" fill="#085041">White / blue belt</text>
+  <text class="ts" x="150" y="414" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Let them get 50% into movement</text>
+  <text class="ts" x="150" y="430" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">before applying the defence</text>
+</g>
+<g class="node" onclick="sd('t_advanced')" style="cursor:pointer">
+  <rect x="400" y="376" width="260" height="68" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="530" y="396" text-anchor="middle" dominant-baseline="central" fill="#085041">Black belt</text>
+  <text class="ts" x="530" y="414" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">10% into movement — much tighter</text>
+  <text class="ts" x="530" y="430" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">window to solve the problem</text>
+</g>
+
+<path d="M150 444 L150 480 L340 480" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M530 444 L530 480 L340 480" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="480" x2="340" y2="506" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a4)"/>
+
+<g class="node" onclick="sd('t_outcome')" style="cursor:pointer">
+  <rect x="120" y="506" width="440" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text class="th" x="340" y="526" text-anchor="middle" dominant-baseline="central" fill="#712B13">Develop self-diagnosis ability</text>
+  <text class="ts" x="340" y="546" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Understand underpinnings → self-correct in training</text>
+</g>
+<text class="ts" x="20" y="40" fill="#888780">Vol 4</text>
+<text class="ts" x="20" y="120" fill="#888780">Vol 4</text>
+<text class="ts" x="20" y="220" fill="#888780">Vol 4</text>
+<text class="ts" x="20" y="400" fill="#888780">Vol 4</text>
+</svg>
+</div>
+
+<div class="dp" id="dpanel">
+  <div style="color:var(--color-text-secondary)">Click any node to see details from the transcripts.</div>
+</div>
+
+<script>
+const D = {
+  c_why:{t:"Why grip fighting matters",v:"Vol 1",d:"Most BJJ practitioners never develop this skill because most gyms teach techniques in isolation without the engagement phase. Elite grapplers in judo and wrestling are universally good at this because competition forces it. In BJJ many people train casually against others who also never learned it — so the gap is never exposed until you spar someone elite."},
+  c_engage:{t:"The engagement phase",v:"Vol 4",d:"The moment from no grips until grips are established and a guard position is set. The winner of the engagement phase dictates what happens next. If they win — they're playing their passing game. If you win — you're playing your guard offensively. Losing the hand fight means you immediately enter guard RETENTION, not guard playing."},
+  c_align:{t:"Alignment theory",v:"Vol 1",d:"A person in good alignment has their weight distributed and can resist attacks. Kuzushi is the art of breaking alignment — moving their center of gravity outside their base so they become vulnerable. You must understand alignment to know WHEN someone is vulnerable (or when you've made a mistake) so you can exploit the moment."},
+  c_pillars:{t:"Three core principles",v:"Vol 1-2",d:"Everything in the system flows from three ideas: range battles (you have a preferred range, they have one — winner advances, loser retreats and re-engages), lever access (collar → spine, wrist → elbow, ankle → knee — longer lever = more force), center of gravity (push their CoG outside their base and they fall)."},
+  c_range:{t:"Range battles",v:"Vol 2",d:"Every exchange has a range preference. If they win the range battle — retreat, don't keep engaging from a losing position. The loser stops going forward, addresses the problem, then re-engages on their own terms. In the gi especially: neutral collar-for-collar is fine. Losing a range battle is not a crisis — it's a signal to reset."},
+  c_lever:{t:"Lever access",v:"Vol 1-2",d:"The collar connects to the spine (long lever — small input, big movement). The wrist connects to the elbow. The ankle connects to the knee. Using longer levers requires less strength. This is why a collar drag on someone who ignores it works regardless of size: you're accessing their spine, not fighting their arms."},
+  c_cog:{t:"Centre of gravity",v:"Vol 1",d:"The fundamental mechanical goal of all kuzushi. Every sweep and off-balance is about moving opponent's center of gravity outside their base of support. Once it's outside, they must step or put a hand down to recover — and that reaction is your attack window."},
+  c_kuz:{t:"Kuzushi — two functions",v:"Vol 3",d:"Like a jab from a world-class boxer — it can knock out a beginner by itself, but against a skilled opponent it draws a reaction that sets up the real attack. You need to understand which function you're using. Against someone with good posture: kuzushi is probing to find their response pattern. Against someone weak: just knock them over."},
+  c_sweep:{t:"Direct sweep / score",v:"Vol 3",d:"Against opponents unfamiliar with the kuzushi material or with poor base, the kuzushi IS the sweep — no follow-up needed. Rob describes working de la Riva kuzushi against untrained partners: 'It took quite a while for me to catch up and go oh no no you're not catching me with this stupid off-balancing thing.' Until then it was scoring directly."},
+  c_react:{t:"Reaction → follow-up",v:"Vol 3",d:"Against skilled opponents, the kuzushi creates a predictable defensive reaction. Your job is to read that reaction and plug in the appropriate follow-up attack. You alternate directions — pull forward / push sideways / pull back — and chain whatever the reaction gives you. The system makes your guard unpredictable."},
+  c_pull:{t:"Pull forward + push/side — alternate",v:"Vol 3",d:"The organizing principle of all kuzushi sequences. You always alternate directions. Pull forward (collar drag) → they brace backward → sweep backward. Push sideways → they step out → go for the opposite angle. Staying one-directional is predictable and easy to defend. Alternating keeps them guessing and creates the openings."},
+  g_start:{t:"Initial contact — no grips",v:"Vol 1",d:"The moment you and your training partner/opponent come within range. This is the engagement phase starting point. Most people skip straight to 'I'll grab the sleeve' without understanding that the grip fight begins before any fabric is touched — it starts with your body positioning and initial reach."},
+  g_optimal:{t:"Optimal grip hierarchy",v:"Vol 1",d:"Two-on-one is the best grip in the system — one hand on wrist, one on bicep, with your elbow tucked in. It creates angles, stops their counterattacks, and sets up multiple kuzushi options. Wrist control alone is next. Collar tie is third. Individual fingers — never. Grabbing all four fingers for a wrist control is legitimate and strong; individual fingers just snap."},
+  g_2on1:{t:"Two-on-one entry",v:"Vol 2",d:"Two primary entries: (1) take an angle and catch their wrist as they extend — most common from butterfly guard. (2) They take an angle and catch your wrist — immediately re-grip with two-on-one on them. The key detail: elbow tucked. Elbow out = they can grab your elbow and counter. Elbow in = they can't access it."},
+  g_wrist:{t:"Wrist control mechanics",v:"Vol 2",d:"The gap between thumb and forefinger is the weak point of any grip. To break a grip, circle against the thumb — not against all four fingers. In closed guard the pushing/pulling approach works instead of circling. Block their wrist or bicep first, then circle. In standing, opening the range is the simplest break."},
+  g_collar:{t:"Collar tie counter",v:"Vol 2",d:"If they reach for your head — intercept it. Your hands should already be in position. As they reach forward, their wrist is presented: take two-on-one. If they've already made contact and you're slow: Y-block or C-clamp behind their tricep. Get your elbow covered — if your elbow is exposed trying to grab their wrist, they just grab your elbow back."},
+  g_2on1seq:{t:"Two-on-one sequence",v:"Vol 2",d:"From two-on-one: pull down on their wrist, angle your body out. This gives you an attack on their back, a collar drag, or a leg attack entry. The angle is everything — without the angle, two-on-one just becomes a hand wrestle. With the angle, their body is turned and committed."},
+  g_break:{t:"Breaking grips",v:"Vol 2",d:"As Rob says, stealing a quote from Kurt Osiander: breaking grips is 'you messed up a long time ago.' The real goal is to never be in a position where you have to break grips. But when needed: circle against the thumb, block at the wrist/bicep/hip, open range and re-engage. Minimal motion — don't flare the elbow while breaking."},
+  g_collarseq:{t:"Collar tie defence",v:"Vol 2",d:"They reach for your head — immediately go to two-on-one on their reaching arm. If they've made contact and you were slow: Y-block or C-clamp behind the tricep. Block their wrist to stop them following you as you circle. The principle: never just try to push a collar tie off — control the arm."},
+  g_collar_drag:{t:"Collar drag",v:"Vol 2",d:"The signature gi sequence. They grab your pants — take a cross-collar grip and shift your hips. If they don't let go, they're going for a ride. Unanswered collar drag = easy score. Amplifies every kuzushi: come back to it after any forward-pull attempt. It's the base of the forward-pull direction in the alternating game."},
+  g_pants:{t:"Pants and sleeve control",v:"Vol 2",d:"All the no-gi kuzushi sequences can be amplified by gi grips. Collar enables the forward-pull direction. Sleeve enables the sideways/backward direction. Always come back to collar drag after any failed kuzushi — the combination of forward + sideways keeps opponents completely off balance."},
+  g_outcome:{t:"Win the hand fight",v:"Vol 2",d:"Winning = you have your grips established and they don't. You're now playing guard. Losing = they have their grips and you don't. You're now in guard retention. Every training session, every match, you're fighting for this outcome from the moment the clock starts."},
+  k_entry:{t:"Seated / butterfly guard",v:"Vol 3",d:"The seated or butterfly guard is the starting point for open guard kuzushi. You're sitting up facing the kneeling or standing passer. The first read is their stance — this determines which kuzushi options you have immediately available."},
+  k_square:{t:"Square stance",v:"Vol 3",d:"Both their feet are roughly level, which means both heels are equally accessible. The idiot sweep applies directly without needing an angle first. Best-case starting scenario for kuzushi from seated guard."},
+  k_stagger:{t:"Staggered stance",v:"Vol 3",d:"One foot forward, one back. The back heel is too far to reach directly. You must cut an angle first — hip movement to put yourself in a position where the back heel comes into range. Then the sweep or ankle pick applies."},
+  k_idiot:{t:"Idiot sweep",v:"Vol 3",d:"Named for what happens when an opponent ignores it. From square stance: push both knees simultaneously — their center of gravity goes outside their base and they fall. Works directly on inexperienced opponents. Against skilled opponents it's a probe: they'll base out, step back, or sprawl forward — each reaction feeds a follow-up."},
+  k_angle:{t:"Cut angle → heel sweep or knee tap",v:"Vol 3",d:"Against staggered stance or after they've evaded the idiot sweep: cut your hip angle to get in line with their back foot. From here heel sweep (push the heel sideways), knee tap (push the knee from outside), or ankle pick become available. The angle IS the technique — without it you have no leverage on the back foot."},
+  k_react:{t:"Opponent defensive reactions",v:"Vol 3",d:"Skilled opponents have four predictable responses to kuzushi: step back (creating distance), step over or hop (avoiding the leg attack), sprawl forward (using weight to crush your attack), or pull back (shortening to avoid the off-balance). Each of these reactions opens a specific counter."},
+  k_stepback:{t:"Steps back",v:"Vol 3",d:"They create distance to avoid your reach. Counter: collar drag — their retreat opens range for the drag. Or ankle pick: as they step back their weight shifts to the stepping foot, making it vulnerable. Retreating is actually dangerous against a skilled collar dragger."},
+  k_stepover:{t:"Steps over / hops",v:"Vol 3",d:"They hop or step over your leg to avoid the sweep. Counter: quickly recompose your hip angle to follow them. Or use collar grip to punch them backward — as they hop they momentarily lose base and a push sends them back out where you start again."},
+  k_sprawl:{t:"Sprawls forward",v:"Vol 3",d:"They come forward hard to pressure you. Collar to punch them back — their weight going forward combined with collar pressure backward becomes a sweep. Or switch to a knee push in that direction since you're already braced."},
+  k_pullback:{t:"Pulls away",v:"Vol 3",d:"They pull their upper body back and shorten their arms to avoid the kuzushi. The collar drag is the best answer — their backward momentum combined with collar drag forward creates a strong off-balance. Wrestling is also an option if their head drops."},
+  k_anklepick:{t:"Ankle pick → wrestling up",v:"Vol 3",d:"As they step back, their feet present as ankle picks. Most BJJ practitioners don't have good wrestling but collar drag and kuzushi can set up situations where even bad wrestling becomes effective — because the opponent is already moving in the right direction."},
+  k_recompose:{t:"Recompose angle",v:"Vol 3",d:"Follow their hip movement — don't stay static after a hop or step. Immediately recompose your hip angle to face them again. Then apply the same or a different kuzushi. Persistence in the engagement phase is key."},
+  k_kneepush:{t:"Punch backward with collar",v:"Vol 3",d:"After they step over or sprawl forward: use the collar to punch them backward sharply. This either causes them to step back out (giving you collar drag) or resets the position. Combined with an idiot sweep it creates an alternating game."},
+  k_collar_follow:{t:"Collar drag after retreat",v:"Vol 3",d:"The retreating opponent gives you collar drag for free. Their body is moving away, you pull their collar forward — they either let go (you've secured your guard position) or they face-plant (you score). The collar drag is the punctuation mark at the end of every kuzushi sequence."},
+  k_recumbent:{t:"Recumbent guard kuzushi",v:"Vol 3",d:"From de la Riva / outside hook guard: use disruption at the initial engagement BEFORE being fully established in the guard system. The same kuzushi principles apply but with a hook added. Against unfamiliar opponents, the kuzushi alone scores. Against trained opponents, it draws reactions that set up the guard system."},
+  k_spider:{t:"Spider / lasso tomoe nage variation",v:"Vol 3",d:"Foot on elbow from a loose spider/lasso entry. Draw knee to chest, open the elbow out first (don't push yet — premature push closes the structure). Then bridge/leg press. Even without a full bridge, if their arm is unshielded, just opening the elbow and drawing the knee creates enough force to sweep. Versatile even for non-spider players."},
+  cl_entry:{t:"Closed guard starting position",v:"Vol 4",d:"Different from open guard because you can't move freely relative to your opponent. The pull-push mechanics change. You can't use hip escapes the same way. But the kuzushi principles still apply — you're just applying them through the closed guard frame."},
+  cl_pull:{t:"Pulling forward with knees",v:"Vol 4",d:"The most important movement in closed guard. Critical detail: climb the guard HIGH — knees under armpits, not around the hips. Bite the heels against their lower back. Now pulling creates a lever from their spine rather than fighting their hip muscles. With sloppy guard (knees low, legs open) you'll never move a skilled opponent forward."},
+  cl_posture:{t:"Posture break",v:"Vol 4",d:"Head down, one arm trapped or off-balance. Once posture is broken, their defensive options collapse. The goal of all closed guard kuzushi is to create this moment. Everything after is plugging in the appropriate attack (triangle when head dips to one side, armbar when elbow flares, omoplata when shoulder presents, scissor sweep when base is compromised)."},
+  cl_danger:{t:"Counters to closed guard kuzushi",v:"Vol 4",d:"Two primary counters skilled opponents use: posting stiff-arm on your chest (blocks the pull forward) and standing/opening the guard (breaks the leg frame entirely). Each needs a specific response — just pulling harder against a stiff arm doesn't work. The lever mechanics must be adjusted."},
+  cl_post:{t:"Posts on chest / stiff arms",v:"Vol 4",d:"Opponent posts stiff arms on your chest to block your pull-forward. Counter: pull their arms to one side rather than straight in. Or use their stiff-arm post as a submission entry — their straight arm is vulnerable to an armbar when they're posting. Their defense creates an attack opportunity."},
+  cl_stand:{t:"Tries to stand / open guard",v:"Vol 4",d:"Opponent tries to stand up inside closed guard or create space to open it. Counter: use their rising motion to pull them back down with increased leverage — their upward momentum combined with your pull forward creates a bigger sweep than pure kuzushi alone."},
+  cl_pull2:{t:"Pull + redirect sideways",v:"Vol 4",d:"When pulling straight forward is blocked: add a sideways redirect. Pull forward and slightly to the side — this creates a rotational off-balance rather than linear. Much harder to brace against. Also eliminates the headbutt risk from pulling straight forward against an aggressive opponent."},
+  cl_ankle:{t:"Ankle sweep / double ankle",v:"Vol 4",d:"Feet on hips with a tomoe nage style entry. Draw opponent forward, foot on elbow, open the lever before bridging. The bridge amplifies force but isn't always needed — good lever position with a straight arm is enough to sweep. Sets up leg lock entries if they try to base out with a hand."},
+  cl_score:{t:"Posture broken → attack opens",v:"Vol 4",d:"Once posture is genuinely broken — head low, balance compromised — you have a brief window where multiple attacks become available simultaneously. The key is having that attack pre-loaded. Don't break posture and then think about what to do. You need to know before the kuzushi which attack you're going to plug in."},
+  t_problem:{t:"The problem — intangible skills",v:"Vol 4",d:"Grip fighting and kuzushi are considered invisible in most BJJ curriculums. They're treated as things you just pick up. This is why the standard is so low. Elite practitioners all have these skills but received them implicitly through competition, not explicit instruction. This instructional is an attempt to systematize what was previously left to osmosis."},
+  t_fyjj:{t:"Fuck Your Jiu-Jitsu (FYJJ)",v:"Vol 4",d:"Constrained sparring where your partner's only job is to defend one specific thing you're working on. You have to solve it against active, intelligent resistance. The key is calibrating the difficulty — beginner partner gets to defend when the movement is 50% complete, advanced partner gets to defend at 10%. Creates skill faster than regular drilling because the resistance is live."},
+  t_engage:{t:"Engagement phase game",v:"Vol 4",d:"Spar with the specific win condition of winning the hand fight. Once one person wins the grip fight, THAT person then plays their guard or their passing game — the other person defends. This makes the engagement phase the entire focal point. Forces both people to take it seriously rather than treating it as a formality before 'real' jiu-jitsu starts."},
+  t_scale:{t:"Scaling difficulty to level",v:"Vol 4",d:"The FYJJ approach only works if the difficulty is calibrated. Too easy = no growth. Too hard = frustration without learning. The percentage of the movement completed before the defense is applied is the dial you turn. Same drill, wildly different difficulty. Advanced practitioners can host visiting training partners and dial in exactly the right stimulus."},
+  t_beginner:{t:"White / blue belt difficulty",v:"Vol 4",d:"Let them get halfway into the movement before applying the counter. They feel the technique start to work, they feel the resistance when it's partially achieved, they can iterate. If you shut it down at 10% they never feel what success looks like and can't self-correct."},
+  t_advanced:{t:"Black belt difficulty",v:"Vol 4",d:"10% of the movement before the counter. At elite level, 90% is too far gone to answer. The window is extremely tight. This forces elite practitioners to develop sharper timing, earlier reads, and more precise execution. Same drill but the constraint compresses years of development into months."},
+  t_outcome:{t:"Develop self-diagnosis ability",v:"Vol 4",d:"The ultimate goal of the training methodology: practitioners who can observe what's going wrong in their own game, identify the conceptual reason, and self-correct. If you understand alignment, levers, range battles, and center of gravity — you know why a kuzushi failed and how to fix it without needing a coach to tell you."},
+};
+
+function sd(id){
+  const d=D[id];if(!d)return;
+  document.getElementById('dpanel').innerHTML=`<div class="dt">${d.t} <span class="dv">${d.v}</span></div><div>${d.d}</div>`;
+}
+
+function sv(v,btn){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  ['concepts','grips','kuzushi','closed','training'].forEach(id=>{
+    document.getElementById('v-'+id).style.display=id===v?'block':'none';
+  });
+  document.getElementById('dpanel').innerHTML='<div style="color:var(--color-text-secondary)">Click any node to see details from the transcripts.</div>';
+}
+</script>

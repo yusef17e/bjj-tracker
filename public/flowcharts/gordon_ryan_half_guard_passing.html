@@ -1,0 +1,353 @@
+
+<style>
+.tb{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tb button{padding:5px 14px;border-radius:6px;border:0.5px solid var(--color-border-secondary);background:var(--color-background-secondary);color:var(--color-text-secondary);font-size:12px;cursor:pointer}
+.tb button.on{background:var(--color-background-tertiary);color:var(--color-text-primary);border-color:var(--color-border-primary);font-weight:500}
+.dp{border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:12px 16px;margin-top:10px;background:var(--color-background-secondary);font-size:13px;color:var(--color-text-secondary);line-height:1.6;min-height:52px}
+.dp .h{font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:3px}
+.dp .v{font-size:11px;color:var(--color-text-secondary);margin-left:6px}
+svg{display:block;width:100%}
+</style>
+
+<div class="tb">
+  <button class="on" onclick="sw('overview',this)">Overview</button>
+  <button onclick="sw('knee',this)">Knee shields</button>
+  <button onclick="sw('chest',this)">Chest to chest</button>
+  <button onclick="sw('attacks',this)">Attacks</button>
+  <button onclick="sw('defensive',this)">Defensive positions</button>
+</div>
+
+<!-- OVERVIEW -->
+<div id="overview">
+<svg viewBox="0 0 680 660" role="img"><title>Gordon Ryan half guard passing — overview</title><desc>Top-level system overview of Gordon Ryan's half guard passing instructional</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node c-gray" onclick="d('start')" style="cursor:pointer"><rect x="215" y="14" width="250" height="44" rx="8" stroke-width="0.5"/><text class="th" x="340" y="36" text-anchor="middle" dominant-baseline="central">Half guard (top position)</text></g>
+<line x1="340" y1="58" x2="340" y2="86" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-purple" onclick="d('battle')" style="cursor:pointer"><rect x="170" y="86" width="340" height="56" rx="8" stroke-width="0.5"/><text class="th" x="340" y="107" text-anchor="middle" dominant-baseline="central">Win the inside position battle</text><text class="ts" x="340" y="127" text-anchor="middle" dominant-baseline="central">Upper + lower body simultaneously</text></g>
+<line x1="340" y1="142" x2="340" y2="170" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-purple" onclick="d('2ways')" style="cursor:pointer"><rect x="170" y="170" width="340" height="44" rx="8" stroke-width="0.5"/><text class="th" x="340" y="192" text-anchor="middle" dominant-baseline="central">Two paths to chest-to-chest</text></g>
+
+<line x1="260" y1="214" x2="160" y2="258" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="420" y1="214" x2="520" y2="258" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-teal" onclick="d('crash')" style="cursor:pointer"><rect x="50" y="258" width="220" height="54" rx="8" stroke-width="0.5"/><text class="th" x="160" y="278" text-anchor="middle" dominant-baseline="central">Crash far shoulder</text><text class="ts" x="160" y="298" text-anchor="middle" dominant-baseline="central">Flatten opponent directly</text></g>
+<g class="node c-teal" onclick="d('hipswitch')" style="cursor:pointer"><rect x="410" y="258" width="220" height="54" rx="8" stroke-width="0.5"/><text class="th" x="520" y="278" text-anchor="middle" dominant-baseline="central">Hip switch</text><text class="ts" x="520" y="298" text-anchor="middle" dominant-baseline="central">Overback grip or reverse underhook</text></g>
+
+<path d="M160 312 L160 370 L340 370" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M520 312 L520 370 L340 370" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<line x1="340" y1="370" x2="340" y2="396" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-purple" onclick="d('c2c')" style="cursor:pointer"><rect x="150" y="396" width="380" height="54" rx="8" stroke-width="1"/><text class="th" x="340" y="416" text-anchor="middle" dominant-baseline="central">Chest to chest achieved</text><text class="ts" x="340" y="436" text-anchor="middle" dominant-baseline="central">Cranial shift + carry body weight</text></g>
+
+<line x1="240" y1="450" x2="140" y2="494" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="340" y1="450" x2="340" y2="494" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="440" y1="450" x2="540" y2="494" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-teal" onclick="d('side')" style="cursor:pointer"><rect x="30" y="494" width="185" height="54" rx="8" stroke-width="0.5"/><text class="th" x="122" y="514" text-anchor="middle" dominant-baseline="central">Side control</text><text class="ts" x="122" y="534" text-anchor="middle" dominant-baseline="central">Inside hip domination</text></g>
+<g class="node c-teal" onclick="d('mount')" style="cursor:pointer"><rect x="248" y="494" width="185" height="54" rx="8" stroke-width="0.5"/><text class="th" x="340" y="514" text-anchor="middle" dominant-baseline="central">Mount</text><text class="ts" x="340" y="534" text-anchor="middle" dominant-baseline="central">High tripod entry</text></g>
+<g class="node c-teal" onclick="d('back')" style="cursor:pointer"><rect x="466" y="494" width="185" height="54" rx="8" stroke-width="0.5"/><text class="th" x="558" y="514" text-anchor="middle" dominant-baseline="central">Back take</text><text class="ts" x="558" y="534" text-anchor="middle" dominant-baseline="central">Via backtrack/leg ride</text></g>
+
+<path d="M122 548 L122 600 L340 600" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M340 548 L340 600" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M558 548 L558 600 L340 600" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<line x1="340" y1="600" x2="340" y2="618" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-coral" onclick="d('pass')" style="cursor:pointer"><rect x="200" y="618" width="280" height="34" rx="8" stroke-width="0.5"/><text class="th" x="340" y="635" text-anchor="middle" dominant-baseline="central">Half guard passed</text></g>
+
+<text class="ts" x="12" y="36" fill="var(--color-text-secondary)">Start</text>
+<text class="ts" x="12" y="112" fill="var(--color-text-secondary)">Vol 1</text>
+<text class="ts" x="12" y="192" fill="var(--color-text-secondary)">Vol 1</text>
+<text class="ts" x="12" y="290" fill="var(--color-text-secondary)">Vol 1-2</text>
+<text class="ts" x="12" y="424" fill="var(--color-text-secondary)">Vol 4-5</text>
+<text class="ts" x="12" y="524" fill="var(--color-text-secondary)">Vol 5</text>
+</svg>
+</div>
+
+<!-- KNEE SHIELDS -->
+<div id="knee" style="display:none">
+<svg viewBox="0 0 680 640" role="img"><title>Knee shield passing system</title><desc>Methods for passing high and low knee shields</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node c-gray" onclick="d('kshield')" style="cursor:pointer"><rect x="215" y="14" width="250" height="44" rx="8" stroke-width="0.5"/><text class="th" x="340" y="36" text-anchor="middle" dominant-baseline="central">Opponent's knee shield</text></g>
+
+<line x1="270" y1="58" x2="180" y2="96" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="410" y1="58" x2="500" y2="96" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-purple" onclick="d('highk')" style="cursor:pointer"><rect x="50" y="96" width="260" height="44" rx="8" stroke-width="0.5"/><text class="th" x="180" y="118" text-anchor="middle" dominant-baseline="central">High knee shield</text></g>
+<g class="node c-purple" onclick="d('lowk')" style="cursor:pointer"><rect x="370" y="96" width="260" height="44" rx="8" stroke-width="0.5"/><text class="th" x="500" y="118" text-anchor="middle" dominant-baseline="central">Low knee shield</text></g>
+
+<line x1="110" y1="140" x2="80" y2="178" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="180" y1="140" x2="180" y2="178" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="250" y1="140" x2="280" y2="178" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-teal" onclick="d('stuff')" style="cursor:pointer"><rect x="20" y="178" width="115" height="54" rx="8" stroke-width="0.5"/><text class="th" x="77" y="198" text-anchor="middle" dominant-baseline="central">Stuff leg</text><text class="ts" x="77" y="218" text-anchor="middle" dominant-baseline="central">Sprawl method</text></g>
+<g class="node c-teal" onclick="d('rise')" style="cursor:pointer"><rect x="140" y="178" width="115" height="54" rx="8" stroke-width="0.5"/><text class="th" x="197" y="198" text-anchor="middle" dominant-baseline="central">Rise up</text><text class="ts" x="197" y="218" text-anchor="middle" dominant-baseline="central">Pop through knee</text></g>
+<g class="node c-teal" onclick="d('hswitch')" style="cursor:pointer"><rect x="260" y="178" width="115" height="54" rx="8" stroke-width="0.5"/><text class="th" x="317" y="198" text-anchor="middle" dominant-baseline="central">Hip switch</text><text class="ts" x="317" y="218" text-anchor="middle" dominant-baseline="central">To overback grip</text></g>
+
+<line x1="430" y1="140" x2="430" y2="178" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="500" y1="140" x2="500" y2="178" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="570" y1="140" x2="570" y2="178" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-teal" onclick="d('testlock')" style="cursor:pointer"><rect x="380" y="178" width="95" height="54" rx="8" stroke-width="0.5"/><text class="th" x="427" y="198" text-anchor="middle" dominant-baseline="central">Test lock</text><text class="ts" x="427" y="218" text-anchor="middle" dominant-baseline="central">Sprawl method</text></g>
+<g class="node c-teal" onclick="d('cranial')" style="cursor:pointer"><rect x="480" y="178" width="95" height="54" rx="8" stroke-width="0.5"/><text class="th" x="527" y="198" text-anchor="middle" dominant-baseline="central">Cranial shift</text><text class="ts" x="527" y="218" text-anchor="middle" dominant-baseline="central">If lock opens</text></g>
+<g class="node c-teal" onclick="d('risemeth')" style="cursor:pointer"><rect x="580" y="178" width="90" height="54" rx="8" stroke-width="0.5"/><text class="th" x="625" y="198" text-anchor="middle" dominant-baseline="central">Rise up</text><text class="ts" x="625" y="218" text-anchor="middle" dominant-baseline="central">Ds post</text></g>
+
+<line x1="180" y1="260" x2="340" y2="294" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)" fill="none"/>
+<line x1="500" y1="260" x2="340" y2="294" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)" fill="none"/>
+
+<g class="node c-purple" onclick="d('frames')" style="cursor:pointer"><rect x="130" y="294" width="420" height="56" rx="8" stroke-width="0.5"/><text class="th" x="340" y="315" text-anchor="middle" dominant-baseline="central">Opponent's upper body frames</text><text class="ts" x="340" y="335" text-anchor="middle" dominant-baseline="central">No post → double shoulder → cross shoulder post</text></g>
+
+<line x1="220" y1="350" x2="130" y2="394" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="340" y1="350" x2="340" y2="394" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="460" y1="350" x2="550" y2="394" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-teal" onclick="d('nopost')" style="cursor:pointer"><rect x="20" y="394" width="200" height="54" rx="8" stroke-width="0.5"/><text class="th" x="120" y="414" text-anchor="middle" dominant-baseline="central">No shoulder post</text><text class="ts" x="120" y="434" text-anchor="middle" dominant-baseline="central">Stuff, rise, hip switch freely</text></g>
+<g class="node c-teal" onclick="d('dpost')" style="cursor:pointer"><rect x="240" y="394" width="200" height="54" rx="8" stroke-width="0.5"/><text class="th" x="340" y="414" text-anchor="middle" dominant-baseline="central">Double shoulder post</text><text class="ts" x="340" y="434" text-anchor="middle" dominant-baseline="central">Fight hands to inside</text></g>
+<g class="node c-teal" onclick="d('cpost')" style="cursor:pointer"><rect x="460" y="394" width="200" height="54" rx="8" stroke-width="0.5"/><text class="th" x="560" y="414" text-anchor="middle" dominant-baseline="central">Cross shoulder post</text><text class="ts" x="560" y="434" text-anchor="middle" dominant-baseline="central">Climb the tree method</text></g>
+
+<path d="M120 448 L120 510 L340 510" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M340 448 L340 510" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M560 448 L560 510 L340 510" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<line x1="340" y1="510" x2="340" y2="534" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-coral" onclick="d('oback')" style="cursor:pointer"><rect x="160" y="534" width="360" height="54" rx="8" stroke-width="0.5"/><text class="th" x="340" y="554" text-anchor="middle" dominant-baseline="central">Overback grip achieved</text><text class="ts" x="340" y="574" text-anchor="middle" dominant-baseline="central">Flatten out + pass, or ankle scoop series</text></g>
+
+<text class="ts" x="12" y="36" fill="var(--color-text-secondary)">Start</text>
+<text class="ts" x="12" y="120" fill="var(--color-text-secondary)">Vol 1-2</text>
+<text class="ts" x="12" y="210" fill="var(--color-text-secondary)">Vol 1-3</text>
+<text class="ts" x="12" y="322" fill="var(--color-text-secondary)">Vol 1-2</text>
+<text class="ts" x="12" y="422" fill="var(--color-text-secondary)">Vol 1-2</text>
+<text class="ts" x="12" y="562" fill="var(--color-text-secondary)">Vol 1-2</text>
+</svg>
+</div>
+
+<!-- CHEST TO CHEST -->
+<div id="chest" style="display:none">
+<svg viewBox="0 0 680 660" role="img"><title>Chest to chest passing system</title><desc>Gordon Ryan's chest to chest passing sequence including high tripod and body lock</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node c-gray" onclick="d('c2cstart')" style="cursor:pointer"><rect x="190" y="14" width="300" height="44" rx="8" stroke-width="0.5"/><text class="th" x="340" y="36" text-anchor="middle" dominant-baseline="central">Chest to chest established</text></g>
+<line x1="340" y1="58" x2="340" y2="86" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-purple" onclick="d('handpos')" style="cursor:pointer"><rect x="150" y="86" width="380" height="54" rx="8" stroke-width="0.5"/><text class="th" x="340" y="107" text-anchor="middle" dominant-baseline="central">Hand position hierarchy</text><text class="ts" x="340" y="127" text-anchor="middle" dominant-baseline="central">Top head + arm → crossface → over-unders → body lock</text></g>
+<line x1="340" y1="140" x2="340" y2="168" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-purple" onclick="d('tripod')" style="cursor:pointer"><rect x="150" y="168" width="380" height="54" rx="8" stroke-width="1"/><text class="th" x="340" y="189" text-anchor="middle" dominant-baseline="central">High tripod position</text><text class="ts" x="340" y="209" text-anchor="middle" dominant-baseline="central">Knee wedge inside or outside hip</text></g>
+
+<line x1="240" y1="222" x2="140" y2="266" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="340" y1="222" x2="340" y2="266" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="440" y1="222" x2="540" y2="266" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-teal" onclick="d('kneefree')" style="cursor:pointer"><rect x="30" y="266" width="200" height="54" rx="8" stroke-width="0.5"/><text class="th" x="130" y="286" text-anchor="middle" dominant-baseline="central">Knee frees cleanly</text><text class="ts" x="130" y="306" text-anchor="middle" dominant-baseline="central">Pass to side or mount</text></g>
+<g class="node c-teal" onclick="d('bfly')" style="cursor:pointer"><rect x="240" y="266" width="200" height="54" rx="8" stroke-width="0.5"/><text class="th" x="340" y="286" text-anchor="middle" dominant-baseline="central">Butterfly hook appears</text><text class="ts" x="340" y="306" text-anchor="middle" dominant-baseline="central">Test, pommel, hip switch</text></g>
+<g class="node c-teal" onclick="d('hippost')" style="cursor:pointer"><rect x="450" y="266" width="200" height="54" rx="8" stroke-width="0.5"/><text class="th" x="550" y="286" text-anchor="middle" dominant-baseline="central">Near hip post</text><text class="ts" x="550" y="306" text-anchor="middle" dominant-baseline="central">Transfer to head block</text></g>
+
+<line x1="130" y1="320" x2="130" y2="364" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="340" y1="320" x2="340" y2="364" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="550" y1="320" x2="550" y2="364" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-teal" onclick="d('sc2')" style="cursor:pointer"><rect x="30" y="364" width="190" height="54" rx="8" stroke-width="0.5"/><text class="th" x="125" y="384" text-anchor="middle" dominant-baseline="central">Side control</text><text class="ts" x="125" y="404" text-anchor="middle" dominant-baseline="central">Dominate inside hip</text></g>
+<g class="node c-teal" onclick="d('pommels')" style="cursor:pointer"><rect x="240" y="364" width="200" height="54" rx="8" stroke-width="0.5"/><text class="th" x="340" y="384" text-anchor="middle" dominant-baseline="central">Pommel battle</text><text class="ts" x="340" y="404" text-anchor="middle" dominant-baseline="central">Top vs front pommel dilemma</text></g>
+<g class="node c-teal" onclick="d('headblock')" style="cursor:pointer"><rect x="460" y="364" width="190" height="54" rx="8" stroke-width="0.5"/><text class="th" x="555" y="384" text-anchor="middle" dominant-baseline="central">Head block</text><text class="ts" x="555" y="404" text-anchor="middle" dominant-baseline="central">Convert to over-unders</text></g>
+
+<line x1="340" y1="418" x2="340" y2="456" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<path d="M125 418 L125 456 L340 456" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M555 418 L555 456 L340 456" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+
+<g class="node c-purple" onclick="d('dunder')" style="cursor:pointer"><rect x="150" y="456" width="380" height="54" rx="8" stroke-width="0.5"/><text class="th" x="340" y="477" text-anchor="middle" dominant-baseline="central">Double unders (best position)</text><text class="ts" x="340" y="497" text-anchor="middle" dominant-baseline="central">Blocks vision + symmetrical passing</text></g>
+<line x1="340" y1="510" x2="340" y2="538" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<line x1="280" y1="538" x2="180" y2="580" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="400" y1="538" x2="500" y2="580" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-coral" onclick="d('mn')" style="cursor:pointer"><rect x="50" y="580" width="240" height="44" rx="8" stroke-width="0.5"/><text class="th" x="170" y="602" text-anchor="middle" dominant-baseline="central">Mount</text></g>
+<g class="node c-coral" onclick="d('sn')" style="cursor:pointer"><rect x="390" y="580" width="240" height="44" rx="8" stroke-width="0.5"/><text class="th" x="510" y="602" text-anchor="middle" dominant-baseline="central">Side control</text></g>
+
+<text class="ts" x="12" y="36" fill="var(--color-text-secondary)">Vol 4</text>
+<text class="ts" x="12" y="112" fill="var(--color-text-secondary)">Vol 4</text>
+<text class="ts" x="12" y="196" fill="var(--color-text-secondary)">Vol 4-5</text>
+<text class="ts" x="12" y="296" fill="var(--color-text-secondary)">Vol 5-6</text>
+<text class="ts" x="12" y="394" fill="var(--color-text-secondary)">Vol 5-6</text>
+<text class="ts" x="12" y="484" fill="var(--color-text-secondary)">Vol 6</text>
+<text class="ts" x="12" y="602" fill="var(--color-text-secondary)">Vol 5</text>
+</svg>
+</div>
+
+<!-- ATTACKS -->
+<div id="attacks" style="display:none">
+<svg viewBox="0 0 680 580" role="img"><title>Submission attacks from half guard top</title><desc>Kimura, Darce, guillotine and leg lock entries from half guard passing</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node c-gray" onclick="d('atk_start')" style="cursor:pointer"><rect x="190" y="14" width="300" height="44" rx="8" stroke-width="0.5"/><text class="th" x="340" y="36" text-anchor="middle" dominant-baseline="central">Can't pass or want submission</text></g>
+<line x1="340" y1="58" x2="340" y2="86" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-purple" onclick="d('atk_entry')" style="cursor:pointer"><rect x="150" y="86" width="380" height="44" rx="8" stroke-width="0.5"/><text class="th" x="340" y="108" text-anchor="middle" dominant-baseline="central">Entry opportunities from cross shoulder post / underhook</text></g>
+
+<line x1="175" y1="130" x2="80" y2="174" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="270" y1="130" x2="230" y2="174" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="410" y1="130" x2="450" y2="174" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="505" y1="130" x2="600" y2="174" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-coral" onclick="d('kimura')" style="cursor:pointer"><rect x="14" y="174" width="130" height="56" rx="8" stroke-width="0.5"/><text class="th" x="79" y="195" text-anchor="middle" dominant-baseline="central">Kimura</text><text class="ts" x="79" y="215" text-anchor="middle" dominant-baseline="central">When bridge occurs</text></g>
+<g class="node c-coral" onclick="d('darce')" style="cursor:pointer"><rect x="154" y="174" width="150" height="56" rx="8" stroke-width="0.5"/><text class="th" x="229" y="195" text-anchor="middle" dominant-baseline="central">Darce / inverted KG</text><text class="ts" x="229" y="215" text-anchor="middle" dominant-baseline="central">Off cross shoulder post</text></g>
+<g class="node c-coral" onclick="d('guill')" style="cursor:pointer"><rect x="354" y="174" width="150" height="56" rx="8" stroke-width="0.5"/><text class="th" x="429" y="195" text-anchor="middle" dominant-baseline="central">Guillotine</text><text class="ts" x="429" y="215" text-anchor="middle" dominant-baseline="central">Chin to chest finish</text></g>
+<g class="node c-coral" onclick="d('legs')" style="cursor:pointer"><rect x="514" y="174" width="150" height="56" rx="8" stroke-width="0.5"/><text class="th" x="589" y="195" text-anchor="middle" dominant-baseline="central">Leg lock entries</text><text class="ts" x="589" y="215" text-anchor="middle" dominant-baseline="central">Threat opens passing</text></g>
+
+<line x1="79" y1="230" x2="79" y2="274" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="229" y1="230" x2="229" y2="274" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="429" y1="230" x2="429" y2="274" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-teal" onclick="d('kimurad')" style="cursor:pointer"><rect x="14" y="274" width="130" height="70" rx="8" stroke-width="0.5"/><text class="th" x="79" y="296" text-anchor="middle" dominant-baseline="central">Kimura detail</text><text class="ts" x="79" y="314" text-anchor="middle" dominant-baseline="central">Counter bridge</text><text class="ts" x="79" y="330" text-anchor="middle" dominant-baseline="central">Pass with kimura</text></g>
+<g class="node c-teal" onclick="d('darced')" style="cursor:pointer"><rect x="154" y="274" width="150" height="70" rx="8" stroke-width="0.5"/><text class="th" x="229" y="296" text-anchor="middle" dominant-baseline="central">Darce detail</text><text class="ts" x="229" y="314" text-anchor="middle" dominant-baseline="central">Crunch chin to chest</text><text class="ts" x="229" y="330" text-anchor="middle" dominant-baseline="central">Darce dilemma</text></g>
+<g class="node c-teal" onclick="d('guilld')" style="cursor:pointer"><rect x="354" y="274" width="150" height="70" rx="8" stroke-width="0.5"/><text class="th" x="429" y="296" text-anchor="middle" dominant-baseline="central">Guillotine detail</text><text class="ts" x="429" y="314" text-anchor="middle" dominant-baseline="central">Failed → shoulder crunch</text><text class="ts" x="429" y="330" text-anchor="middle" dominant-baseline="central">Or Darce dilemma</text></g>
+
+<g class="node c-purple" onclick="d('underhookatk')" style="cursor:pointer"><rect x="130" y="390" width="420" height="56" rx="8" stroke-width="0.5"/><text class="th" x="340" y="411" text-anchor="middle" dominant-baseline="central">Opponent gets underhook</text><text class="ts" x="340" y="431" text-anchor="middle" dominant-baseline="central">Counter: pommel back, overback grip, or Darce</text></g>
+
+<line x1="229" y1="344" x2="229" y2="390" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="340" y1="344" x2="340" y2="390" stroke="var(--color-border-secondary)" stroke-width="0.5" stroke-dasharray="4 3"/>
+
+<line x1="200" y1="446" x2="130" y2="490" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="340" y1="446" x2="340" y2="490" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="480" y1="446" x2="550" y2="490" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-teal" onclick="d('pommback')" style="cursor:pointer"><rect x="14" y="490" width="200" height="56" rx="8" stroke-width="0.5"/><text class="th" x="114" y="511" text-anchor="middle" dominant-baseline="central">Pommel back</text><text class="ts" x="114" y="531" text-anchor="middle" dominant-baseline="central">Wizard grip counter</text></g>
+<g class="node c-teal" onclick="d('overback2')" style="cursor:pointer"><rect x="240" y="490" width="200" height="56" rx="8" stroke-width="0.5"/><text class="th" x="340" y="511" text-anchor="middle" dominant-baseline="central">Sit to overback</text><text class="ts" x="340" y="531" text-anchor="middle" dominant-baseline="central">Block hip, sit over arm</text></g>
+<g class="node c-teal" onclick="d('3qnelson')" style="cursor:pointer"><rect x="466" y="490" width="200" height="56" rx="8" stroke-width="0.5"/><text class="th" x="566" y="511" text-anchor="middle" dominant-baseline="central">3/4 Nelson</text><text class="ts" x="566" y="531" text-anchor="middle" dominant-baseline="central">Return to floor, then Darce</text></g>
+
+<text class="ts" x="12" y="36" fill="var(--color-text-secondary)">Vol 1-2</text>
+<text class="ts" x="12" y="108" fill="var(--color-text-secondary)">Vol 2</text>
+<text class="ts" x="12" y="206" fill="var(--color-text-secondary)">Vol 2</text>
+<text class="ts" x="12" y="314" fill="var(--color-text-secondary)">Vol 1-2</text>
+<text class="ts" x="12" y="420" fill="var(--color-text-secondary)">Vol 6</text>
+<text class="ts" x="12" y="520" fill="var(--color-text-secondary)">Vol 6</text>
+</svg>
+</div>
+
+<!-- DEFENSIVE POSITIONS -->
+<div id="defensive" style="display:none">
+<svg viewBox="0 0 680 600" role="img"><title>Defensive positions and counters from half guard top</title><desc>Scorpion, deep half guard, lower leg shift and body lock passing counters</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node c-gray" onclick="d('def_start')" style="cursor:pointer"><rect x="170" y="14" width="340" height="44" rx="8" stroke-width="0.5"/><text class="th" x="340" y="36" text-anchor="middle" dominant-baseline="central">Opponent's dangerous defensive positions</text></g>
+
+<line x1="175" y1="58" x2="100" y2="96" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="280" y1="58" x2="260" y2="96" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="400" y1="58" x2="420" y2="96" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="505" y1="58" x2="580" y2="96" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-purple" onclick="d('scorpion')" style="cursor:pointer"><rect x="14" y="96" width="170" height="56" rx="8" stroke-width="0.5"/><text class="th" x="99" y="117" text-anchor="middle" dominant-baseline="central">Scorpion / lockdown</text><text class="ts" x="99" y="137" text-anchor="middle" dominant-baseline="central">Inside or outside</text></g>
+<g class="node c-purple" onclick="d('deephalf')" style="cursor:pointer"><rect x="194" y="96" width="160" height="56" rx="8" stroke-width="0.5"/><text class="th" x="274" y="117" text-anchor="middle" dominant-baseline="central">Deep half guard</text><text class="ts" x="274" y="137" text-anchor="middle" dominant-baseline="central">Bottom underhook</text></g>
+<g class="node c-purple" onclick="d('lowerleg')" style="cursor:pointer"><rect x="364" y="96" width="160" height="56" rx="8" stroke-width="0.5"/><text class="th" x="444" y="117" text-anchor="middle" dominant-baseline="central">Lower leg shift</text><text class="ts" x="444" y="137" text-anchor="middle" dominant-baseline="central">Scoop grip danger</text></g>
+<g class="node c-purple" onclick="d('bodylock')" style="cursor:pointer"><rect x="534" y="96" width="132" height="56" rx="8" stroke-width="0.5"/><text class="th" x="600" y="117" text-anchor="middle" dominant-baseline="central">Body lock</text><text class="ts" x="600" y="137" text-anchor="middle" dominant-baseline="central">Vol 8</text></g>
+
+<line x1="99" y1="152" x2="99" y2="196" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="274" y1="152" x2="274" y2="196" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="444" y1="152" x2="444" y2="196" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="600" y1="152" x2="600" y2="196" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-teal" onclick="d('scorp_c')" style="cursor:pointer"><rect x="14" y="196" width="170" height="70" rx="8" stroke-width="0.5"/><text class="th" x="99" y="218" text-anchor="middle" dominant-baseline="central">Counter scorpion</text><text class="ts" x="99" y="236" text-anchor="middle" dominant-baseline="central">Pommel legs, hide ankle</text><text class="ts" x="99" y="252" text-anchor="middle" dominant-baseline="central">Peel scoop grip</text></g>
+<g class="node c-teal" onclick="d('deep_c')" style="cursor:pointer"><rect x="194" y="196" width="160" height="70" rx="8" stroke-width="0.5"/><text class="th" x="274" y="218" text-anchor="middle" dominant-baseline="central">Counter deep half</text><text class="ts" x="274" y="236" text-anchor="middle" dominant-baseline="central">Top knee down</text><text class="ts" x="274" y="252" text-anchor="middle" dominant-baseline="central">Deny ankle exposure</text></g>
+<g class="node c-teal" onclick="d('lower_c')" style="cursor:pointer"><rect x="364" y="196" width="160" height="70" rx="8" stroke-width="0.5"/><text class="th" x="444" y="218" text-anchor="middle" dominant-baseline="central">Counter lower leg</text><text class="ts" x="444" y="236" text-anchor="middle" dominant-baseline="central">Fake backstep</text><text class="ts" x="444" y="252" text-anchor="middle" dominant-baseline="central">Prevent/peel scoop</text></g>
+<g class="node c-teal" onclick="d('body_c')" style="cursor:pointer"><rect x="534" y="196" width="132" height="70" rx="8" stroke-width="0.5"/><text class="th" x="600" y="218" text-anchor="middle" dominant-baseline="central">Body lock pass</text><text class="ts" x="600" y="236" text-anchor="middle" dominant-baseline="central">Hip vs cranium</text><text class="ts" x="600" y="252" text-anchor="middle" dominant-baseline="central">control dilemma</text></g>
+
+<line x1="99" y1="266" x2="99" y2="320" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="274" y1="266" x2="274" y2="320" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-teal" onclick="d('passover')" style="cursor:pointer"><rect x="14" y="320" width="170" height="56" rx="8" stroke-width="0.5"/><text class="th" x="99" y="341" text-anchor="middle" dominant-baseline="central">Counter passover</text><text class="ts" x="99" y="361" text-anchor="middle" dominant-baseline="central">Post hip, step over head</text></g>
+<g class="node c-teal" onclick="d('kimconv')" style="cursor:pointer"><rect x="194" y="320" width="160" height="56" rx="8" stroke-width="0.5"/><text class="th" x="274" y="341" text-anchor="middle" dominant-baseline="central">Kimura conversion</text><text class="ts" x="274" y="361" text-anchor="middle" dominant-baseline="central">Expose underhook first</text></g>
+
+<line x1="444" y1="266" x2="444" y2="320" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<g class="node c-teal" onclick="d('rollstop')" style="cursor:pointer"><rect x="364" y="320" width="160" height="56" rx="8" stroke-width="0.5"/><text class="th" x="444" y="341" text-anchor="middle" dominant-baseline="central">Stop the roll</text><text class="ts" x="444" y="361" text-anchor="middle" dominant-baseline="central">Sit hip, knee to far hip</text></g>
+
+<path d="M99 376 L99 430 L340 430" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M274 376 L274 430" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M444 376 L444 430 L340 430" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M600 266 L600 430 L340 430" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<line x1="340" y1="430" x2="340" y2="456" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node c-purple" onclick="d('standing')" style="cursor:pointer"><rect x="150" y="456" width="380" height="56" rx="8" stroke-width="0.5"/><text class="th" x="340" y="477" text-anchor="middle" dominant-baseline="central">Standing passing option</text><text class="ts" x="340" y="497" text-anchor="middle" dominant-baseline="central">Move to feet when ground game is compromised</text></g>
+<line x1="340" y1="512" x2="340" y2="540" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arr)"/>
+<g class="node c-coral" onclick="d('regain')" style="cursor:pointer"><rect x="180" y="540" width="320" height="44" rx="8" stroke-width="0.5"/><text class="th" x="340" y="562" text-anchor="middle" dominant-baseline="central">Regain passing position</text></g>
+
+<text class="ts" x="12" y="36" fill="var(--color-text-secondary)">Vol 7</text>
+<text class="ts" x="12" y="124" fill="var(--color-text-secondary)">Vol 7</text>
+<text class="ts" x="12" y="234" fill="var(--color-text-secondary)">Vol 7</text>
+<text class="ts" x="12" y="352" fill="var(--color-text-secondary)">Vol 7</text>
+<text class="ts" x="12" y="484" fill="var(--color-text-secondary)">Vol 7</text>
+</svg>
+</div>
+
+<div class="dp" id="dp"><div style="color:var(--color-text-secondary)">Click any node for detail from the transcripts.</div></div>
+
+<script>
+const D={
+start:{h:"Half guard — top position",v:"Vol 1 Intro",t:"Gordon Ryan's starting premise: half guard is one of the most effective ways to pass AND to tire your opponent simultaneously. Unlike other guard passing, you can carry your full body weight. The system covers every defensive configuration the bottom player can use."},
+battle:{h:"Win the inside position battle",v:"Vol 1 Ch 6",t:"Everything comes down to inside position. You need to win at both the upper body AND lower body simultaneously. If your partner wins upper body inside position, they'll use it for knee lever escapes and underhook battles. If they win lower body, they'll build to butterfly hooks or sweep setups."},
+"2ways":{h:"Two paths to chest-to-chest",v:"Vol 1 Ch 7",t:"Gordon's two master methods: crash the far shoulder (flatten the opponent directly — usually more for passing with a crossface or top head and arm) and hip switching (which gets you to an overback grip or reverse underhook). Both lead to chest-to-chest, just via different upper body positions."},
+crash:{h:"Crash the far shoulder",v:"Vol 1 Ch 7",t:"Drive your far shoulder into the opponent's upper body, creating a cranial shift (moving their head to the side). Once you have chest-to-chest contact with a cranial shift, the leg becomes almost impossible to maintain. This is the more direct of the two paths."},
+hipswitch:{h:"Hip switch to overback",v:"Vol 1 Ch 7 + Vol 2 Ch 6",t:"Switch your hips past the opponent's top knee shield. The destination is an overback grip — arm over the opponent's back with elbow connected. From here you have the ankle scoop series, backstepping, and flattening methods. A reverse underhook is the alternative when the overback isn't available."},
+c2c:{h:"Chest to chest — the goal",v:"Vol 1 Ch 3-4",t:"Once chest-to-chest is achieved with a cranial shift, you're carrying your opponent's body weight. Gordon says this is what makes half guard so exhausting for the bottom player — they're supporting your weight while trying to escape. The cranial shift (pushing their head to one side) prevents the re-guard."},
+side:{h:"Side control",v:"Vol 5 Ch 1",t:"The basic pass destination. Dominate the inside hip with your knee on the floor. If your knee can't reach the floor, the pass isn't complete — opponent can recover. Inside hip knee domination is the completion criteria."},
+mount:{h:"Mount",v:"Vol 5 Ch 2",t:"Pass 95% to side control, then use two butterfly hooks to step back into mount. Or go directly to high tripod and free the knee over the top. Dominating the outside hip (not inside) when going to mount."},
+back:{h:"Back take",v:"Vol 1 Ch 5",t:"Backtracking and leg riding — when you get close to a pass, instead of forcing it, you back up and ride your opponent's leg. This is partly tactical: you set the pace of the match. From leg riding you can enter back takes or reset to passing."},
+pass:{h:"Half guard passed",v:"Vol 1 Overview",t:"Gordon states this instructional covers roughly 13 hours of technique — the most comprehensive half guard passing resource he's produced, covering every defensive configuration an expert opponent might use."},
+kshield:{h:"Opponent's knee shield",v:"Vol 1-3",t:"The knee shield is the opponent's primary structural defense from bottom half guard. Gordon categorizes them into high knee shield (knee at chest/shoulder level) and low knee shield (knee at hip/stomach level). Each requires slightly different approaches."},
+highk:{h:"High knee shield",v:"Vol 1-2",t:"The most common configuration. The opponent's knee is at chest or shoulder level, creating a strong frame. Gordon's methods: stuff the leg past (basic), rise up and through (intermediate), hip switch to overback grip (most reliable). Opponent's upper body frames (none / double post / cross post) determine which method works."},
+lowk:{h:"Low knee shield",v:"Vol 3",t:"Lower knee position makes the stuffing method unreliable — the leg can't be driven past as easily. Instead: test the lock first (sprawl and see if legs separate), then use rising methods or hip switch. Upper body posts still determine the specific entry."},
+stuff:{h:"Stuffing method",v:"Vol 1 Ch 9-10",t:"Physically drive the opponent's knee to the floor. Works well against no shoulder post — drive the leg down with your hip/knee while establishing upper body inside position. Does NOT work reliably against a double shoulder post or cross shoulder post (opponent's frame prevents it)."},
+rise:{h:"Rising method",v:"Vol 1 Ch 11",t:"Quickly pop up through a split squat position and then drop back down into half guard, beating the opponent's leg to inside position. Works against all frame configurations but requires timing. The pop-up bypasses the frame rather than fighting through it."},
+hswitch:{h:"Hip switch to overback",v:"Vol 1 Ch 12-13",t:"Switch hips to get past the top knee shield. Best method when opponent has a cross shoulder post — the hip switch creates an angle that makes the cross post less effective. Drive to an overback grip where you control the opponent's back with your elbow."},
+testlock:{h:"Test the lock",v:"Vol 3 Ch 2",t:"Against low knee shield, first test how strong the leg lock is. A simple sprawl hip switch will separate legs if the lock is weak — then you can pass immediately. If the lock is strong, proceed to more deliberate passing methods."},
+cranial:{h:"Cranial shift",v:"Vol 3 Ch 3",t:"After separating the legs (or anytime chest-to-chest is established), making a cranial shift — moving the opponent's head to the side — is the key. With cranial shift you can pass to either side. Without it, the opponent can re-guard more easily."},
+risemeth:{h:"Rising methods — low shield",v:"Vol 3 Ch 6 + 9 + 13",t:"Rising methods are repeated across multiple frames because they're the most versatile — they work against double shoulder posts where stuffing fails, because the rising motion bypasses the frame. Key: pop up fast enough that the cross shoulder post can't follow."},
+frames:{h:"Upper body frames",v:"Vol 1-3",t:"Three tiers of opponent defense: no shoulder post (basic, stuff method works), double shoulder post (fight hands to inside), cross shoulder post (most advanced — requires climbing the tree, rising methods, or hip switch combinations). Most skilled opponents use the cross shoulder post."},
+nopost:{h:"No shoulder post",v:"Vol 1 Ch 10",t:"Basic configuration. Opponent just wants to escape with the legs. All three methods work — stuff, rise, hip switch. Establish inside hand position and drive to chest-to-chest. Gordon spends less time here because skilled opponents always have upper body frames."},
+dpost:{h:"Double shoulder post",v:"Vol 2 Ch 11-14",t:"Opponent places both hands on your upper chest or shoulders. Stuffing method fails because the posts prevent you from getting low enough. Solutions: fight hands to inside position from below (elbow connection), rising methods to bypass the posts, or hip switching to overback where the posts become irrelevant."},
+cpost:{h:"Cross shoulder post",v:"Vol 2 Ch 15-17",t:"The correct defense — opponent posts one hand diagonally across your upper body. Gordon says this is what skilled players should be doing. Counter: climbing the tree (posting your hands up their body), rising and hip switch combinations, grip fighting sequences to reach overback."},
+oback:{h:"Overback grip",v:"Vol 1 Ch 12-13",t:"Arm over the opponent's back, elbow connected to their far hip. This is Gordon's primary position for flattening opponents out. From here: ankle scoop series (backstep, mount, leg ride), standard flatten and pass, or kimura/guillotine attacks when the bridge happens."},
+c2cstart:{h:"Chest to chest — start passing",v:"Vol 4 Ch 12",t:"Now that chest-to-chest is established, Gordon transitions from the knee shield section to the actual passing mechanics. The key insight: passing from half guard is about two simultaneous goals — dominating your partner's inside hip with your knee AND maintaining upper body control."},
+handpos:{h:"Hand position hierarchy",v:"Vol 4 Ch 13",t:"Best to worst: top head and arm (control head + one arm), crossface alone, over-unders (symmetric, powerful), body lock. The higher positions restrict movement more completely. Gordon generally starts with crossface and works up to top head and arm or over-unders as the pass develops."},
+tripod:{h:"High tripod — the key position",v:"Vol 4 Ch 18",t:"The high tripod is the position between chest-to-chest and completing the pass. One knee is between you and the opponent, propping you up high. From here you free the knee (inside hip domination = pass complete, outside hip = mount). This is the most important tactical position in the system."},
+kneefree:{h:"Knee frees to inside hip",v:"Vol 5 Ch 1",t:"Knee hits the inside hip — pass is essentially complete. Move to side control. Dominate that inside position first before worrying about anything else. If the knee comes up but can't reach the floor, the pass is incomplete and opponent can recover."},
+bfly:{h:"Butterfly hook in high tripod",v:"Vol 5 Ch 13-16",t:"Most common problem from the high tripod: opponent pommels a butterfly hook in before you free the knee. First test: try hip switch pass (tests if hook is sticky). If sticky, go to pommel battle. Top pommel vs front pommel dilemma — Gordon's answer is to dominate the far hip as the tiebreaker."},
+hippost:{h:"Near hip post",v:"Vol 6 Ch 5-6",t:"Opponent posts their near hip to off-balance you as you go to high tripod. Gordon says this is super important and underappreciated. Solution: transfer to a head block position (head crosses to the other side), which eliminates the off-balance problem entirely."},
+sc2:{h:"Side control",v:"Vol 5 Ch 1",t:"After freeing the knee to the inside hip — cross-face, far arm trapped, knee driving the hip down. Can pass to side control vs explosive bridges by passing through their bridge rather than against it."},
+pommels:{h:"Pommel battle",v:"Vol 5 Ch 16-19",t:"Pommel battle from the high tripod with butterfly hook. Gordon's critical advice: whoever dominates the far hip wins. If both players have butterfly hooks inside, compete for the far hip. The far hip knee wedge or dominating the far hip with a post breaks the tie."},
+headblock:{h:"Head block position",v:"Vol 6 Ch 6-8",t:"Head crosses to the other side of the opponent's head, with an underhook. Eliminates the near hip post problem. From head block, convert to over-unders: push your head through from this position and frame on the far side. Wide base of support."},
+dunder:{h:"Double unders — best position",v:"Vol 6 Ch 8",t:"Gordon calls double unders the best passing position in half guard. Reason 1: blocks opponent's field of vision. Reason 2: almost no upper body counters available. Reason 3: you can pass symmetrically to either side. Used to be considered risky but Gordon argues it's actually the safest top position."},
+mn:{h:"Mount from double unders",v:"Vol 5 Ch 2-3",t:"From double unders, pass 95% to side control then use two butterfly hooks to step back into mount. Or go directly from high tripod — outside hip domination leads to mount entry."},
+sn:{h:"Side control from double unders",v:"Vol 5 Ch 1",t:"From double unders, pass in the direction of inside hip domination. Knee hits floor at inside hip — side control achieved."},
+atk_start:{h:"Can't pass or want submission",v:"Vol 2 Ch 18-20",t:"The attack options are tactical as much as technical. Sometimes you can't get chest-to-chest yet, sometimes you choose not to. The cross shoulder post creates specific attack opportunities that aren't available from chest-to-chest."},
+atk_entry:{h:"Entry opportunities",v:"Vol 2 Ch 18-20",t:"Cross shoulder post / underhook battle creates lanes for: Kimura (when the bridge occurs from hip switch), Darce / inverted kata gatame (off the cross shoulder post), guillotine (when opponent builds up to knees), leg lock entries (threat alone opens passing lanes)."},
+kimura:{h:"Kimura from half guard top",v:"Vol 1 Ch 16-17",t:"Comes from the hip switch scenario. When you go to hip switch, opponent bridges to reverse you. Use the bridge: you end up in bottom position, lock the kimura, use it to come back to top. Then pass with the kimura — options include staying with the kimura, transitioning to top head and arm, or punching through to the back."},
+darce:{h:"Darce / inverted kata gatame",v:"Vol 2 Ch 19",t:"Gordon calls it 'inverted kata gatame' to be accurate — a darce strangle. Off the cross shoulder post: sit over the opponent's arm while establishing the grip. Then roll through to finish. The darce dilemma: opponent pulls chin away — use this to then transition to guillotine."},
+guill:{h:"Guillotine",v:"Vol 1 Ch 18-19 + Vol 2",t:"When opponent bridges during hip switch (like the kimura), or when they build up to their knees to escape. Gordon's key: lean over the far shoulder with the guillotine, not straight back. Chin to chest is the mechanical requirement. Failed guillotine → switch to shoulder crunch (sumi gaeshi)."},
+legs:{h:"Leg lock entries",v:"Vol 2 Ch 20",t:"The threat of leg locks — entering the leg entanglement — is often more useful than the leg locks themselves. When opponent has an annoying cross shoulder post and you can't get chest-to-chest or a Kimura/Darce, threatening legs opens passing lanes."},
+kimurad:{h:"Kimura detail",v:"Vol 1 Ch 16-17",t:"Bridge counter: hip switch → opponent bridges → end up in bottom position → lock kimura → use kimura to come back on top. Passing with the kimura: multiple options — stay with kimura, go to top head and arm, punch underhook in, or take the back."},
+darced:{h:"Darce detail",v:"Vol 2 Ch 19 + Vol 6 Ch 14-15",t:"Crunch the opponent's chin to their chest. If they resist by lifting the chin away — use that opening to transition to guillotine. Darce dilemma: Darce opens guillotine, guillotine opens Darce. The two submissions are connected and threaten simultaneously."},
+guilld:{h:"Guillotine detail",v:"Vol 1 Ch 18-19",t:"Failed guillotine → switch to shoulder crunch (this is the Joao Rocha competition moment Ryan references). If the guillotine fails, don't abandon it — use the position to access a shoulder crunch / sumi gaeshi."},
+underhookatk:{h:"Opponent gets underhook",v:"Vol 6 Ch 10-22",t:"The most important defensive counter in the whole instructional. When the opponent gets an underhook, they have shoulder-to-armpit connection and head under your chest. They can build to their knees and start wrestling. Gordon's system has multiple layers of counters."},
+pommback:{h:"Pommel back to underhook",v:"Vol 6 Ch 12",t:"Use a wizard grip (overhook the opponent's underhooking arm) to prevent them strengthening it. From the wizard, re-establish your own underhook or transition to overback. This is the preferred response when you catch the underhook early."},
+overback2:{h:"Sit to overback grip",v:"Vol 6 Ch 13",t:"When opponent gets a good underhook, instead of fighting it directly, lift your elbow and sit over their arm to establish overback. Block their hip with your hand as you do it. From overback, all the standard flattening options apply."},
+"3qnelson":{h:"3/4 Nelson",v:"Vol 6 Ch 20",t:"When opponent builds up to their knees with an underhook. Return them to the floor with a 3/4 Nelson — chin-to-chest motion that brings them back down. From there, go directly to Darce strangles. Gordon's preferred response to the build-up."},
+def_start:{h:"Dangerous defensive positions",v:"Vol 7-8",t:"The positions that can actually reverse the situation or threaten the top player. Gordon dedicates volumes 7 and 8 to these: scorpion/lockdown (Vol 7), deep half guard (Vol 7), lower leg shift with scoop grip (Vol 6-7), body lock passing (Vol 8 — going offensive with it)."},
+scorpion:{h:"Scorpion / lockdown",v:"Vol 7 Ch 1-6",t:"Opponent locks their legs on the outside of yours in an extended position (lockdown). Can extend your leg and compromise your base. Two types: inside scorpion (leg inside) and outside scorpion (easier to deal with — just pull heel to butt). Gordon's primary counter is to pommel the legs and hide the ankle."},
+deephalf:{h:"Deep half guard",v:"Vol 7 Ch 7-15",t:"Opponent has gotten underneath you with their head under your hip, usually with a butterfly hook or traditional lock. Goals: pull you overhead (passover), sweep you to the opposite side, or enter leg attacks. Gordon's response: top knee down first, deny ankle exposure, then expose underhook for kimura conversion."},
+lowerleg:{h:"Lower leg shift / scoop grip",v:"Vol 6 Ch 23-36",t:"Opponent shifts to control your lower leg with a scoop grip — dangerous because they can roll you or enter deep half. Gordon's system: prevent the scoop (take leg out and away), peel it if they get it, fake backstep to knee slide, force deep half as last resort."},
+bodylock:{h:"Body lock passing",v:"Vol 8",t:"Gordon's final system — not really defensive, but offensive using a body lock. Two configurations: under both arms (symmetric, can pass either side, treat like double unders) and arm-in body lock (opponent's arm trapped, asymmetric). Hip control vs cranium control is the core dilemma."},
+scorp_c:{h:"Counter scorpion",v:"Vol 7 Ch 2-6",t:"Pommel your legs when chest-to-chest to prevent scorpion from locking. Hide your ankle (shoelaces under your body) so they can't feed a scoop grip. If they get a deep scoop anyway — peel the grip using the hip post and angle. Counter a roll-through by posting the far hip. Counter a passover by stepping over their head."},
+deep_c:{h:"Counter deep half",v:"Vol 7 Ch 10-18",t:"Top knee down first — denies ankle exposure. Every time opponent goes to push your knee down, they expose an underhook. Take it and convert to a kimura. The kimura conversion from deep half is Gordon's preferred submission/passing combination from this position."},
+lower_c:{h:"Counter lower leg shift",v:"Vol 6 Ch 23-36",t:"Fake a backstep — this either forces a knee slide opportunity (if they open their knees to stop the backstep) or exposes the far hip (if they hold). Prevent scoop by removing the leg early. Peel scoop with hip post and angle creation. Stop rolls by sitting to one hip with knee to far hip."},
+body_c:{h:"Body lock pass",v:"Vol 8 Ch 7-13",t:"The hip vs cranium dilemma: sometimes you need cranium control (when opponent's upper body inside position is too strong to get a cranial shift), sometimes hip control (body lock). Body lock under both arms = symmetrical, pass either side. Arm-in lock = pass to near side with near underhook."},
+passover:{h:"Counter passover",v:"Vol 7 Ch 6 + 13",t:"Worst position — opponent locks scoop scorpion and passes your leg across their body. Counter: two-on-one on the leg immediately, hip post, step over the head. Gordon covers this in detail because it's the most dangerous scorpion sequence."},
+kimconv:{h:"Kimura conversion",v:"Vol 7 Ch 16-18",t:"The primary weapon from deep half counter. Deny ankle exposure → opponent exposes underhook → lock kimura over their arm → convert to submission, back take, or use kimura handle to return to passing position. Gordon's favorite sequence from this position."},
+rollstop:{h:"Stop the roll",v:"Vol 6 Ch 32",t:"Opponent has the scoop grip and tries to roll you over. Sit to one hip reactively, take your knee to the far hip. This stops the roll. Then peel the scoop grip from the hip post position."},
+standing:{h:"Standing passing option",v:"Vol 7 Ch 12",t:"When the ground game gets too complicated — opponent has too many leg entrances or is using deep half effectively — just stand up and pass from the feet. Gordon explicitly recommends this as a reset option, not a failure."},
+regain:{h:"Regain passing position",v:"Vol 7-8",t:"The meta-lesson of the defensive volumes: there is always a counter, always a next step. Gordon's system is designed so that even the opponent's best defensive positions lead back into his passing structure or into submission opportunities."},
+};
+function d(id){const x=D[id];if(!x)return;document.getElementById('dp').innerHTML=`<div class="h">${x.h} <span class="v">${x.v}</span></div><div>${x.t}</div>`;}
+function sw(v,btn){document.querySelectorAll('.tb button').forEach(b=>b.classList.remove('on'));btn.classList.add('on');['overview','knee','chest','attacks','defensive'].forEach(id=>{document.getElementById(id).style.display=id===v?'block':'none';});document.getElementById('dp').innerHTML='<div style="color:var(--color-text-secondary)">Click any node for detail from the transcripts.</div>';}
+</script>

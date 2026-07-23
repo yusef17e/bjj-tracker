@@ -1,0 +1,757 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.tabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px}
+.tab{padding:5px 12px;border-radius:8px;border:0.5px solid var(--color-border-secondary);background:var(--color-background-secondary);color:var(--color-text-secondary);font-size:12px;cursor:pointer;transition:all .15s;font-family:inherit}
+.tab.active{background:var(--color-background-tertiary);color:var(--color-text-primary);border-color:var(--color-border-primary);font-weight:500}
+.leg{display:flex;gap:12px;font-size:11px;color:var(--color-text-secondary);margin-bottom:10px;flex-wrap:wrap}
+.ld{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.dp{border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:12px 16px;margin-top:10px;background:var(--color-background-secondary);font-size:13px;color:var(--color-text-secondary);line-height:1.6;min-height:52px}
+.dp .dt{font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:3px}
+.dp .dv{font-size:11px;color:var(--color-text-secondary)}
+svg{display:block;width:100%}
+</style>
+
+<div class="tabs">
+  <button class="tab active" onclick="sv('theory',this)">Theory</button>
+  <button class="tab" onclick="sv('irimi',this)">Irimi ashi</button>
+  <button class="tab" onclick="sv('outside',this)">Outside ashi</button>
+  <button class="tab" onclick="sv('cross',this)">Cross ashi</button>
+  <button class="tab" onclick="sv('5050',this)">50/50</button>
+  <button class="tab" onclick="sv('subs',this)">Submissions</button>
+</div>
+
+<div class="leg">
+  <span><span class="ld" style="background:#888780"></span>Position / entry</span>
+  <span><span class="ld" style="background:#534AB7"></span>Control / principle</span>
+  <span><span class="ld" style="background:#0F6E56"></span>Attack / transition</span>
+  <span><span class="ld" style="background:#185FA5"></span>Opponent reaction</span>
+  <span><span class="ld" style="background:#993C1D"></span>Submission</span>
+</div>
+
+<div id="v-theory">
+<svg viewBox="0 0 680 780" role="img">
+<title>Gordon Ryan leg lock system — theory</title>
+<desc>Core theory: asymmetric positions, inside position battle, ashi garami families</desc>
+<defs><marker id="a0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node" onclick="sd('t_core')" style="cursor:pointer">
+  <rect x="160" y="14" width="360" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central" fill="#444441">Core philosophy</text>
+  <text class="ts" x="340" y="54" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Fight from asymmetric leg positions</text>
+</g>
+<line x1="340" y1="70" x2="340" y2="96" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+
+<g class="node" onclick="sd('t_inside')" style="cursor:pointer">
+  <rect x="80" y="96" width="520" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="116" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Win the inside position battle</text>
+  <text class="ts" x="340" y="136" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Feet and knees inside opponent's → you attack. Outside → they attack.</text>
+</g>
+<line x1="340" y1="152" x2="340" y2="184" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g class="node" onclick="sd('t_families')" style="cursor:pointer">
+  <rect x="160" y="184" width="360" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="206" text-anchor="middle" dominant-baseline="central" fill="#444441">4 ashi garami families</text>
+</g>
+
+<line x1="200" y1="228" x2="120" y2="270" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+<line x1="280" y1="228" x2="250" y2="270" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+<line x1="400" y1="228" x2="430" y2="270" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+<line x1="480" y1="228" x2="560" y2="270" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+
+<g class="node" onclick="sd('t_irimi')" style="cursor:pointer">
+  <rect x="30" y="270" width="180" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="120" y="290" text-anchor="middle" dominant-baseline="central" fill="#085041">Irimi ashi</text>
+  <text class="ts" x="120" y="308" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Entering · safest</text>
+</g>
+<g class="node" onclick="sd('t_outside')" style="cursor:pointer">
+  <rect x="220" y="270" width="160" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="300" y="290" text-anchor="middle" dominant-baseline="central" fill="#085041">Outside ashi</text>
+  <text class="ts" x="300" y="308" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Outside heel hook</text>
+</g>
+<g class="node" onclick="sd('t_cross')" style="cursor:pointer">
+  <rect x="390" y="270" width="160" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="470" y="290" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Cross ashi</text>
+  <text class="ts" x="470" y="308" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Best position overall</text>
+</g>
+<g class="node" onclick="sd('t_5050')" style="cursor:pointer">
+  <rect x="560" y="270" width="100" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="610" y="290" text-anchor="middle" dominant-baseline="central" fill="#712B13">50/50</text>
+  <text class="ts" x="610" y="308" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Symmetric</text>
+</g>
+
+<line x1="340" y1="340" x2="340" y2="374" stroke="none"/>
+<path d="M120 326 L120 360 L340 360" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M300 326 L300 360" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M470 326 L470 360 L340 360" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="360" x2="340" y2="386" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+
+<g class="node" onclick="sd('t_subs')" style="cursor:pointer">
+  <rect x="80" y="386" width="520" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="408" text-anchor="middle" dominant-baseline="central" fill="#444441">Submission hierarchy from any position</text>
+</g>
+
+<line x1="200" y1="430" x2="130" y2="470" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+<line x1="290" y1="430" x2="270" y2="470" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+<line x1="390" y1="430" x2="410" y2="470" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+<line x1="480" y1="430" x2="550" y2="470" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+
+<g class="node" onclick="sd('t_heel')" style="cursor:pointer">
+  <rect x="30" y="470" width="190" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text class="th" x="125" y="490" text-anchor="middle" dominant-baseline="central" fill="#712B13">Heel hook</text>
+  <text class="ts" x="125" y="508" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Inside stronger than outside</text>
+</g>
+<g class="node" onclick="sd('t_toe')" style="cursor:pointer">
+  <rect x="230" y="470" width="160" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="310" y="490" text-anchor="middle" dominant-baseline="central" fill="#712B13">Toe hold</text>
+  <text class="ts" x="310" y="508" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Faster pressure than heel</text>
+</g>
+<g class="node" onclick="sd('t_kbar')" style="cursor:pointer">
+  <rect x="400" y="470" width="150" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="475" y="490" text-anchor="middle" dominant-baseline="central" fill="#712B13">Knee bar</text>
+  <text class="ts" x="475" y="508" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Double trouble required</text>
+</g>
+<g class="node" onclick="sd('t_ach')" style="cursor:pointer">
+  <rect x="560" y="470" width="100" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="610" y="490" text-anchor="middle" dominant-baseline="central" fill="#712B13">Achilles</text>
+  <text class="ts" x="610" y="508" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Control base</text>
+</g>
+
+<line x1="340" y1="546" x2="340" y2="580" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g class="node" onclick="sd('t_universal')" style="cursor:pointer">
+  <rect x="80" y="580" width="520" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="600" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Universal principles</text>
+  <text class="ts" x="340" y="618" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Follow the leg · switch legs · go last in shootouts</text>
+</g>
+<line x1="340" y1="636" x2="340" y2="662" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a0)"/>
+
+<g class="node" onclick="sd('t_gripping')" style="cursor:pointer">
+  <rect x="160" y="662" width="360" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="340" y="682" text-anchor="middle" dominant-baseline="central" fill="#085041">Gripping — the transmission</text>
+  <text class="ts" x="340" y="700" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Ashi = engine · gripping = gears · learn last</text>
+</g>
+<text class="ts" x="20" y="120" fill="#888780">Vol 1</text>
+<text class="ts" x="20" y="300" fill="#888780">Vol 1</text>
+<text class="ts" x="20" y="500" fill="#888780">Vol 1</text>
+<text class="ts" x="20" y="690" fill="#888780">Vol 6</text>
+</svg>
+</div>
+
+<div id="v-irimi" style="display:none">
+<svg viewBox="0 0 680 860" role="img">
+<title>Irimi ashi garami system</title>
+<desc>Entering ashi garami — control, submissions, and counters to opponent reactions</desc>
+<defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node" onclick="sd('i_entry')" style="cursor:pointer">
+  <rect x="190" y="14" width="300" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central" fill="#444441">Irimi ashi garami</text>
+  <text class="ts" x="340" y="54" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Inside leg — physical wedge, safest position</text>
+</g>
+<line x1="340" y1="70" x2="340" y2="96" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+
+<g class="node" onclick="sd('i_stress')" style="cursor:pointer">
+  <rect x="160" y="96" width="360" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="116" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Stress test — tighten the ashi</text>
+  <text class="ts" x="340" y="136" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Lock legs, test opponent reactions before attacking</text>
+</g>
+<line x1="340" y1="152" x2="340" y2="184" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+
+<g class="node" onclick="sd('i_ach')" style="cursor:pointer">
+  <rect x="190" y="184" width="300" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="206" text-anchor="middle" dominant-baseline="central" fill="#444441">Basic Achilles lock attempt</text>
+</g>
+
+<line x1="250" y1="228" x2="150" y2="268" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+<line x1="340" y1="228" x2="340" y2="268" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+<line x1="430" y1="228" x2="530" y2="268" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+
+<g class="node" onclick="sd('i_extract')" style="cursor:pointer">
+  <rect x="30" y="268" width="220" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="140" y="288" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Basic extraction</text>
+  <text class="ts" x="140" y="306" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Scoot back, pull knee</text>
+</g>
+<g class="node" onclick="sd('i_fwd')" style="cursor:pointer">
+  <rect x="260" y="268" width="160" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="340" y="288" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Forward pressure</text>
+  <text class="ts" x="340" y="306" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Tries to pass / stack</text>
+</g>
+<g class="node" onclick="sd('i_boot')" style="cursor:pointer">
+  <rect x="430" y="268" width="220" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="540" y="288" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Boots legs + hand fight</text>
+  <text class="ts" x="540" y="306" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Won't respect Achilles</text>
+</g>
+
+<line x1="140" y1="324" x2="140" y2="360" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+<line x1="340" y1="324" x2="340" y2="360" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+<line x1="540" y1="324" x2="540" y2="360" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+
+<g class="node" onclick="sd('i_elbow')" style="cursor:pointer">
+  <rect x="30" y="360" width="220" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="140" y="380" text-anchor="middle" dominant-baseline="central" fill="#085041">Counter extraction</text>
+  <text class="ts" x="140" y="398" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Elbow position — dominate space</text>
+</g>
+<g class="node" onclick="sd('i_post')" style="cursor:pointer">
+  <rect x="260" y="360" width="160" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="340" y="380" text-anchor="middle" dominant-baseline="central" fill="#085041">Post ashi / belly down</text>
+  <text class="ts" x="340" y="398" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Or butterfly ashi switch</text>
+</g>
+<g class="node" onclick="sd('i_heelhook')" style="cursor:pointer">
+  <rect x="430" y="360" width="220" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text class="th" x="540" y="380" text-anchor="middle" dominant-baseline="central" fill="#712B13">Switch to heel hook</text>
+  <text class="ts" x="540" y="398" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Achilles/heel hook dilemma</text>
+</g>
+
+<line x1="340" y1="416" x2="340" y2="452" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g class="node" onclick="sd('i_finish')" style="cursor:pointer">
+  <rect x="100" y="452" width="480" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="474" text-anchor="middle" dominant-baseline="central" fill="#444441">Finishing mechanics — lock the heel</text>
+</g>
+
+<line x1="240" y1="496" x2="160" y2="536" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+<line x1="440" y1="496" x2="520" y2="536" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+
+<g class="node" onclick="sd('i_bellydown')" style="cursor:pointer">
+  <rect x="30" y="536" width="260" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="160" y="556" text-anchor="middle" dominant-baseline="central" fill="#712B13">Belly down finish</text>
+  <text class="ts" x="160" y="574" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Toes to butt, heel to chin</text>
+</g>
+<g class="node" onclick="sd('i_bellyup')" style="cursor:pointer">
+  <rect x="390" y="536" width="260" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="520" y="556" text-anchor="middle" dominant-baseline="central" fill="#712B13">Belly up finish</text>
+  <text class="ts" x="520" y="574" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Crunch toes to butt</text>
+</g>
+
+<line x1="340" y1="606" x2="340" y2="646" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g class="node" onclick="sd('i_roll')" style="cursor:pointer">
+  <rect x="160" y="646" width="360" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="340" y="668" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Opponent rolls to escape</text>
+</g>
+
+<line x1="260" y1="690" x2="160" y2="726" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+<line x1="420" y1="690" x2="520" y2="726" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a1)"/>
+
+<g class="node" onclick="sd('i_single')" style="cursor:pointer">
+  <rect x="30" y="726" width="260" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="160" y="746" text-anchor="middle" dominant-baseline="central" fill="#085041">Single roll theory</text>
+  <text class="ts" x="160" y="764" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Follow, finish on other side</text>
+</g>
+<g class="node" onclick="sd('i_fig4')" style="cursor:pointer">
+  <rect x="390" y="726" width="260" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="520" y="746" text-anchor="middle" dominant-baseline="central" fill="#085041">Figure 4 if refuses roll</text>
+  <text class="ts" x="520" y="764" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Switch outside ashi</text>
+</g>
+<text class="ts" x="20" y="40" fill="#888780">Vol 2</text>
+<text class="ts" x="20" y="290" fill="#888780">Vol 2</text>
+<text class="ts" x="20" y="560" fill="#888780">Vol 2</text>
+<text class="ts" x="20" y="750" fill="#888780">Vol 2</text>
+</svg>
+</div>
+
+<div id="v-outside" style="display:none">
+<svg viewBox="0 0 680 800" role="img">
+<title>Outside ashi garami system</title>
+<desc>Outside ashi — control, heel exposure methods, and finishing</desc>
+<defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node" onclick="sd('o_entry')" style="cursor:pointer">
+  <rect x="160" y="14" width="360" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central" fill="#444441">Outside ashi garami</text>
+  <text class="ts" x="340" y="54" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Strong breaking · back exposure risk · use from irimi</text>
+</g>
+<line x1="340" y1="70" x2="340" y2="96" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+
+<g class="node" onclick="sd('o_control')" style="cursor:pointer">
+  <rect x="100" y="96" width="480" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="116" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Control — hips close, knee deep in knee line</text>
+  <text class="ts" x="340" y="136" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Achilles grip to hold and climb the leg</text>
+</g>
+
+<line x1="240" y1="152" x2="140" y2="188" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="340" y1="152" x2="340" y2="188" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="440" y1="152" x2="540" y2="188" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+
+<g class="node" onclick="sd('o_highleg')" style="cursor:pointer">
+  <rect x="20" y="188" width="220" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="130" y="208" text-anchor="middle" dominant-baseline="central" fill="#0C447C">High leg over</text>
+  <text class="ts" x="130" y="226" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Pommel / counter-attack</text>
+</g>
+<g class="node" onclick="sd('o_fwdpress')" style="cursor:pointer">
+  <rect x="250" y="188" width="180" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="340" y="208" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Forward pressure</text>
+  <text class="ts" x="340" y="226" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Stacking / passing</text>
+</g>
+<g class="node" onclick="sd('o_back')" style="cursor:pointer">
+  <rect x="440" y="188" width="220" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="550" y="208" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Back exposure</text>
+  <text class="ts" x="550" y="226" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Stands / scoots corner</text>
+</g>
+
+<line x1="130" y1="244" x2="130" y2="280" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="340" y1="244" x2="340" y2="280" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="550" y1="244" x2="550" y2="280" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+
+<g class="node" onclick="sd('o_wipe')" style="cursor:pointer">
+  <rect x="20" y="280" width="220" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="130" y="300" text-anchor="middle" dominant-baseline="central" fill="#085041">Wipe off / toe hold threat</text>
+  <text class="ts" x="130" y="318" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Wrist-to-wrist to punish</text>
+</g>
+<g class="node" onclick="sd('o_scissor')" style="cursor:pointer">
+  <rect x="250" y="280" width="180" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="340" y="300" text-anchor="middle" dominant-baseline="central" fill="#085041">Leg scissor / cross shin</text>
+  <text class="ts" x="340" y="318" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Pin hips, forward roll</text>
+</g>
+<g class="node" onclick="sd('o_deny')" style="cursor:pointer">
+  <rect x="440" y="280" width="220" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="550" y="300" text-anchor="middle" dominant-baseline="central" fill="#085041">Deny back · post ashi</text>
+  <text class="ts" x="550" y="318" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Keep hips close</text>
+</g>
+
+<path d="M130 336 L130 374 L340 374" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M340 336 L340 374" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M550 336 L550 374 L340 374" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="374" x2="340" y2="400" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+
+<g class="node" onclick="sd('o_expose')" style="cursor:pointer">
+  <rect x="100" y="400" width="480" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="422" text-anchor="middle" dominant-baseline="central" fill="#444441">Heel exposure — 4 methods</text>
+</g>
+
+<line x1="180" y1="444" x2="100" y2="480" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="280" y1="444" x2="253" y2="480" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="400" y1="444" x2="427" y2="480" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+<line x1="500" y1="444" x2="580" y2="480" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+
+<g class="node" onclick="sd('o_bd')" style="cursor:pointer">
+  <rect x="20" y="480" width="140" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="90" y="500" text-anchor="middle" dominant-baseline="central" fill="#085041">Belly down</text>
+  <text class="ts" x="90" y="518" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Hip to mat</text>
+</g>
+<g class="node" onclick="sd('o_pa')" style="cursor:pointer">
+  <rect x="170" y="480" width="160" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="250" y="500" text-anchor="middle" dominant-baseline="central" fill="#085041">Post ashi</text>
+  <text class="ts" x="250" y="518" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Stop fwd pressure</text>
+</g>
+<g class="node" onclick="sd('o_pf')" style="cursor:pointer">
+  <rect x="340" y="480" width="160" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="420" y="500" text-anchor="middle" dominant-baseline="central" fill="#085041">Post feet</text>
+  <text class="ts" x="420" y="518" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Kneeling opponent</text>
+</g>
+<g class="node" onclick="sd('o_cs')" style="cursor:pointer">
+  <rect x="510" y="480" width="150" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="585" y="500" text-anchor="middle" dominant-baseline="central" fill="#085041">Cross shin</text>
+  <text class="ts" x="585" y="518" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Wedge hips</text>
+</g>
+
+<path d="M90 536 L90 580 L340 580" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M250 536 L250 580" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M420 536 L420 580 L340 580" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M585 536 L585 580 L340 580" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="580" x2="340" y2="606" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a2)"/>
+
+<g class="node" onclick="sd('o_hh')" style="cursor:pointer">
+  <rect x="100" y="606" width="480" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text class="th" x="340" y="626" text-anchor="middle" dominant-baseline="central" fill="#712B13">Outside heel hook finish</text>
+  <text class="ts" x="340" y="644" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Toes down, heel up · also heel-knee bar (Paul Harris style)</text>
+</g>
+<line x1="340" y1="662" x2="340" y2="688" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g class="node" onclick="sd('o_ushiro')" style="cursor:pointer">
+  <rect x="160" y="688" width="360" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="708" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Top ushiro / spin leg to cross ashi</text>
+  <text class="ts" x="340" y="726" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Escalate position from outside ashi</text>
+</g>
+<text class="ts" x="20" y="40" fill="#888780">Vol 3</text>
+<text class="ts" x="20" y="210" fill="#888780">Vol 3</text>
+<text class="ts" x="20" y="500" fill="#888780">Vol 3</text>
+<text class="ts" x="20" y="630" fill="#888780">Vol 3</text>
+</svg>
+</div>
+
+<div id="v-cross" style="display:none">
+<svg viewBox="0 0 680 840" role="img">
+<title>Cross ashi garami system</title>
+<desc>Best leg lock position — inverted heel hook, secondary leg control, full attack tree</desc>
+<defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node" onclick="sd('c_entry')" style="cursor:pointer">
+  <rect x="100" y="14" width="480" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Cross ashi — best position in leg locks</text>
+  <text class="ts" x="340" y="54" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Inverted heel hook + both legs controlled + feet safer</text>
+</g>
+<line x1="340" y1="70" x2="340" y2="96" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+
+<g class="node" onclick="sd('c_issues')" style="cursor:pointer">
+  <rect x="100" y="96" width="480" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="118" text-anchor="middle" dominant-baseline="central" fill="#444441">Main issue — controlling primary + secondary leg</text>
+</g>
+
+<line x1="240" y1="140" x2="140" y2="176" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+<line x1="440" y1="140" x2="540" y2="176" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+
+<g class="node" onclick="sd('c_fig4')" style="cursor:pointer">
+  <rect x="20" y="176" width="240" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="140" y="196" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Figure 4 Achilles</text>
+  <text class="ts" x="140" y="214" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Reverse fig-4 · leg lace</text>
+</g>
+<g class="node" onclick="sd('c_dracula')" style="cursor:pointer">
+  <rect x="420" y="176" width="240" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="540" y="196" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Half / double Dracula</text>
+  <text class="ts" x="540" y="214" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Keep secondary trapped</text>
+</g>
+
+<path d="M140 232 L140 270 L340 270" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M540 232 L540 270 L340 270" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="270" x2="340" y2="296" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+
+<g class="node" onclick="sd('c_tilt')" style="cursor:pointer">
+  <rect x="100" y="296" width="480" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="318" text-anchor="middle" dominant-baseline="central" fill="#444441">Tilt opponent to correct hip for heel exposure</text>
+</g>
+<line x1="340" y1="340" x2="340" y2="366" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+
+<g class="node" onclick="sd('c_ihh')" style="cursor:pointer">
+  <rect x="100" y="366" width="480" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text class="th" x="340" y="386" text-anchor="middle" dominant-baseline="central" fill="#712B13">Inverted heel hook</text>
+  <text class="ts" x="340" y="404" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Strongest heel hook · forward shift entry</text>
+</g>
+
+<line x1="240" y1="422" x2="140" y2="458" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+<line x1="340" y1="422" x2="340" y2="458" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+<line x1="440" y1="422" x2="540" y2="458" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+
+<g class="node" onclick="sd('c_roll')" style="cursor:pointer">
+  <rect x="20" y="458" width="240" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="140" y="478" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Defensive roll</text>
+  <text class="ts" x="140" y="496" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Double inversion risk</text>
+</g>
+<g class="node" onclick="sd('c_pullpri')" style="cursor:pointer">
+  <rect x="270" y="458" width="140" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="340" y="478" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Pulls primary</text>
+  <text class="ts" x="340" y="496" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Frees the leg</text>
+</g>
+<g class="node" onclick="sd('c_chest')" style="cursor:pointer">
+  <rect x="420" y="458" width="240" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="540" y="478" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Losing position</text>
+  <text class="ts" x="540" y="496" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Legs slipping away</text>
+</g>
+
+<line x1="140" y1="514" x2="140" y2="550" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+<line x1="340" y1="514" x2="340" y2="550" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+<line x1="540" y1="514" x2="540" y2="550" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+
+<g class="node" onclick="sd('c_ach_back')" style="cursor:pointer">
+  <rect x="20" y="550" width="240" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="140" y="570" text-anchor="middle" dominant-baseline="central" fill="#085041">Achilles mitigates back</text>
+  <text class="ts" x="140" y="588" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Transfer to backside 50/50</text>
+</g>
+<g class="node" onclick="sd('c_stretch')" style="cursor:pointer">
+  <rect x="270" y="550" width="140" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="340" y="570" text-anchor="middle" dominant-baseline="central" fill="#085041">Stretch ashi</text>
+  <text class="ts" x="340" y="588" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Or switch to irimi</text>
+</g>
+<g class="node" onclick="sd('c_center')" style="cursor:pointer">
+  <rect x="420" y="550" width="240" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="540" y="570" text-anchor="middle" dominant-baseline="central" fill="#085041">Center chest</text>
+  <text class="ts" x="540" y="588" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Reset — don't disengage</text>
+</g>
+
+<line x1="340" y1="620" x2="340" y2="660" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g class="node" onclick="sd('c_shoelace')" style="cursor:pointer">
+  <rect x="160" y="660" width="360" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="680" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Shoelace ashi — advanced sequence</text>
+  <text class="ts" x="340" y="698" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Heisting dilemma · pass to top position</text>
+</g>
+<line x1="340" y1="716" x2="340" y2="742" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a3)"/>
+
+<g class="node" onclick="sd('c_far')" style="cursor:pointer">
+  <rect x="160" y="742" width="360" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="340" y="762" text-anchor="middle" dominant-baseline="central" fill="#085041">Far hip ashi · follow a roll</text>
+  <text class="ts" x="340" y="780" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Stop roll · transfer to inside ashi</text>
+</g>
+<text class="ts" x="20" y="40" fill="#888780">Vol 5</text>
+<text class="ts" x="20" y="200" fill="#888780">Vol 5</text>
+<text class="ts" x="20" y="390" fill="#888780">Vol 5</text>
+<text class="ts" x="20" y="575" fill="#888780">Vol 5</text>
+</svg>
+</div>
+
+<div id="v-5050" style="display:none">
+<svg viewBox="0 0 680 740" role="img">
+<title>50/50 and mutual ashi system</title>
+<desc>Symmetric position strategy — attack until defending, dilemmas, mutual ashi</desc>
+<defs><marker id="a4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node" onclick="sd('f_entry')" style="cursor:pointer">
+  <rect x="160" y="14" width="360" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central" fill="#712B13">50/50 — symmetric, not preferred</text>
+  <text class="ts" x="340" y="54" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Doesn't fit asymmetric philosophy — but common</text>
+</g>
+<line x1="340" y1="70" x2="340" y2="96" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a4)"/>
+
+<g class="node" onclick="sd('f_attack')" style="cursor:pointer">
+  <rect x="100" y="96" width="480" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="118" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Attack until you're defending — never wait</text>
+</g>
+<line x1="340" y1="140" x2="340" y2="166" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a4)"/>
+
+<g class="node" onclick="sd('f_inside')" style="cursor:pointer">
+  <rect x="100" y="166" width="480" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="186" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Steal the inside knee position</text>
+  <text class="ts" x="340" y="204" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Knee to floor = much harder for opponent to break</text>
+</g>
+<line x1="340" y1="222" x2="340" y2="248" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a4)"/>
+
+<g class="node" onclick="sd('f_legs')" style="cursor:pointer">
+  <rect x="160" y="248" width="360" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="270" text-anchor="middle" dominant-baseline="central" fill="#444441">Deal with opponent's leg crossing</text>
+</g>
+
+<line x1="260" y1="292" x2="180" y2="328" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a4)"/>
+<line x1="420" y1="292" x2="500" y2="328" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a4)"/>
+
+<g class="node" onclick="sd('f_semi')" style="cursor:pointer">
+  <rect x="30" y="328" width="290" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="175" y="348" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Semi sankaku (crossed ankles)</text>
+  <text class="ts" x="175" y="366" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Separate with toe hold / separation dilemma</text>
+</g>
+<g class="node" onclick="sd('f_fig4')" style="cursor:pointer">
+  <rect x="360" y="328" width="290" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="505" y="348" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Full figure 4</text>
+  <text class="ts" x="505" y="366" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Double trouble — they give a gift</text>
+</g>
+
+<path d="M175 384 L175 420 L340 420" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M505 384 L505 420 L340 420" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="420" x2="340" y2="446" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a4)"/>
+
+<g class="node" onclick="sd('f_dilemma')" style="cursor:pointer">
+  <rect x="100" y="446" width="480" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="466" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Toe hold / heel hook dilemma</text>
+  <text class="ts" x="340" y="484" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Separate → heel hook · stay crossed → toe hold</text>
+</g>
+<line x1="340" y1="502" x2="340" y2="528" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a4)"/>
+
+<g class="node" onclick="sd('f_backside')" style="cursor:pointer">
+  <rect x="100" y="528" width="480" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="340" y="548" text-anchor="middle" dominant-baseline="central" fill="#085041">Backside 50/50 · cross waist</text>
+  <text class="ts" x="340" y="566" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">High leg → catch · belly down finish</text>
+</g>
+<line x1="340" y1="596" x2="340" y2="626" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g class="node" onclick="sd('f_mutual')" style="cursor:pointer">
+  <rect x="100" y="626" width="480" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="340" y="646" text-anchor="middle" dominant-baseline="central" fill="#712B13">Mutual ashi — go last</text>
+  <text class="ts" x="340" y="664" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Far hip ashi · rolling through to expose heel</text>
+</g>
+<text class="ts" x="20" y="40" fill="#888780">Vol 6</text>
+<text class="ts" x="20" y="190" fill="#888780">Vol 6</text>
+<text class="ts" x="20" y="350" fill="#888780">Vol 6</text>
+<text class="ts" x="20" y="470" fill="#888780">Vol 6</text>
+<text class="ts" x="20" y="650" fill="#888780">Vol 6</text>
+</svg>
+</div>
+
+<div id="v-subs" style="display:none">
+<svg viewBox="0 0 680 780" role="img">
+<title>Submission mechanics — full detail</title>
+<desc>Heel hook, toe hold, knee bar, and Achilles lock mechanics from all positions</desc>
+<defs><marker id="a5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node" onclick="sd('s_force')" style="cursor:pointer">
+  <rect x="100" y="14" width="480" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="36" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Coupled force — applies to all submissions</text>
+</g>
+<line x1="340" y1="58" x2="340" y2="90" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a5)"/>
+
+<g class="node" onclick="sd('s_toes')" style="cursor:pointer">
+  <rect x="100" y="90" width="480" height="44" rx="8" fill="#534AB7" fill-opacity="0.12" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="112" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Toes to butt · heel to chin</text>
+</g>
+
+<line x1="340" y1="134" x2="340" y2="166" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g class="node" onclick="sd('s_heeldtl')" style="cursor:pointer">
+  <rect x="20" y="166" width="300" height="80" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/>
+  <text class="th" x="170" y="186" text-anchor="middle" dominant-baseline="central" fill="#712B13">Heel hook</text>
+  <text class="ts" x="170" y="206" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Inside > outside mechanically</text>
+  <text class="ts" x="170" y="224" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Bite at back of heel · don't grip wrist</text>
+</g>
+<g class="node" onclick="sd('s_toedtl')" style="cursor:pointer">
+  <rect x="360" y="166" width="300" height="80" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="510" y="186" text-anchor="middle" dominant-baseline="central" fill="#712B13">Toe hold</text>
+  <text class="ts" x="510" y="206" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Faster pressure than heel hook</text>
+  <text class="ts" x="510" y="224" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Belly up and belly down mechanics</text>
+</g>
+
+<line x1="170" y1="246" x2="170" y2="282" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a5)"/>
+<line x1="510" y1="246" x2="510" y2="282" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a5)"/>
+
+<g class="node" onclick="sd('s_heelslip')" style="cursor:pointer">
+  <rect x="20" y="282" width="300" height="68" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="170" y="302" text-anchor="middle" dominant-baseline="central" fill="#0C447C">If heel slips</text>
+  <text class="ts" x="170" y="320" text-anchor="middle" dominant-baseline="central" fill="#185FA5">High hands counter · roll through</text>
+  <text class="ts" x="170" y="336" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Don't chase when being stacked</text>
+</g>
+<g class="node" onclick="sd('s_toerecap')" style="cursor:pointer">
+  <rect x="360" y="282" width="300" height="68" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="510" y="302" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Toe hold to heel hook</text>
+  <text class="ts" x="510" y="320" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Shoot in toe hold · separate · switch</text>
+  <text class="ts" x="510" y="336" text-anchor="middle" dominant-baseline="central" fill="#185FA5">to heel hook as legs open</text>
+</g>
+
+<line x1="340" y1="370" x2="340" y2="406" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<g class="node" onclick="sd('s_kbar')" style="cursor:pointer">
+  <rect x="20" y="406" width="300" height="80" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="170" y="426" text-anchor="middle" dominant-baseline="central" fill="#712B13">Knee bar</text>
+  <text class="ts" x="170" y="446" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Requires double trouble to prevent roll</text>
+  <text class="ts" x="170" y="464" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Common from top ushiro</text>
+</g>
+<g class="node" onclick="sd('s_achilles')" style="cursor:pointer">
+  <rect x="360" y="406" width="300" height="80" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="510" y="426" text-anchor="middle" dominant-baseline="central" fill="#712B13">Achilles lock</text>
+  <text class="ts" x="510" y="446" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Control grip vs finishing grip</text>
+  <text class="ts" x="510" y="464" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Bite long end of lever</text>
+</g>
+
+<line x1="170" y1="486" x2="170" y2="522" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a5)"/>
+<line x1="510" y1="486" x2="510" y2="522" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a5)"/>
+
+<g class="node" onclick="sd('s_kbar2')" style="cursor:pointer">
+  <rect x="20" y="522" width="300" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="170" y="542" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Toe hold / knee bar dilemma</text>
+  <text class="ts" x="170" y="560" text-anchor="middle" dominant-baseline="central" fill="#185FA5">From top ushiro with double trouble</text>
+</g>
+<g class="node" onclick="sd('s_ach2')" style="cursor:pointer">
+  <rect x="360" y="522" width="300" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="510" y="542" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Achilles/heel hook dilemma</text>
+  <text class="ts" x="510" y="560" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Control ach → they boot → switch heel</text>
+</g>
+
+<path d="M170 578 L170 620 L340 620" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<path d="M510 578 L510 620 L340 620" stroke="#B4B2A9" stroke-width="0.5" fill="none"/>
+<line x1="340" y1="620" x2="340" y2="646" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a5)"/>
+
+<g class="node" onclick="sd('s_follow')" style="cursor:pointer">
+  <rect x="100" y="646" width="480" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="666" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Follow the leg · switch legs · recapture</text>
+  <text class="ts" x="340" y="684" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Explosive opponent rolls → follow and finish other side</text>
+</g>
+<line x1="340" y1="702" x2="340" y2="728" stroke="#B4B2A9" stroke-width="0.5" marker-end="url(#a5)"/>
+
+<g class="node" onclick="sd('s_gripping')" style="cursor:pointer">
+  <rect x="160" y="728" width="360" height="36" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="340" y="746" text-anchor="middle" dominant-baseline="central" fill="#085041">Gripping — multiple configurations (Vol 6)</text>
+</g>
+<text class="ts" x="20" y="40" fill="#888780">All vols</text>
+<text class="ts" x="20" y="200" fill="#888780">Vol 1</text>
+<text class="ts" x="20" y="430" fill="#888780">Vol 4</text>
+<text class="ts" x="20" y="670" fill="#888780">Vol 1</text>
+</svg>
+</div>
+
+<div class="dp" id="dpanel">
+  <div style="color:var(--color-text-secondary)">Click any node to see details from the transcripts.</div>
+</div>
+
+<script>
+const D = {
+  t_core:{t:"Core philosophy",v:"Vol 1",d:"The entire system is built around fighting from asymmetric leg positions. Unlike 50/50 where both athletes have equal access, asymmetric positions (irimi, outside, cross ashi) give you better heel hooks and better control while limiting opponent's attacks. Gordon's team made this philosophy famous."},
+  t_inside:{t:"Win the inside position battle",v:"Vol 1 Ch 5",d:"The single most repeated concept in the entire series. Whoever keeps their feet and knees INSIDE opponent's feet and knees wins the leg lock exchange. If you're inside — you attack. If they're inside — they attack. Every transition, every scramble, every position change is a battle for inside position."},
+  t_families:{t:"4 ashi garami families",v:"Vol 1 Ch 2",d:"The four positions differ in back exposure risk, submission options, and control. Irimi (entering) is safest with a physical wedge blocking guard passes and back takes. Outside ashi has strong breaking mechanics but back exposure. Cross ashi is best overall — strongest heel hook, both legs controlled. 50/50 is symmetric and avoided when possible."},
+  t_irimi:{t:"Irimi ashi strategy",v:"Vol 1 Ch 6",d:"Best for control and setting up transitions. The inside foot creates a physical wedge that makes passing and back takes very difficult. Primary heel hook is an outside heel hook from here, and you can always transition to cross ashi or outside ashi. Safest position to stay in."},
+  t_outside:{t:"Outside ashi strategy",v:"Vol 1 Ch 6",d:"Strong heel hook breaking mechanics but opponent can come forward, pass, or take your back. Use with caution — always be aware of the back exposure. Gordon prefers to use it as a secondary position when transitioning, not as a first choice to stay in."},
+  t_cross:{t:"Cross ashi strategy",v:"Vol 1 Ch 7",d:"The best position in leg locks according to Gordon. You have the mechanically strongest heel hook (inverted/inside), your feet are relatively safe, and you can control both opponent's legs with double trouble. Cross ashi inside sankaku is even stronger. Primary goal of the entire system."},
+  t_5050:{t:"50/50 strategy",v:"Vol 1 Ch 8",d:"Doesn't fit the asymmetric philosophy — you both have equal access to heel hooks. Gordon uses it when forced to, not by choice. The primary strategy is to go LAST — the person who exposes their heel first usually gets heel hooked. Attack until you're defending, never wait."},
+  t_heel:{t:"Heel hook",v:"Vol 1 Ch 20",d:"Inside heel hooks are inherently stronger than outside mechanically — inside rotation goes further. In a shootout, go for inside (inverted) heel hook if possible. Outside heel hooks are still highly effective but require better positioning and stronger mechanics to finish vs a resisting opponent."},
+  t_toe:{t:"Toe hold",v:"Vol 1 Ch 19",d:"Pressure comes on faster than heel hooks because hands move faster than the full body. In a shootout, toe hold pressure arrives before heel hook pressure. Smart leg lockers shoot a toe hold to create a dilemma — opponent's response determines whether you switch to a heel hook."},
+  t_kbar:{t:"Knee bar",v:"Vol 1 Ch 18",d:"Double trouble is required — without controlling both legs the opponent simply high-legs and rotates internally out of the ashi to change angle and escape. With double trouble you body weight the leg and the knee bar becomes nearly unavoidable. Common from top ushiro position."},
+  t_ach:{t:"Achilles lock",v:"Vol 1 Ch 17",d:"Two distinct forms: control grip (anywhere below knee — to hold and climb the leg) and finishing grip (long end of the lever on the Achilles tendon). The problem with Achilles is that people don't respect it — they take the break and fight out. Use it to climb the leg and set up heel hooks."},
+  t_universal:{t:"Universal principles",v:"Vol 1 Ch 12-13",d:"Three principles apply to every position: Follow the leg — when opponent rolls you must follow them through the transition and finish on the other side. Switch legs — when they pull one leg out immediately switch to the other. Go last — in mutual ashi and 50/50 shootouts, whoever goes for exposure first usually loses."},
+  t_gripping:{t:"Gripping — the transmission",v:"Vol 6 Ch 16",d:"Gordon leaves gripping until the end for a reason: ashi garami is like the engine, gripping is the transmission. Without the ashi, gripping is useless. With perfect ashi and no grip knowledge, you can still be effective — like driving in third gear everywhere. Master the positions first, then layer on gripping."},
+  i_entry:{t:"Irimi ashi garami — entering",v:"Vol 2 Ch 1",d:"The inside foot creates a physical wedge between you and your opponent. Guard passing becomes very difficult. Back takes are very difficult. This is the safety net of the leg lock system. From here you can attack, transition to cross ashi, or switch to outside ashi — you always have options."},
+  i_stress:{t:"Stress test",v:"Vol 2 Ch 3",d:"Before attacking, verify your ashi is tight enough to hold. Test several opponent reactions: can they scoot back? Can they come forward? Lock the position properly first. If you feel the ashi loosening during the stress test, switch to an Achilles grip immediately to maintain control."},
+  i_ach:{t:"Basic Achilles lock attempt",v:"Vol 2 Ch 4",d:"After stress testing — go to Achilles first. Always. It's the safest attack with lowest back exposure risk. Use a controlling Achilles grip to climb up the leg. The moment you feel them booting or fighting the leg — make the decision: fight for the Achilles finish or escalate to heel hook."},
+  i_extract:{t:"Opponent: basic extraction",v:"Vol 2 Ch 5",d:"They scoot straight back and pull the knee free. Counter by dominating the space between their knees, keeping elbows tight and in the correct position. Don't let them create the angle to pull out — your elbow position is the key counter."},
+  i_fwd:{t:"Opponent: forward pressure",v:"Vol 2 Ch 6-8",d:"They try to pass or stack over you. Counter options in order: ashi garami grip with elbow position to stop them coming through, post ashi to stop the forward pressure, belly down Achilles (change direction). The key is maintaining heel distance from their butt."},
+  i_boot:{t:"Opponent: boots legs / hand fight",v:"Vol 2 Ch 11",d:"They don't respect the Achilles and just boot to free the leg, or actively fight your hands. This is the Achilles/heel hook dilemma — the second they boot, transition to heel hook grip. Don't try to fight back to Achilles once they've committed to fighting it."},
+  i_elbow:{t:"Counter extraction — elbow position",v:"Vol 2 Ch 5",d:"Proper elbow position dominates the space. When they try to pull back, your elbow controls the pocket between their legs and prevents the extraction. This is why elbow position is taught before any finishing mechanics."},
+  i_post:{t:"Post ashi / belly down / butterfly ashi",v:"Vol 2 Ch 7-9",d:"Three tools for forward pressure: post ashi stops them from stacking, belly down Achilles changes direction of the attack, butterfly ashi gives further transition options when they're really committed to forward pressure."},
+  i_heelhook:{t:"Switch to heel hook",v:"Vol 2 Ch 11",d:"The Achilles/heel hook dilemma is one of the most important concepts: once you threaten Achilles, people start booting aggressively. That booting motion exposes the heel. The second you see the boot commit — switch to heel hook grip immediately."},
+  i_finish:{t:"Finishing mechanics — lock the heel",v:"Vol 2 Ch 12",d:"The heel must be exposed and separated from opponent's butt. Once you have the heel in your armpit and the bite is established — coupled force: push toes toward butt AND pull heel toward your chin simultaneously. Both forces together create the rotation that breaks."},
+  i_bellydown:{t:"Belly down finish",v:"Vol 2 Ch 12",d:"The preferred finishing position from irimi ashi. Hip to mat, toes going down toward butt, heel coming up toward chin. Your body weight participates in the finish. More mechanically powerful than belly up."},
+  i_bellyup:{t:"Belly up finish",v:"Vol 2 Ch 20",d:"When forced into belly up position — crunch toes toward butt using body rotation. Different mechanics from belly down — more reliant on upper body. Comes up when opponent rolls or when inside position prevents belly down."},
+  i_roll:{t:"Opponent rolls to escape",v:"Vol 2 Ch 17",d:"Single roll theory is critical. When they go to roll through, you have a brief window to follow. Don't let them complete 2+ rolls — each roll generates momentum that makes following harder and creates back exposure risk."},
+  i_single:{t:"Single roll theory",v:"Vol 2 Ch 17",d:"Follow your opponent through ONE roll and finish on the other side. The mistake is allowing multiple rolls — they generate enough momentum to pop the knee free. The goal is to match their roll and come up finishing the heel hook from the opposite side."},
+  i_fig4:{t:"Figure 4 if refuses to roll",v:"Vol 2 Ch 19",d:"When they stay in the knee and won't roll — because rolling fully breaks them and staying in the knee just pops them — switch to figure 4 grip to create leverage that forces the roll. The figure 4 changes the mechanical equation so staying becomes more painful than rolling."},
+  o_entry:{t:"Outside ashi garami",v:"Vol 3 Ch 1-2",d:"Strong breaking mechanics for outside heel hooks but the back exposure is real — guard passes and back takes are possible when you go outside. Gordon prefers using irimi as the base position and transitioning to outside ashi when the opportunity arises rather than entering outside directly."},
+  o_control:{t:"Control — hips close, knee deep",v:"Vol 3 Ch 5",d:"To maintain outside ashi, keep your hips as close to theirs as possible and drive their knee as deep into your knee line as possible. The further their hips are from you, the less control you have. Achilles grips help climb the leg and maintain proximity."},
+  o_highleg:{t:"High leg over",v:"Vol 3 Ch 3-4",d:"The most common counter — opponent throws their secondary leg over to interfere with your heel lock and potentially counter-attack. Counter: wipe it off with your hand, or as it comes over, threat a wrist-to-wrist toe hold. One credible toe hold response usually stops them throwing the high leg again."},
+  o_fwdpress:{t:"Forward pressure",v:"Vol 3 Ch 6-7",d:"Opponent tries to come forward and stack you. Use leg scissoring — push and pull their leg like scissors — to pin their hips and stop the forward movement. If scissoring fails, put your back on the floor and scoot under their leg to place a cross shin wedge in front of their hips."},
+  o_back:{t:"Back exposure",v:"Vol 3 Ch 1",d:"The fundamental risk of outside ashi. Opponent can stand, scoot the corner, and take your back. This is why Gordon prefers irimi as the home base — irimi's physical wedge eliminates back take attempts. When in outside ashi, always deny back exposure proactively."},
+  o_wipe:{t:"Wipe off / toe hold threat",v:"Vol 3 Ch 3-4",d:"Two responses to the high leg: physically wipe it off your body, or as it comes over, step into the position and lock a wrist-to-wrist toe hold. The toe hold threat is more powerful — once they've felt it once, they stop throwing the high leg."},
+  o_scissor:{t:"Leg scissor / cross shin",v:"Vol 3 Ch 6-7",d:"Against forward pressure: scissor the legs in opposing directions to pin opponent's hips to the floor. If scissors won't hold, go to back-flat position and scoot underneath their leg to insert a cross shin physically in front of their hips as a wedge."},
+  o_deny:{t:"Deny back / post ashi",v:"Vol 3 Ch 5 + Ch 11",d:"Keep hips close and deny back exposure proactively. Post ashi is the next tool — from outside ashi, post your foot to stop them coming forward AND to separate the heel from the butt for heel exposure. You won't have long before they counter the post ashi."},
+  o_expose:{t:"Heel exposure — 4 methods",v:"Vol 3",d:"Goal is always to get the heel away from their butt. The four methods attack from different angles and deal with different opponent postures. Belly down works when you can get to the mat. Post ashi stops forward pressure. Post feet for kneeling opponents. Cross shin as a hip wedge."},
+  o_bd:{t:"Belly down heel exposure",v:"Vol 3 Ch 10",d:"Get your hip to the mat, shovel the leg under your armpit. The key: when reaching for the heel, don't align forearm with the shin — you lose leverage. Keep the forearm perpendicular to the shin for maximum control."},
+  o_pa:{t:"Post ashi heel exposure",v:"Vol 3 Ch 11",d:"Post your foot on opponent's hip — this stops forward pressure AND naturally separates their heel from their butt. Limited time window because they'll grab your foot or stand. Move quickly to heel hook grip once the heel is exposed."},
+  o_pf:{t:"Post feet heel exposure",v:"Vol 3 Ch 12",d:"For kneeling opponents. Post feet on their hip and push — this tilts them back and separates the heel. Use the moment of separation to immediately go to heel hook grip."},
+  o_cs:{t:"Cross shin heel exposure",v:"Vol 3 Ch 13",d:"Use the cross shin not just to stop forward pressure but as a lever to separate the heel — as the shin pushes across, it naturally tilts the leg and creates heel separation. More mechanical than post ashi."},
+  o_hh:{t:"Outside heel hook finish",v:"Vol 3 + Vol 2",d:"Toes going down toward butt, heel coming up toward chin — same coupled force as all heel hooks. Note that many finishes credited as heel hooks (including Paul Harris's UFC finishes) are actually heel-knee bars — heel hook grip but the finishing pressure is on the knee ligaments."},
+  o_ushiro:{t:"Top ushiro / spin leg to cross ashi",v:"Vol 4 Ch 9-10",d:"When you've lost the heel or want to escalate, move to top ushiro. Scissor the legs, stand up, then spin or step into top ushiro. From here knee bars and toe holds are available. If you want cross ashi instead, spin the leg by stepping up from top ushiro."},
+  c_entry:{t:"Cross ashi — best position",v:"Vol 5 Ch 1",d:"Gordon's personal ranking: cross ashi is the best leg lock position available. Three reasons: you have the mechanically strongest heel hook (inverted/inside), your feet are relatively safe from counter heel hooks, and with sankaku your legs are inside theirs for the strongest possible control."},
+  c_issues:{t:"Main issues — both legs",v:"Vol 5 Ch 3",d:"The main problem with cross ashi is controlling both the primary and secondary leg simultaneously. If opponent can bring their heel to their butt (tuck the secondary leg) they can disengage. You must control the secondary leg to prevent this and to maintain position."},
+  c_fig4:{t:"Figure 4 / reverse figure 4 / leg lace",v:"Vol 5 Ch 6-10",d:"Three secondary leg control tools: regular figure 4 Achilles (most secure), reverse figure 4 (gets opponent's hips high and hands to floor — use to set up heel hook transition), leg lace (use to tilt opponent to the correct hip for heel exposure). All three serve the same goal: keep secondary leg trapped."},
+  c_dracula:{t:"Half / double Dracula",v:"Vol 5 Ch 12-13",d:"Named by Danaher because of how Dracula sleeps. Half Dracula traps the secondary leg while exposing the primary leg's heel. Double Dracula traps both legs completely. These are advanced secondary leg controls used when simpler methods aren't holding the secondary leg in place."},
+  c_tilt:{t:"Tilt opponent to correct hip",v:"Vol 5",d:"For heel exposure in cross ashi, opponent must be on their LEFT hip (when attacking right leg) for you to access the heel. Reverse figure 4 Achilles and leg lace are both used to tilt them to the correct hip. Wrong hip position = no heel access regardless of how locked the ashi is."},
+  c_ihh:{t:"Inverted heel hook",v:"Vol 5",d:"The crown jewel of cross ashi. Mechanically the strongest heel hook available because the internal rotation travels further before the knee ligaments reach maximum tension. Forward shift to heel hook is a specific technique for going directly into the inverted heel hook when opponent is starting to move."},
+  c_roll:{t:"Defensive roll",v:"Vol 5 Ch 20",d:"The danger of cross ashi — if opponent can point their shoelaces and roll while you're not blocking their toes, you can both end up double inverted (both facing belly down) and they take your back. Made famous by Felipe Pena against Gordon twice. Must block the toes to prevent this."},
+  c_pullpri:{t:"Pulls primary leg",v:"Vol 5 Ch 15",d:"When they pull the primary leg free, you still have irimi ashi on the other leg. Don't follow them — hold the secondary leg and use stretch ashi or transition to irimi ashi on the other leg rather than chasing the freed leg."},
+  c_chest:{t:"Losing the position",v:"Vol 5 Ch 22",d:"Sometimes you feel the position slipping — legs unwinding, can't get the heel, can't switch. Don't disengage — that just resets to neutral. Center chest: come chest-to-chest, control their upper body, and use that to stabilize and reset to a new attack rather than losing all your work."},
+  c_ach_back:{t:"Achilles mitigates back exposure",v:"Vol 5 Ch 19-21",d:"When opponent goes to roll in a way that exposes your back, use your initial Achilles grip to redirect their momentum. This transfers into backside 50/50, then cross waist 50/50, then back to cross ashi options. The Achilles grip is a steering wheel for their hips."},
+  c_stretch:{t:"Stretch ashi / switch to irimi",v:"Vol 5 Ch 15",d:"When primary leg is freed, post your free leg and physically step into stretch ashi or straight to irimi ashi on the secondary leg. You've been working that leg already — switching is faster than starting fresh."},
+  c_center:{t:"Center chest — don't disengage",v:"Vol 5 Ch 22",d:"The reset move. When all submissions fail and you feel like you're about to lose the legs — don't disengage, that hands them neutral. Instead center chest, chest-to-chest, and use upper body control to re-stabilize before transitioning back to any ashi."},
+  c_shoelace:{t:"Shoelace ashi",v:"Vol 5 Ch 17-18",d:"Advanced cross ashi variant where your laces are against their knee. Very hard to escape from. The heisting dilemma from shoelace ashi: you can either continue attacking legs or heist up to pass. This creates a dilemma for opponent between defending leg locks and defending the guard pass."},
+  c_far:{t:"Far hip ashi / follow a roll",v:"Vol 5 Ch 24-26",d:"Far hip ashi: instead of foot on hip, bring foot to the FAR hip — this locks your position and stops them rolling. Following a roll: when they complete a roll, follow with them, transition to inside ashi on the same leg or the other leg."},
+  f_entry:{t:"50/50 — symmetric, not preferred",v:"Vol 6 Ch 1",d:"50/50 isn't a position Gordon uses by choice. It's symmetric — you both have equal access to each other's feet. No back exposure is a positive but it lacks the asymmetric advantages of the other positions. You often find yourself here because of scrambles or opponent counters."},
+  f_attack:{t:"Attack until you're defending",v:"Vol 6 Ch 2",d:"The 50/50 mindset: you are always on offense until you have to be on defense. Never wait. Never pause. Immediately go to work the second you land in 50/50. If both athletes wait — nothing happens. Force them to react to your attacks."},
+  f_inside:{t:"Steal inside knee position",v:"Vol 6 Ch 3",d:"Even in 50/50, the inside knee position still matters. If you can invert your knee and get it to the floor while their knee is above yours, they lose much of their ability to generate heel hook pressure. Actively fight for this every time you're in 50/50."},
+  f_legs:{t:"Deal with leg crossing",v:"Vol 6 Ch 4",d:"Opponent will cross their ankles or figure 4 to make separation harder and to add defense. Two different situations need different responses. Semi sankaku (crossed ankles) gives them less wedging but opens toe hold space. Full figure 4 is harder to separate but they gift you double trouble."},
+  f_semi:{t:"Semi sankaku — toe hold / separation dilemma",v:"Vol 6 Ch 5",d:"When they semi sankaku: you can go for a toe hold using the space created, OR you can try to separate their legs. The dilemma is that going for the toe hold might let them lock tighter, while separating might expose your heel first."},
+  f_fig4:{t:"Full figure 4 — they give you a gift",v:"Vol 6 Ch 4",d:"When they figure 4 their legs, they've given you double trouble. Doesn't matter if they're crossed or figure 4 — you get double trouble either way. Now you have both legs controlled and body weight available. Fall across and go to work."},
+  f_dilemma:{t:"Toe hold / heel hook dilemma",v:"Vol 6 Ch 6",d:"The main 50/50 dilemma: go for toe hold (faster pressure) or heel hook (stronger break). If you go toe hold and they separate their legs to avoid it — immediately switch to heel hook with knee toward ceiling. Their separation attempt exposes the heel."},
+  f_backside:{t:"Backside 50/50 / cross waist",v:"Vol 6 Ch 8-10",d:"Cross waist 50/50 is achieved by firing the leg over when you get inside knee position. When opponent high-legs through, catch them and go to backside 50/50 immediately — invert the knee, go belly down, finish. Cross waist denies their access to your head and hands."},
+  f_mutual:{t:"Mutual ashi — go last",v:"Vol 6 Ch 12-15",d:"The 50/50 of outside heel hooks — both athletes have outside heel hook access. The go-last strategy is critical: whoever tries to expose their heel first usually exposes their own heel to the opponent. Force them to go first. Far hip ashi helps lock your position. Rolling through: force them to expose their heel so you can catch it."},
+  s_force:{t:"Coupled force — the universal mechanic",v:"Vol 1",d:"Every submission in the leg lock system uses the same paired forces. You cannot finish with one force alone — you need both simultaneously. This is the single most important mechanical concept across all four submission types."},
+  s_toes:{t:"Toes to butt · heel to chin",v:"Vol 1",d:"The universal finishing direction. For heel hooks and toe holds: push the toes toward the butt AND pull the heel toward the chin. These two forces create a rotation of the knee that attacks the ACL and MCL. One force without the other dramatically reduces finishing power."},
+  s_heeldtl:{t:"Heel hook mechanics",v:"Vol 1 Ch 20",d:"Bite at the BACK of the heel — not the Achilles tendon, the back of the heel bone. Your forearm across the back of their heel, arm pit seals over the top. Inside hooks have more rotational range because of anatomical limits on internal rotation. Outside hooks are still effective but finish at a lower % vs resistance."},
+  s_toedtl:{t:"Toe hold mechanics",v:"Vol 4 Ch 4-5",d:"Belly down: strong back heel, pinch knees, toes to butt, heel to chin — same as heel hook lower body mechanics. Belly up: crunch toes to butt using body rotation. Hands move faster than body so pressure arrives before heel hook in a shootout — use this strategically."},
+  s_heelslip:{t:"If heel slips",v:"Vol 2 Ch 14-15",d:"Two counters to a heel slip: high hands (reach up over their head to control before they can posture), and roll through (follow them into a forward roll, finish from the other side). Never chase the heel when already being stacked — that's when you lose it completely."},
+  s_toerecap:{t:"Toe hold to heel hook",v:"Vol 4 Ch 6",d:"One of the most important combination sequences. Shoot a toe hold knowing it will come on faster — opponent reacts by straightening and separating their legs to relieve toe hold pressure. The second they separate: point your knee to the ceiling and transition to heel hook. Their escape feeds your finish."},
+  s_kbar:{t:"Knee bar — double trouble required",v:"Vol 1 Ch 18",d:"Without double trouble, opponent simply high-legs and internally rotates to change the angle and escape. With double trouble you body weight the leg and eliminate that escape. Most common from top ushiro. Paul Harris style heel-knee bars also common — heel hook grip, knee bar finish."},
+  s_achilles:{t:"Achilles lock — two distinct grips",v:"Vol 1 Ch 17",d:"Critical distinction: control Achilles (anywhere below the knee — to hold position and climb the leg) vs finishing Achilles (bite at the long end of the lever, Achilles tendon). Don't try to finish with a control grip. Once you shift to a finishing grip, opponent starts booting — that's your cue to switch to heel hook."},
+  s_kbar2:{t:"Toe hold / knee bar dilemma",v:"Vol 4 Ch 13",d:"From top ushiro with double trouble, opponent almost always crosses their legs (semi sankaku or figure 4). Fall across, lock double trouble with body weight. Now: if toes are accessible, go toe hold. If toes are protected, go knee bar. They have to defend both simultaneously."},
+  s_ach2:{t:"Achilles / heel hook dilemma",v:"Vol 2 Ch 11",d:"The fundamental submission dilemma of the whole system. Tight Achilles grip threatens the finish. Opponent boots their leg aggressively to fight out. The boot exposes the heel. Switch to heel hook the instant they commit to the boot. If you go back to fighting for Achilles, you lose the window."},
+  s_follow:{t:"Follow the leg / switch legs",v:"Vol 1 Ch 12-13",d:"Two fundamental tactical skills: Following — when opponent rolls explosively you MUST follow them through the transition and finish from the other side rather than letting them create distance. Switching — when they pull one leg completely free, immediately switch your entire attack to the other leg."},
+  s_gripping:{t:"Gripping configurations",v:"Vol 6 Ch 16",d:"The gripping chapter covers multiple hand configurations for the ashi itself — how to lock the figure 4 for maximum tightness, how to grip the knee, how to grip the thigh. Gordon teaches this last because having the right ashi is far more important than hand position. But with good ashi, proper gripping makes the difference in high-level competition."},
+};
+
+function sd(id){
+  const d=D[id];if(!d)return;
+  document.getElementById('dpanel').innerHTML=`<div class="dt">${d.t} <span class="dv">${d.v}</span></div><div>${d.d}</div>`;
+}
+
+function sv(v,btn){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  ['theory','irimi','outside','cross','5050','subs'].forEach(id=>{
+    document.getElementById('v-'+id).style.display=id===v?'block':'none';
+  });
+  document.getElementById('dpanel').innerHTML='<div style="color:var(--color-text-secondary)">Click any node to see details from the transcripts.</div>';
+}
+</script>

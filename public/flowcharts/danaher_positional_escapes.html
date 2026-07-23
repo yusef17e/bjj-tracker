@@ -1,0 +1,326 @@
+
+<style>
+.tb{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tb button{padding:5px 14px;border-radius:6px;border:0.5px solid var(--color-border-secondary);background:var(--color-background-secondary);color:var(--color-text-secondary);font-size:12px;cursor:pointer}
+.tb button.on{background:var(--color-background-tertiary);color:var(--color-text-primary);border-color:var(--color-border-primary);font-weight:500}
+.dp{border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:12px 16px;margin-top:10px;background:var(--color-background-secondary);font-size:13px;color:var(--color-text-secondary);line-height:1.6;min-height:52px}
+.dp .h{font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:3px}
+.dp .v{font-size:11px;color:var(--color-text-secondary);margin-left:6px}
+svg{display:block;width:100%}
+</style>
+
+<div class="tb">
+  <button class="on" onclick="sw('phil',this)">Philosophy</button>
+  <button onclick="sw('mount',this)">Mount escapes</button>
+  <button onclick="sw('back',this)">Back escapes</button>
+  <button onclick="sw('side',this)">Side pin escapes</button>
+  <button onclick="sw('turtle',this)">Turtle escapes</button>
+  <button onclick="sw('method',this)">5-step method</button>
+</div>
+
+<!-- PHILOSOPHY -->
+<div id="phil">
+<svg viewBox="0 0 680 620" role="img"><title>New wave escape philosophy</title>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="d('p1')" style="cursor:pointer"><rect x="160" y="14" width="360" height="54" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#444441" x="340" y="36" text-anchor="middle" dominant-baseline="central">The traditional binary approach fails</text><text font-size="12" fill="#5F5E5A" x="340" y="56" text-anchor="middle" dominant-baseline="central">Escape fully OR survive. Both are wrong goals.</text></g>
+<line x1="340" y1="68" x2="340" y2="96" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('p2')" style="cursor:pointer"><rect x="140" y="96" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="118" text-anchor="middle" dominant-baseline="central">New wave philosophy: satisficing</text><text font-size="12" fill="#534AB7" x="340" y="138" text-anchor="middle" dominant-baseline="central">Good enough outcome now beats perfect outcome never</text></g>
+<line x1="340" y1="152" x2="340" y2="180" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('p3')" style="cursor:pointer"><rect x="140" y="180" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="202" text-anchor="middle" dominant-baseline="central">Sunk cost principle</text><text font-size="12" fill="#534AB7" x="340" y="222" text-anchor="middle" dominant-baseline="central">Don't cling to failed escape attempts — abandon and regroup</text></g>
+<line x1="340" y1="236" x2="340" y2="264" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('p4')" style="cursor:pointer"><rect x="140" y="264" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="286" text-anchor="middle" dominant-baseline="central">Escape skills = confidence foundation</text><text font-size="12" fill="#534AB7" x="340" y="306" text-anchor="middle" dominant-baseline="central">Attack boldly when you trust your escapes</text></g>
+<line x1="340" y1="320" x2="340" y2="348" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('p5')" style="cursor:pointer"><rect x="140" y="348" width="400" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="340" y="370" text-anchor="middle" dominant-baseline="central">Game plan: inside position first</text><text font-size="12" fill="#185FA5" x="340" y="390" text-anchor="middle" dominant-baseline="central">Own inside = block submissions. Then escape the pin.</text></g>
+<line x1="340" y1="404" x2="340" y2="432" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('p6')" style="cursor:pointer"><rect x="140" y="432" width="400" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="340" y="454" text-anchor="middle" dominant-baseline="central">The 5 pins of jiu-jitsu</text><text font-size="12" fill="#185FA5" x="340" y="474" text-anchor="middle" dominant-baseline="central">Mount · rear mount · side · knee-on-belly · turtle</text></g>
+<line x1="340" y1="488" x2="340" y2="516" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('p7')" style="cursor:pointer"><rect x="140" y="516" width="400" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#712B13" x="340" y="538" text-anchor="middle" dominant-baseline="central">Problem solving under stress</text><text font-size="12" fill="#993C1D" x="340" y="558" text-anchor="middle" dominant-baseline="central">Each opponent grip = different puzzle. Customize your solution.</text></g>
+
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="44">Vol 1</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="124">Vol 1</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="210">Vol 1</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="296">Vol 1</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="382">Vol 1</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="462">Vol 1</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="548">Vol 4-8</text>
+</svg>
+</div>
+
+<!-- MOUNT ESCAPES -->
+<div id="mount" style="display:none">
+<svg viewBox="0 0 680 600" role="img"><title>Mount escapes</title>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="d('m0')" style="cursor:pointer"><rect x="210" y="14" width="260" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#444441" x="340" y="36" text-anchor="middle" dominant-baseline="central">Mounted position</text></g>
+<line x1="340" y1="58" x2="340" y2="86" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('m1')" style="cursor:pointer"><rect x="140" y="86" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="108" text-anchor="middle" dominant-baseline="central">Maximizing philosophy</text><text font-size="12" fill="#534AB7" x="340" y="128" text-anchor="middle" dominant-baseline="central">Escape + counter simultaneously. Don't just survive.</text></g>
+
+<line x1="240" y1="142" x2="140" y2="186" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="440" y1="142" x2="540" y2="186" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="340" y1="142" x2="340" y2="186" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('m2')" style="cursor:pointer"><rect x="14" y="186" width="230" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="129" y="208" text-anchor="middle" dominant-baseline="central">Lateral kipping escape</text><text font-size="12" fill="#185FA5" x="129" y="228" text-anchor="middle" dominant-baseline="central">Best to learn first —</text><text font-size="12" fill="#185FA5" x="129" y="244" text-anchor="middle" dominant-baseline="central">most accessible</text></g>
+<g onclick="d('m3')" style="cursor:pointer"><rect x="220" y="186" width="240" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="340" y="208" text-anchor="middle" dominant-baseline="central">Misdirectional kipping</text><text font-size="12" fill="#185FA5" x="340" y="228" text-anchor="middle" dominant-baseline="central">Fake one way, kip the other</text><text font-size="12" fill="#185FA5" x="340" y="244" text-anchor="middle" dominant-baseline="central">Disguises intent</text></g>
+<g onclick="d('m4')" style="cursor:pointer"><rect x="436" y="186" width="230" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="551" y="208" text-anchor="middle" dominant-baseline="central">Overhead kipping escape</text><text font-size="12" fill="#185FA5" x="551" y="228" text-anchor="middle" dominant-baseline="central">When lateral is blocked —</text><text font-size="12" fill="#185FA5" x="551" y="244" text-anchor="middle" dominant-baseline="central">go vertical</text></g>
+
+<path d="M129 256 L129 310 L340 310" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M340 256 L340 310" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M551 256 L551 310 L340 310" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<line x1="340" y1="310" x2="340" y2="334" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('m5')" style="cursor:pointer"><rect x="140" y="334" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="356" text-anchor="middle" dominant-baseline="central">Elbow escape family</text><text font-size="12" fill="#534AB7" x="340" y="376" text-anchor="middle" dominant-baseline="central">Inside variation (high level) beats outside (beginner)</text></g>
+
+<line x1="260" y1="390" x2="160" y2="434" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="420" y1="390" x2="520" y2="434" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('m6')" style="cursor:pointer"><rect x="30" y="434" width="250" height="70" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#085041" x="155" y="456" text-anchor="middle" dominant-baseline="central">Outside elbow escape</text><text font-size="12" fill="#0F6E56" x="155" y="474" text-anchor="middle" dominant-baseline="central">Best VALUE: use while being</text><text font-size="12" fill="#0F6E56" x="155" y="490" text-anchor="middle" dominant-baseline="central">mounted, not after</text></g>
+<g onclick="d('m7')" style="cursor:pointer"><rect x="400" y="434" width="250" height="70" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/><text font-size="14" font-weight="500" fill="#712B13" x="525" y="456" text-anchor="middle" dominant-baseline="central">Inside elbow escape</text><text font-size="12" fill="#993C1D" x="525" y="474" text-anchor="middle" dominant-baseline="central">Expert level — builds to</text><text font-size="12" fill="#993C1D" x="525" y="490" text-anchor="middle" dominant-baseline="central">leg lock counter-attack</text></g>
+
+<line x1="525" y1="504" x2="525" y2="542" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<g onclick="d('m8')" style="cursor:pointer"><rect x="360" y="542" width="300" height="44" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#712B13" x="510" y="564" text-anchor="middle" dominant-baseline="central">Counter-attack with leg locks</text></g>
+
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="38">Vol 2</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="114">Vol 2</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="222">Vol 2</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="364">Vol 2</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="470">Vol 2</text>
+</svg>
+</div>
+
+<!-- BACK ESCAPES -->
+<div id="back" style="display:none">
+<svg viewBox="0 0 680 620" role="img"><title>Back and rear mount escapes</title>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="d('b0')" style="cursor:pointer"><rect x="190" y="14" width="300" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#444441" x="340" y="36" text-anchor="middle" dominant-baseline="central">Rear mount / back control</text></g>
+<line x1="340" y1="58" x2="340" y2="86" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('b1')" style="cursor:pointer"><rect x="140" y="86" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="108" text-anchor="middle" dominant-baseline="central">Two battles fought simultaneously</text><text font-size="12" fill="#534AB7" x="340" y="128" text-anchor="middle" dominant-baseline="central">Win the hand fight AND the head fight</text></g>
+
+<line x1="260" y1="142" x2="160" y2="186" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="420" y1="142" x2="520" y2="186" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('b2')" style="cursor:pointer"><rect x="30" y="186" width="240" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/><text font-size="14" font-weight="500" fill="#0C447C" x="150" y="208" text-anchor="middle" dominant-baseline="central">Battle 1: Hand fight</text><text font-size="12" fill="#185FA5" x="150" y="226" text-anchor="middle" dominant-baseline="central">Strip the choking arm.</text><text font-size="12" fill="#185FA5" x="150" y="242" text-anchor="middle" dominant-baseline="central">Elbow to mat, turn.</text></g>
+<g onclick="d('b3')" style="cursor:pointer"><rect x="410" y="186" width="240" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/><text font-size="14" font-weight="500" fill="#0C447C" x="530" y="208" text-anchor="middle" dominant-baseline="central">Battle 2: Head fight</text><text font-size="12" fill="#185FA5" x="530" y="226" text-anchor="middle" dominant-baseline="central">If head pinned, cannot turn.</text><text font-size="12" fill="#185FA5" x="530" y="242" text-anchor="middle" dominant-baseline="central">Must free head first.</text></g>
+
+<path d="M150 256 L150 310 L340 310" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M530 256 L530 310 L340 310" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<line x1="340" y1="310" x2="340" y2="334" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('b4')" style="cursor:pointer"><rect x="140" y="334" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="356" text-anchor="middle" dominant-baseline="central">Body triangle — special problem</text><text font-size="12" fill="#534AB7" x="340" y="376" text-anchor="middle" dominant-baseline="central">4 triangles theory + the fifth triangle</text></g>
+
+<line x1="240" y1="390" x2="140" y2="434" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="340" y1="390" x2="340" y2="434" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="440" y1="390" x2="540" y2="434" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('b5')" style="cursor:pointer"><rect x="14" y="434" width="200" height="70" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#085041" x="114" y="456" text-anchor="middle" dominant-baseline="central">4 triangles method</text><text font-size="12" fill="#0F6E56" x="114" y="474" text-anchor="middle" dominant-baseline="central">Weaken strongest →</text><text font-size="12" fill="#0F6E56" x="114" y="490" text-anchor="middle" dominant-baseline="central">to escapable</text></g>
+<g onclick="d('b6')" style="cursor:pointer"><rect x="240" y="434" width="200" height="70" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#085041" x="340" y="456" text-anchor="middle" dominant-baseline="central">Spinning escape</text><text font-size="12" fill="#0F6E56" x="340" y="474" text-anchor="middle" dominant-baseline="central">Upper body connection</text><text font-size="12" fill="#0F6E56" x="340" y="490" text-anchor="middle" dominant-baseline="central">→ spin to guard</text></g>
+<g onclick="d('b7')" style="cursor:pointer"><rect x="466" y="434" width="200" height="70" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#085041" x="566" y="456" text-anchor="middle" dominant-baseline="central">Headlock escape</text><text font-size="12" fill="#0F6E56" x="566" y="474" text-anchor="middle" dominant-baseline="central">When neck/headlock</text><text font-size="12" fill="#0F6E56" x="566" y="490" text-anchor="middle" dominant-baseline="central">variant applied</text></g>
+
+<path d="M114 504 L114 558 L340 558" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M340 504 L340 558" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M566 504 L566 558 L340 558" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<line x1="340" y1="558" x2="340" y2="580" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<g onclick="d('b8')" style="cursor:pointer"><rect x="180" y="580" width="320" height="34" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#712B13" x="340" y="597" text-anchor="middle" dominant-baseline="central">Guard or counter-attack with leg locks</text></g>
+
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="38">Vol 3</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="114">Vol 3</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="222">Vol 3</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="362">Vol 3</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="470">Vol 3</text>
+</svg>
+</div>
+
+<!-- SIDE PIN ESCAPES -->
+<div id="side" style="display:none">
+<svg viewBox="0 0 680 660" role="img"><title>Side pin and north-south escapes</title>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="d('s0')" style="cursor:pointer"><rect x="190" y="14" width="300" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#444441" x="340" y="36" text-anchor="middle" dominant-baseline="central">Side / north-south / knee-on-belly pin</text></g>
+<line x1="340" y1="58" x2="340" y2="86" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('s1')" style="cursor:pointer"><rect x="140" y="86" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="108" text-anchor="middle" dominant-baseline="central">Identify pin type + opponent's grip</text><text font-size="12" fill="#534AB7" x="340" y="128" text-anchor="middle" dominant-baseline="central">Crossface? Reverse crossface? Sit-out? North-south?</text></g>
+<line x1="340" y1="142" x2="340" y2="170" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('s2')" style="cursor:pointer"><rect x="140" y="170" width="400" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="340" y="192" text-anchor="middle" dominant-baseline="central">Wedges vs frames</text><text font-size="12" fill="#185FA5" x="340" y="212" text-anchor="middle" dominant-baseline="central">His wedges around hips/head/shoulders. Your frames inside them.</text></g>
+
+<line x1="230" y1="226" x2="130" y2="270" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="340" y1="226" x2="340" y2="270" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="450" y1="226" x2="550" y2="270" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('s3')" style="cursor:pointer"><rect x="14" y="270" width="220" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="124" y="292" text-anchor="middle" dominant-baseline="central">Side elbow escape</text><text font-size="12" fill="#185FA5" x="124" y="310" text-anchor="middle" dominant-baseline="central">Kipping + reverse shrimp</text><text font-size="12" fill="#185FA5" x="124" y="326" text-anchor="middle" dominant-baseline="central">Turn in toward opponent</text></g>
+<g onclick="d('s4')" style="cursor:pointer"><rect x="244" y="270" width="192" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="340" y="292" text-anchor="middle" dominant-baseline="central">High leg escape</text><text font-size="12" fill="#185FA5" x="340" y="310" text-anchor="middle" dominant-baseline="central">When elbow escape</text><text font-size="12" fill="#185FA5" x="340" y="326" text-anchor="middle" dominant-baseline="central">is blocked</text></g>
+<g onclick="d('s5')" style="cursor:pointer"><rect x="446" y="270" width="220" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="556" y="292" text-anchor="middle" dominant-baseline="central">Knee escape</text><text font-size="12" fill="#185FA5" x="556" y="310" text-anchor="middle" dominant-baseline="central">3 parts: basic → ankle</text><text font-size="12" fill="#185FA5" x="556" y="326" text-anchor="middle" dominant-baseline="central">trap → beat crossface</text></g>
+
+<line x1="124" y1="340" x2="124" y2="384" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="556" y1="340" x2="556" y2="384" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('s6')" style="cursor:pointer"><rect x="14" y="384" width="220" height="70" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#085041" x="124" y="406" text-anchor="middle" dominant-baseline="central">Tricep post / back door</text><text font-size="12" fill="#0F6E56" x="124" y="424" text-anchor="middle" dominant-baseline="central">Turn away — only when</text><text font-size="12" fill="#0F6E56" x="124" y="440" text-anchor="middle" dominant-baseline="central">turning in is blocked</text></g>
+<g onclick="d('s7')" style="cursor:pointer"><rect x="446" y="384" width="220" height="70" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/><text font-size="14" font-weight="500" fill="#712B13" x="556" y="406" text-anchor="middle" dominant-baseline="central">Side elbow → leg locks</text><text font-size="12" fill="#993C1D" x="556" y="424" text-anchor="middle" dominant-baseline="central">Arm-dominant pins →</text><text font-size="12" fill="#993C1D" x="556" y="440" text-anchor="middle" dominant-baseline="central">go upper body first</text></g>
+
+<g onclick="d('s8')" style="cursor:pointer"><rect x="140" y="490" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="512" text-anchor="middle" dominant-baseline="central">North-south: unique elements</text><text font-size="12" fill="#534AB7" x="340" y="532" text-anchor="middle" dominant-baseline="central">High leg escape + variations by grip type</text></g>
+<line x1="340" y1="226" x2="340" y2="490" stroke="var(--color-border-secondary)" stroke-width="0.5" stroke-dasharray="4 3"/>
+<line x1="340" y1="340" x2="340" y2="490" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('s9')" style="cursor:pointer"><rect x="140" y="574" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="596" text-anchor="middle" dominant-baseline="central">The clamp — special study</text><text font-size="12" fill="#534AB7" x="340" y="616" text-anchor="middle" dominant-baseline="central">Ashi garami connection — hip distance control</text></g>
+<line x1="340" y1="546" x2="340" y2="574" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="38">Vol 4-6</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="114">Vol 4</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="200">Vol 8</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="306">Vol 4-6</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="420">Vol 5-6</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="520">Vol 6</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="602">Vol 5</text>
+</svg>
+</div>
+
+<!-- TURTLE ESCAPES -->
+<div id="turtle" style="display:none">
+<svg viewBox="0 0 680 580" role="img"><title>Turtle position escapes</title>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="d('t0')" style="cursor:pointer"><rect x="190" y="14" width="300" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#444441" x="340" y="36" text-anchor="middle" dominant-baseline="central">Turtle position</text></g>
+<line x1="340" y1="58" x2="340" y2="86" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('t1')" style="cursor:pointer"><rect x="140" y="86" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="108" text-anchor="middle" dominant-baseline="central">Identify opponent's connection</text><text font-size="12" fill="#534AB7" x="340" y="128" text-anchor="middle" dominant-baseline="central">Tight waist · body lock · seatbelt · one-on-one · covering hips</text></g>
+
+<line x1="195" y1="142" x2="80" y2="186" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="280" y1="142" x2="236" y2="186" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="340" y1="142" x2="340" y2="186" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="400" y1="142" x2="444" y2="186" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="485" y1="142" x2="600" y2="186" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('t2')" style="cursor:pointer"><rect x="14" y="186" width="130" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="79" y="208" text-anchor="middle" dominant-baseline="central">Tight waist</text><text font-size="12" fill="#185FA5" x="79" y="226" text-anchor="middle" dominant-baseline="central">Makikomi</text><text font-size="12" fill="#185FA5" x="79" y="242" text-anchor="middle" dominant-baseline="central">roll escape</text></g>
+<g onclick="d('t3')" style="cursor:pointer"><rect x="154" y="186" width="130" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="219" y="208" text-anchor="middle" dominant-baseline="central">Shoulder roll</text><text font-size="12" fill="#185FA5" x="219" y="226" text-anchor="middle" dominant-baseline="central">When tight waist</text><text font-size="12" fill="#185FA5" x="219" y="242" text-anchor="middle" dominant-baseline="central">is deep</text></g>
+<g onclick="d('t4')" style="cursor:pointer"><rect x="294" y="186" width="130" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="359" y="208" text-anchor="middle" dominant-baseline="central">Body lock</text><text font-size="12" fill="#185FA5" x="359" y="226" text-anchor="middle" dominant-baseline="central">When tight waist</text><text font-size="12" fill="#185FA5" x="359" y="242" text-anchor="middle" dominant-baseline="central">locks both arms</text></g>
+<g onclick="d('t5')" style="cursor:pointer"><rect x="434" y="186" width="130" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="499" y="208" text-anchor="middle" dominant-baseline="central">Seatbelt</text><text font-size="12" fill="#185FA5" x="499" y="226" text-anchor="middle" dominant-baseline="central">Reach-back</text><text font-size="12" fill="#185FA5" x="499" y="242" text-anchor="middle" dominant-baseline="central">sumi gaeshi</text></g>
+<g onclick="d('t6')" style="cursor:pointer"><rect x="574" y="186" width="100" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#0C447C" x="624" y="208" text-anchor="middle" dominant-baseline="central">Seatbelt</text><text font-size="12" fill="#185FA5" x="624" y="226" text-anchor="middle" dominant-baseline="central">Peek-out</text><text font-size="12" fill="#185FA5" x="624" y="242" text-anchor="middle" dominant-baseline="central">escape</text></g>
+
+<path d="M79 256 L79 320 L340 320" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M219 256 L219 320" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M359 256 L359 320 L340 320" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M499 256 L499 320 L340 320" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<path d="M624 256 L624 320 L340 320" fill="none" stroke="var(--color-border-secondary)" stroke-width="1"/>
+<line x1="340" y1="320" x2="340" y2="344" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('t7')" style="cursor:pointer"><rect x="140" y="344" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="366" text-anchor="middle" dominant-baseline="central">General hand fighting from turtle</text><text font-size="12" fill="#534AB7" x="340" y="386" text-anchor="middle" dominant-baseline="central">Swisher steps + inside control → all escapes flow from here</text></g>
+<line x1="340" y1="400" x2="340" y2="428" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<line x1="270" y1="428" x2="160" y2="472" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="410" y1="428" x2="520" y2="472" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('t8')" style="cursor:pointer"><rect x="30" y="472" width="250" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#712B13" x="155" y="494" text-anchor="middle" dominant-baseline="central">Guard recovery</text><text font-size="12" fill="#993C1D" x="155" y="514" text-anchor="middle" dominant-baseline="central">Turn away from opponent → guard</text></g>
+<g onclick="d('t9')" style="cursor:pointer"><rect x="400" y="472" width="250" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1"/><text font-size="14" font-weight="500" fill="#712B13" x="525" y="494" text-anchor="middle" dominant-baseline="central">Counter-attack</text><text font-size="12" fill="#993C1D" x="525" y="514" text-anchor="middle" dominant-baseline="central">Leg entries or sumi gaeshi sweep</text></g>
+
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="38">Vol 7</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="114">Vol 7</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="222">Vol 7</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="374">Vol 7</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="500">Vol 7</text>
+</svg>
+</div>
+
+<!-- 5-STEP METHOD -->
+<div id="method" style="display:none">
+<svg viewBox="0 0 680 580" role="img"><title>The 5-step escape method</title>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g onclick="d('f0')" style="cursor:pointer"><rect x="170" y="14" width="340" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#444441" x="340" y="36" text-anchor="middle" dominant-baseline="central">Under a pin — recall the 5-step method</text></g>
+<line x1="340" y1="58" x2="340" y2="86" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('f1')" style="cursor:pointer"><rect x="140" y="86" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="108" text-anchor="middle" dominant-baseline="central">Step 1: Defensive responsibility</text><text font-size="12" fill="#534AB7" x="340" y="128" text-anchor="middle" dominant-baseline="central">Chin down · elbows in · knees in · play defensively</text></g>
+<line x1="340" y1="142" x2="340" y2="170" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('f2')" style="cursor:pointer"><rect x="140" y="170" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="192" text-anchor="middle" dominant-baseline="central">Step 2: Kuzushi</text><text font-size="12" fill="#534AB7" x="340" y="212" text-anchor="middle" dominant-baseline="central">Off-balance opponent — the joker. Can occur at any point.</text></g>
+<line x1="340" y1="226" x2="340" y2="254" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('f3')" style="cursor:pointer"><rect x="140" y="254" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="276" text-anchor="middle" dominant-baseline="central">Step 3: The first frame</text><text font-size="12" fill="#534AB7" x="340" y="296" text-anchor="middle" dominant-baseline="central">Create frame inside opponent's wedges — buy space</text></g>
+<line x1="340" y1="310" x2="340" y2="338" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('f4')" style="cursor:pointer"><rect x="140" y="338" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="360" text-anchor="middle" dominant-baseline="central">Step 4: Primary entry point</text><text font-size="12" fill="#534AB7" x="340" y="380" text-anchor="middle" dominant-baseline="central">Every escape has one essential movement — identify it</text></g>
+<line x1="340" y1="394" x2="340" y2="422" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('f5')" style="cursor:pointer"><rect x="140" y="422" width="400" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/><text font-size="14" font-weight="500" fill="#3C3489" x="340" y="444" text-anchor="middle" dominant-baseline="central">Step 5: Majority inside control</text><text font-size="12" fill="#534AB7" x="340" y="464" text-anchor="middle" dominant-baseline="central">Win inside position. Wedges vs frames — you must win.</text></g>
+<line x1="340" y1="478" x2="340" y2="506" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#ar)"/>
+
+<g onclick="d('f6')" style="cursor:pointer"><rect x="140" y="506" width="400" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/><text font-size="14" font-weight="500" fill="#712B13" x="340" y="528" text-anchor="middle" dominant-baseline="central">Step 6 (bonus): Your choice</text><text font-size="12" fill="#993C1D" x="340" y="548" text-anchor="middle" dominant-baseline="central">Escape to guard · counter-attack · sweep · leg lock</text></g>
+
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="38">Vol 8</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="114">Vol 8</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="200">Vol 8</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="284">Vol 8</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="368">Vol 8</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="452">Vol 8</text>
+<text font-size="11" fill="var(--color-text-secondary)" x="12" y="534">Vol 8</text>
+</svg>
+</div>
+
+<div class="dp" id="dp"><div style="color:var(--color-text-secondary)">Click any node for detail from the transcripts.</div></div>
+
+<script>
+const D={
+p1:{h:"The traditional binary approach fails",v:"Vol 1 Ch 3",t:"Traditional jiu-jitsu teaches escapes as binary: either you get out completely or you survive. Most curriculum start with defensive skills because students inevitably end up on the bottom of mount or side control. The problem is the approach: survive OR escape. This leads to timid, passive grappling that never transitions to attack."},
+p2:{h:"Satisficing vs maximizing",v:"Vol 1 Ch 6",t:"Satisficing (a portmanteau of satisfy + suffice): choosing an outcome that is good enough rather than holding out for the perfect outcome. Applied to escapes: don't wait for the perfect moment to attempt a full escape — take a satisficing outcome (better position, inside control, partial escape) and build from there. Maximizers wait forever and accomplish nothing."},
+p3:{h:"The sunk cost principle",v:"Vol 1 Ch 7",t:"A well-studied psychological principle: humans irrationally persist with failed investments because of what has already been spent. Applied to escapes: if an escape attempt has failed, the effort already spent is irrelevant to future decisions. Abandon the failed attempt immediately and regroup. Most athletes cling to failed escapes far too long."},
+p4:{h:"Escape skills = confidence foundation",v:"Vol 1 Ch 2",t:"The counterintuitive starting point of the New Wave series: to develop a bold attacking game, you must first develop reliable escapes. Knowing you can get out of bad positions makes you willing to take risks. Without escape confidence, every offensive attempt is constrained by fear of ending up on the bottom."},
+p5:{h:"Game plan: inside position first",v:"Vol 1 Ch 8",t:"The game plan when pinned: first priority is inside position — getting your frames between you and the opponent's wedges. Inside position blocks the transition from pin to submission. Until you own inside position, you are vulnerable to both the pin and submissions simultaneously. Win inside first, then work the escape."},
+p6:{h:"The 5 pins of jiu-jitsu",v:"Vol 1 Ch 9",t:"The five pins: side pins (including crossface and reverse crossface variations), mounted position, rear mount/back control, knee on belly, and turtle position. Each requires a different escape approach because each presents a different positional problem. There is no universal escape — you must diagnose which pin and which grip before selecting the escape."},
+p7:{h:"Problem solving under stress",v:"Vol 4 Ch 8",t:"Getting out of pins is problem solving under stress. The key: how your opponent is holding you determines what problem you need to solve. A crossface side pin and a reverse crossface side pin require completely different solutions. You cannot use one-size-fits-all — diagnose the grip, identify the specific problem, customize the solution."},
+m0:{h:"Mounted position",v:"Vol 2",t:"The mounted position is one of the most dangerous pins. Danaher emphasizes that the goal from bottom mount is not merely to escape — it is to escape into a position where you have the advantage. The maximizing philosophy applies: escape + counter simultaneously whenever possible."},
+m1:{h:"Maximizing escape philosophy",v:"Vol 2 Ch 1",t:"From mount, the goal is to escape AND to put yourself in a better position than before the pin started. If you simply escape to guard, you've achieved survival. If you escape into a leg lock entry or a sweep, you've achieved something better. This is the maximizing philosophy applied to mount escapes."},
+m2:{h:"Lateral kipping escape",v:"Vol 2 Ch 1",t:"The best starting point for mount escapes — most students find it most accessible. The lateral kip uses explosive leg movement to bridge and roll. Danaher's key insight: most people do the lateral kip wrong because they go straight sideways. The kip must go diagonally — forward and to the side — to actually displace the mounted opponent."},
+m3:{h:"Misdirectional kipping escape",v:"Vol 2 Ch 2",t:"After years of teaching, Danaher concluded that the lateral escape is best first because students can do it. The misdirectional kip adds deception: fake movement in one direction to draw the opponent's weight, then kip the other direction. The misdirection creates a brief window where the opponent's base is compromised."},
+m4:{h:"Overhead kipping escape",v:"Vol 2 Ch 3",t:"When the lateral kip is defended — opponent widens base to the sides — the overhead kip exploits the fact that wide base is not stable against vertical movement. The overhead kip goes upward rather than sideways. This creates a very different angle of attack that catches opponents who have adjusted to the lateral."},
+m5:{h:"Elbow escape family",v:"Vol 2 Ch 4-5",t:"The elbow escape is the most commonly taught mount escape. Danaher's key insight: there are inside and outside variations, and they work at very different contexts. Outside elbow escape is taught to beginners but its real value at high levels is while being mounted (during the transition), not after the mount is established."},
+m6:{h:"Outside elbow escape",v:"Vol 2 Ch 5",t:"At high level competition, the outside elbow escape's real value is during the mounting process — as the opponent is getting mounted on you. Once fully mounted by an expert, outside elbow escape becomes much harder. Use it reactively as the mount is being established rather than as a remedy after."},
+m7:{h:"Inside elbow escape",v:"Vol 2 Ch 4",t:"The inside elbow escape is the expert variation — harder to perform but opens directly into leg lock counter-attacks. Instead of escaping outward (away from opponent), the inside variation creates a path directly into the opponent's legs. This makes it a dual-purpose move: escape from mount AND entry into leg entanglement."},
+m8:{h:"Counter-attack with leg locks",v:"Vol 2 Ch 4",t:"The inside elbow escape's unique value: it positions you directly into your opponent's legs as you escape. This creates an immediate counter-attack opportunity. Rather than simply recovering guard, you convert the escape directly into an offensive leg lock entry. The mounted position becomes a transition point rather than a crisis."},
+b0:{h:"Rear mount / back control",v:"Vol 3",t:"Rear mount is described as the most dangerous pin in jiu-jitsu — the opponent has immediate access to strangulation and the back-taken player has no direct offense. Danaher covers this in depth across multiple chapters because it requires the most systematic approach of all the pins."},
+b1:{h:"Two battles simultaneously",v:"Vol 3 Ch 1-2",t:"Getting out of rear mount requires winning two separate battles at the same time: the hand fight (preventing the choking arm from locking in) and the head fight (preventing the head from being pinned which would block the turn). Both battles must be engaged simultaneously — winning one while losing the other still results in the strangle."},
+b2:{h:"Battle 1: The hand fight",v:"Vol 3 Ch 1",t:"The hand fight is the priority: strip the choking arm before it locks in. Danaher's method: two-on-one the choking arm, peel it off, drive your elbow to the mat on the same side. This creates the turning angle. The hand fight must be won first — without it, any turn attempt exposes you to the strangle."},
+b3:{h:"Battle 2: The head fight",v:"Vol 3 Ch 2",t:"If the opponent pins your head, you cannot turn to escape. The head fight: prevent head from being pinned by keeping it connected to your shoulder. If the head is already pinned, you must free it first using specific movements before the turn becomes possible. The spinning escape (Vol 3 Ch 7) addresses situations where the upper body connection is used to pin."},
+b4:{h:"Body triangle — the special problem",v:"Vol 3 Ch 4-6",t:"The body triangle is a uniquely difficult leg configuration from back control — Danaher calls it a major source of vexation and frustration. The body triangle prevents the usual escape methods because the legs create a rigid figure-4 around the torso. Requires its own specific theory and methods."},
+b5:{h:"The 4 triangles theory",v:"Vol 3 Ch 5",t:"Danaher's theory: body triangles go from strongest to weakest in a spectrum of 4 configurations. The key insight: rather than attacking the triangle directly (which is very hard), systematically convert the stronger configuration to a slightly weaker one, then weaker still, until you reach an escapable version. Progressive weakening beats direct resistance."},
+b6:{h:"Spinning escape",v:"Vol 3 Ch 7",t:"When the opponent uses an upper body connection to restrict movement during back escapes, the spinning escape converts the upper body connection against them. By spinning in a specific direction while maintaining the upper body connection, you create a moment where the back is given up but you arrive in a dominant position — often directly into guard or sweeping."},
+b7:{h:"Headlock escape",v:"Vol 3 Ch 8",t:"When the opponent applies a headlock variation from back control (neck pressure, head and arm style), this creates a unique puzzle. Standard back escape methods fail because the head is being used as a lever. Specific counter to headlock grip that uses the opponent's head control against them to create an escape angle."},
+b8:{h:"Guard or leg lock counter",v:"Vol 3 Ch 3",t:"The maximizing philosophy applied to back escapes: don't just recover guard — enter the opponent's legs. When you throw your legs in as you escape, instead of putting them back into guard position, put them into ashi garami (leg entanglement) and finish with a leg lock. The escape becomes the attack."},
+s0:{h:"Side and north-south pins",v:"Vol 4-6",t:"Side pins are the most commonly occurring pins in jiu-jitsu and come in more variations than any other pin type. Danaher covers crossface, reverse crossface, sit-out variations, and north-south as separate problems with different solutions. The key: identify exactly which side pin configuration you are in before choosing your escape."},
+s1:{h:"Identify pin type and grip",v:"Vol 4 Ch 8-10",t:"The central problem of crossface side pins: near hip vs far hip connection. The central problem of reverse crossface: near shoulder vs far shoulder. Each combination creates a different escape problem. You cannot just 'escape side control' — you must identify the specific configuration and customize. This is problem solving under stress."},
+s2:{h:"Wedges vs frames",v:"Vol 8 Ch 5",t:"The universal framework: a pin is a set of wedges placed around your hips, head, and shoulders. Your goal is to form frames inside his wedges. If you can get your frames inside his wedges, you can move underneath the pin and escape. If his wedges are outside your frames, he controls you completely. Inside position wins."},
+s3:{h:"Side elbow escape",v:"Vol 4-5",t:"The primary escape from side pins. Uses kipping (explosive leg movement) combined with reverse shrimping. The combination creates space and turns you toward the opponent. Requires: kip to create space, reverse shrimp to position elbow, elbow drives to inside, turn to guard. Danaher spends multiple volumes on the details because it's the most important escape from side control."},
+s4:{h:"High leg escape",v:"Vol 5-6",t:"The auxiliary escape to the side elbow — when the elbow escape isn't working, switch to high leg. The high leg escape uses the far leg over the opponent's body to create a sweep or direct escape. They work as a pair: the side elbow escape and high leg escape create a two-threat system that makes it harder for the opponent to defend both simultaneously."},
+s5:{h:"Knee escape",v:"Vol 5 Ch 8-10",t:"The knee escape is covered in 3 parts: basic knee escape, ankle trap combination (when you can feel the underhook but can't get all the way up), and beating the crossface (when the crossface blocks the standard knee escape). Danaher says knee escapes work extremely well against people who switch to reverse crossface — so it's an important specialty."},
+s6:{h:"Tricep post / back door escape",v:"Vol 6 Ch 2-3",t:"Turning away from the opponent — the opposite direction from the side elbow escape. Used only when turning in is impossible. Tricep post escape creates a frame with the tricep to allow turning away. Back door escape uses the same idea — when you turn away the primary concern is back exposure, and the back door escape addresses this by threading the body through a specific path that prevents back exposure."},
+s7:{h:"Side elbow escape into leg locks",v:"Vol 5 Ch 5",t:"From arm-dominant pins like side control and north-south, Danaher generally favors going to upper body attacks first, then leg entries. The side elbow escape can be converted directly into leg lock entries — instead of completing the escape to guard, the movement of the escape positions you into ashi garami for a leg lock counter-attack."},
+s8:{h:"North-south: unique elements",v:"Vol 6 Ch 5-8",t:"North-south presents unique elements not found in regular side pins: the opponent faces away from your head, changing all the leverage relationships. The high leg escape works differently here. Variations of north-south (standard, reverse, with underhook, with arm trap) each require variations in the escape approach."},
+s9:{h:"The clamp — special study",v:"Vol 5 Ch 4",t:"The clamp is connected to ashi garami (leg entanglement). It controls the distance of your opponent's hips from your hips. Ashi garami works by putting a knee in front and behind — creating a shield and a stop. The clamp is a special study that bridges the escape world and the leg lock world, showing how pin escapes naturally transition into leg lock attacks."},
+t0:{h:"Turtle position",v:"Vol 7",t:"Turtle is described as a position that should be treated almost like a pin — even though technically neutral, the opponent is close to taking the back. Danaher identifies turtle as one of the 5 pins because the threat level is similar: just a few movements and hooks are in. The escape approach is unique because the opponent can connect in many different ways."},
+t1:{h:"Identify opponent's connection",v:"Vol 7 Ch 1",t:"From turtle, the opponent can connect with: tight waist (elbow controls hip), body lock (both arms — controlling, but less submission danger), seatbelt (immediate strangle danger), one-on-one (hand control like a tight waist), covering hips (leg over with horse position). Each requires a different escape."},
+t2:{h:"Tight waist: Makikomi",v:"Vol 7 Ch 2",t:"The Makikomi is a particularly effective counter to the tight waist from turtle. The opponent's arm around the waist becomes a handle — you use it to roll them over your body in a barrel roll motion. The makikomi uses the opponent's own tight waist grip against them, turning their control point into the lever for your escape."},
+t3:{h:"Shoulder roll",v:"Vol 7 Ch 3",t:"When the opponent has a deep tight waist and wises up to the makikomi — they put their head low to prevent the barrel roll. The shoulder roll is the answer: rather than rolling over them, you roll under them, using the shoulder as the pivot point. Works from a similar setup to the makikomi but exploits different body mechanics."},
+t4:{h:"Body lock escape",v:"Vol 7 Ch 4",t:"When the opponent transitions from tight waist to body lock (locking both hands), the options change. Body lock is more controlling but less immediately dangerous for submissions. The body lock escape addresses the complications that arise when the opponent commits both arms and creates a more rigid control."},
+t5:{h:"Seatbelt: reach-back sumi gaeshi",v:"Vol 7 Ch 5",t:"The seatbelt is the most dangerous turtle control — immediate strangle threat. The reach-back sumi gaeshi is one of the most effective counters: you reach back and grab the opponent, then use a sumi gaeshi (stomach throw) motion to bring them over. The seatbelt grip actually assists the throw because it keeps the connection."},
+t6:{h:"Seatbelt: peek-out escape",v:"Vol 7 Ch 7",t:"A second option against the seatbelt. The peek-out: put your head down to the mat, take the inside knee to outside knee position, swisher step (a cross-step movement that is a major theme of turtle escapes). The peek-out creates an angle where you can turn into the opponent without giving up your back."},
+t7:{h:"General hand fighting from turtle",v:"Vol 7 Ch 8",t:"All turtle escapes rely on the hand fight. The opponent's connection is always through his hands — tight waist, body lock, seatbelt, one-on-one. The swisher step is a major movement tool. Inside control from turtle is the key to all escapes — get a hand connection to inside before attempting any specific escape technique."},
+t8:{h:"Guard recovery",v:"Vol 7",t:"The conservative outcome from turtle: turn away from the opponent (opposite direction to where they're attacking) and recover guard. This is satisficing — not maximizing, but a good enough outcome. Prevents back take, recovers neutral position, sets up your own offense."},
+t9:{h:"Counter-attack from turtle",v:"Vol 7 Ch 5",t:"The maximizing outcome from turtle: the reach-back sumi gaeshi and leg entries. When the opponent is controlling from turtle, their legs are in a compromised position. The sumi gaeshi sweep takes them directly to their back. Leg entries create ashi garami counter-attacks. The maximizing philosophy applied to turtle: don't just escape — reverse."},
+f0:{h:"Under a pin — recall the 5-step method",v:"Vol 8",t:"Danaher's summary of positional escape — a framework for recalling information under stress. The 5-step method applies universally to all pins. When you're in a bad position and panicking, the 5 steps give you a systematic sequence to follow rather than reacting randomly."},
+f1:{h:"Step 1: Defensive responsibility",v:"Vol 8 Ch 1",t:"The foundation: chin down (protect against strangles), elbows in (protect against arm attacks), knees in (protect against leg attacks), play defensively. Before you can escape, you must stop the situation from getting worse. Defensive responsibility is about removing the immediate threat so you can think clearly and act systematically."},
+f2:{h:"Step 2: Kuzushi",v:"Vol 8 Ch 2",t:"Kuzushi means off-balancing. Danaher calls it 'the joker' — it can occur at any point in the sequence, not just as step 2. If you can off-balance your opponent at any moment, seize the opportunity immediately. Kuzushi creates a window that makes all subsequent steps easier. Always be looking for kuzushi moments throughout the entire sequence."},
+f3:{h:"Step 3: The first frame",v:"Vol 8 Ch 3",t:"Create a frame inside the opponent's wedges. The frame is a structure — typically using your arms or legs — that creates space between you and the opponent. The first frame doesn't need to complete the escape. It just needs to buy enough space to execute the primary entry point. Think of it as prying open a door."},
+f4:{h:"Step 4: Primary entry point",v:"Vol 8 Ch 4",t:"Every major escape in jiu-jitsu has one essential movement that makes everything else possible. This is the primary entry point. For the side elbow escape it's the elbow driving inside. For the mount kip it's the bridge at the right angle. For the back escape it's winning the hand fight. Identify this movement for each escape and practice it in isolation until it's automatic."},
+f5:{h:"Step 5: Majority inside control",v:"Vol 8 Ch 5",t:"Win the inside position battle. The battle of wedges vs frames: if you own the inside, you can move underneath the pin. If he owns the inside, he can maintain the pin and transition to submissions. This is the decisive step — achieving majority inside control is effectively the escape. Everything after flows naturally."},
+f6:{h:"Step 6 (bonus): Your choice",v:"Vol 8 Ch 6",t:"The bonus step: once you have inside control and the escape is nearly complete, you have a choice. Escape to guard (satisficing — safe). Counter-attack with a submission (maximizing — ambitious). Sweep into top position (maximizing). Enter the legs (maximizing). The choice depends on what the opponent has given you and your comfort level in each area."},
+};
+function d(id){const x=D[id];if(!x)return;document.getElementById('dp').innerHTML=`<div class="h">${x.h} <span class="v">${x.v}</span></div><div>${x.t}</div>`;}
+function sw(v,btn){document.querySelectorAll('.tb button').forEach(b=>b.classList.remove('on'));btn.classList.add('on');['phil','mount','back','side','turtle','method'].forEach(id=>{document.getElementById(id).style.display=id===v?'block':'none';});document.getElementById('dp').innerHTML='<div style="color:var(--color-text-secondary)">Click any node for detail from the transcripts.</div>';}
+</script>

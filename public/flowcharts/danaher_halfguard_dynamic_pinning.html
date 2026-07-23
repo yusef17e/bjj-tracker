@@ -1,0 +1,333 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.tab-bar{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.tab{padding:5px 14px;border-radius:6px;border:0.5px solid var(--color-border-secondary);background:var(--color-background-secondary);color:var(--color-text-secondary);font-size:12px;cursor:pointer;transition:all .15s}
+.tab.active{background:var(--color-background-tertiary);color:var(--color-text-primary);border-color:var(--color-border-primary);font-weight:500}
+.legend{display:flex;gap:14px;font-size:11px;color:var(--color-text-secondary);margin-bottom:10px;flex-wrap:wrap}
+.ld{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.detail{border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:12px 16px;margin-top:12px;background:var(--color-background-secondary);font-size:13px;color:var(--color-text-secondary);line-height:1.6;min-height:52px}
+.detail .dt{font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:3px}
+.detail .dv{font-size:11px;color:var(--color-text-secondary);margin-bottom:4px}
+svg{display:block;width:100%}
+</style>
+
+<div class="tab-bar">
+  <button class="tab active" onclick="showView('hgp',this)">Half guard passing</button>
+  <button class="tab" onclick="showView('pin',this)">Dynamic pinning</button>
+</div>
+
+<div class="legend">
+  <span><span class="ld" style="background:#534AB7"></span>Concept / position</span>
+  <span><span class="ld" style="background:#0F6E56"></span>Passing technique</span>
+  <span><span class="ld" style="background:#185FA5"></span>Skill / method</span>
+  <span><span class="ld" style="background:#993C1D"></span>Outcome / counter</span>
+  <span><span class="ld" style="background:#888780"></span>Foundation</span>
+</div>
+
+<div id="view-hgp">
+<svg viewBox="0 0 680 860" role="img">
+<title>Danaher half guard passing system</title>
+<desc>The 4.6.3 half guard passing system across volumes 1-5</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node" onclick="sd('goal')">
+  <rect x="215" y="14" width="250" height="44" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="36" text-anchor="middle" dominant-baseline="central" fill="#444441">Goal: 4 dominant positions</text>
+</g>
+<line x1="340" y1="58" x2="340" y2="80" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node" onclick="sd('force')">
+  <rect x="200" y="80" width="280" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="100" text-anchor="middle" dominant-baseline="central" fill="#3C3489">1st skill: force half guard</text>
+  <text class="ts" x="340" y="120" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Split squat / HQ / standard passes</text>
+</g>
+
+<path d="M290 136 L180 168" fill="none" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+<path d="M390 136 L500 168" fill="none" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="340" y1="136" x2="340" y2="168" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node" onclick="sd('kshield')">
+  <rect x="60" y="168" width="200" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="160" y="188" text-anchor="middle" dominant-baseline="central" fill="#3C3489">2nd skill: clear defenses</text>
+  <text class="ts" x="160" y="208" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Knee shield / lockdown / deep half</text>
+</g>
+<g class="node" onclick="sd('c2c')">
+  <rect x="240" y="168" width="200" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="188" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Chest-to-chest contact</text>
+  <text class="ts" x="340" y="208" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Negate attacks, grip stance</text>
+</g>
+<g class="node" onclick="sd('hbfly')">
+  <rect x="420" y="168" width="200" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="520" y="188" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Half butterfly variant</text>
+  <text class="ts" x="520" y="208" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Separate passing problem</text>
+</g>
+
+<line x1="160" y1="224" x2="160" y2="256" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="340" y1="224" x2="340" y2="256" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="520" y1="224" x2="520" y2="256" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node" onclick="sd('xface')">
+  <rect x="60" y="256" width="200" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="160" y="276" text-anchor="middle" dominant-baseline="central" fill="#0C447C">3rd skill: crossface</text>
+  <text class="ts" x="160" y="296" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Control head + shoulder</text>
+</g>
+<g class="node" onclick="sd('uhood')">
+  <rect x="240" y="256" width="200" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="340" y="276" text-anchor="middle" dominant-baseline="central" fill="#0C447C">4th skill: underhook</text>
+  <text class="ts" x="340" y="296" text-anchor="middle" dominant-baseline="central" fill="#185FA5">vs opponent whizzer</text>
+</g>
+<g class="node" onclick="sd('hbgrip')">
+  <rect x="420" y="256" width="200" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="520" y="276" text-anchor="middle" dominant-baseline="central" fill="#0C447C">HB: upper body grip</text>
+  <text class="ts" x="520" y="296" text-anchor="middle" dominant-baseline="central" fill="#185FA5">+ lower body positioning</text>
+</g>
+
+<line x1="160" y1="312" x2="160" y2="344" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="340" y1="312" x2="340" y2="344" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="520" y1="312" x2="520" y2="344" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node" onclick="sd('freeleg')">
+  <rect x="60" y="344" width="200" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="160" y="364" text-anchor="middle" dominant-baseline="central" fill="#0C447C">5th skill: free the knee</text>
+  <text class="ts" x="160" y="384" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Shoelace / ball / hand post</text>
+</g>
+<g class="node" onclick="sd('freeleg2')">
+  <rect x="240" y="344" width="200" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="340" y="364" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Configure free leg</text>
+  <text class="ts" x="340" y="384" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Tripod / wedges / floor</text>
+</g>
+<g class="node" onclick="sd('hball')">
+  <rect x="420" y="344" width="200" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="520" y="364" text-anchor="middle" dominant-baseline="central" fill="#0C447C">HB: put it together</text>
+  <text class="ts" x="520" y="384" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Golden rule of HB passing</text>
+</g>
+
+<path d="M160 400 L160 440 L340 440" fill="none" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+<path d="M340 400 L340 440" fill="none" stroke="#B4B2A9" stroke-width="1"/>
+<path d="M520 400 L520 440 L340 440" fill="none" stroke="#B4B2A9" stroke-width="1"/>
+<line x1="340" y1="440" x2="340" y2="460" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node" onclick="sd('4dom')">
+  <rect x="180" y="460" width="320" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="480" text-anchor="middle" dominant-baseline="central" fill="#3C3489">4 dominant passing positions</text>
+  <text class="ts" x="340" y="500" text-anchor="middle" dominant-baseline="central" fill="#534AB7">3/4 side sit-out · 3/4 side · reverse 3/4 · 3/4 mount</text>
+</g>
+
+<line x1="220" y1="516" x2="120" y2="556" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="280" y1="516" x2="240" y2="556" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="400" y1="516" x2="440" y2="556" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+<line x1="460" y1="516" x2="560" y2="556" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node" onclick="sd('p1')">
+  <rect x="40" y="556" width="150" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="115" y="576" text-anchor="middle" dominant-baseline="central" fill="#085041">Half kata gatame</text>
+  <text class="ts" x="115" y="596" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Pass 1 — head arm</text>
+</g>
+<g class="node" onclick="sd('p2')">
+  <rect x="200" y="556" width="150" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="275" y="576" text-anchor="middle" dominant-baseline="central" fill="#085041">Lapel crossface</text>
+  <text class="ts" x="275" y="596" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Pass 2 — gi control</text>
+</g>
+<g class="node" onclick="sd('p3')">
+  <rect x="360" y="556" width="150" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="435" y="576" text-anchor="middle" dominant-baseline="central" fill="#085041">Top head and arm</text>
+  <text class="ts" x="435" y="596" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Pass 3 — foundational</text>
+</g>
+<g class="node" onclick="sd('p4')">
+  <rect x="520" y="556" width="150" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text class="th" x="595" y="576" text-anchor="middle" dominant-baseline="central" fill="#085041">Double underhook</text>
+  <text class="ts" x="595" y="596" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">Pass 4+5</text>
+</g>
+
+<path d="M115 612 L115 650 L340 650" fill="none" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+<path d="M275 612 L275 650" fill="none" stroke="#B4B2A9" stroke-width="1"/>
+<path d="M435 612 L435 650 L340 650" fill="none" stroke="#B4B2A9" stroke-width="1"/>
+<path d="M595 612 L595 650 L340 650" fill="none" stroke="#B4B2A9" stroke-width="1"/>
+<line x1="340" y1="650" x2="340" y2="668" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node" onclick="sd('law')">
+  <rect x="170" y="668" width="340" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="688" text-anchor="middle" dominant-baseline="central" fill="#444441">Law of perpendicularity</text>
+  <text class="ts" x="340" y="708" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Move perpendicular to opponent's spine</text>
+</g>
+
+<line x1="340" y1="724" x2="340" y2="756" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr)"/>
+
+<g class="node" onclick="sd('pass')">
+  <rect x="190" y="756" width="300" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="340" y="776" text-anchor="middle" dominant-baseline="central" fill="#712B13">Half guard passed</text>
+  <text class="ts" x="340" y="796" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Side control / mount / back</text>
+</g>
+
+<text class="ts" x="12" y="100" fill="#888780">Vol 1</text>
+<text class="ts" x="12" y="290" fill="#888780">Vol 2-3</text>
+<text class="ts" x="12" y="390" fill="#888780">Vol 4-5</text>
+<text class="ts" x="12" y="490" fill="#888780">Vol 2</text>
+<text class="ts" x="12" y="590" fill="#888780">Vol 4</text>
+<text class="ts" x="12" y="700" fill="#888780">Vol 2</text>
+</svg>
+</div>
+
+<div id="view-pin" style="display:none">
+<svg viewBox="0 0 680 820" role="img">
+<title>Danaher dynamic pinning system</title>
+<desc>The dynamic pinning system across volumes 6-8</desc>
+<defs><marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="node" onclick="sd('pindef')">
+  <rect x="190" y="14" width="300" height="56" rx="8" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+  <text class="th" x="340" y="34" text-anchor="middle" dominant-baseline="central" fill="#444441">Theory of pinning</text>
+  <text class="ts" x="340" y="54" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">Wedges + base of support + inside position</text>
+</g>
+<line x1="340" y1="70" x2="340" y2="100" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr2)"/>
+
+<g class="node" onclick="sd('3rules')">
+  <rect x="190" y="100" width="300" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="120" text-anchor="middle" dominant-baseline="central" fill="#3C3489">3 golden rules</text>
+  <text class="ts" x="340" y="140" text-anchor="middle" dominant-baseline="central" fill="#534AB7">No perfect pin — dynamic movement required</text>
+</g>
+<line x1="340" y1="156" x2="340" y2="186" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr2)"/>
+
+<g class="node" onclick="sd('escape')">
+  <rect x="170" y="186" width="340" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="340" y="206" text-anchor="middle" dominant-baseline="central" fill="#0C447C">4 lines of escape resistance</text>
+  <text class="ts" x="340" y="226" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Push · shrimp · bridge · knee escape</text>
+</g>
+
+<line x1="260" y1="242" x2="160" y2="282" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr2)"/>
+<line x1="340" y1="242" x2="340" y2="282" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr2)"/>
+<line x1="420" y1="242" x2="520" y2="282" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr2)"/>
+
+<g class="node" onclick="sd('side')">
+  <rect x="50" y="282" width="190" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="145" y="302" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Side pin</text>
+  <text class="ts" x="145" y="322" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Static + dynamic variations</text>
+</g>
+<g class="node" onclick="sd('mount')">
+  <rect x="240" y="282" width="200" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="340" y="302" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Mount</text>
+  <text class="ts" x="340" y="322" text-anchor="middle" dominant-baseline="central" fill="#534AB7">High / low / S-mount vars</text>
+</g>
+<g class="node" onclick="sd('rmount')">
+  <rect x="440" y="282" width="200" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text class="th" x="540" y="302" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Rear mount</text>
+  <text class="ts" x="540" y="322" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Seatbelt + body triangle</text>
+</g>
+
+<text class="ts" x="12" y="310" fill="#B4B2A9">NS also</text>
+
+<line x1="145" y1="338" x2="145" y2="378" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr2)"/>
+<line x1="340" y1="338" x2="340" y2="378" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr2)"/>
+<line x1="540" y1="338" x2="540" y2="378" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr2)"/>
+
+<g class="node" onclick="sd('t-side')">
+  <rect x="50" y="378" width="190" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="145" y="398" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Transitions from side</text>
+  <text class="ts" x="145" y="418" text-anchor="middle" dominant-baseline="central" fill="#185FA5">→ mount · KOB · rear mount</text>
+</g>
+<g class="node" onclick="sd('t-mount')">
+  <rect x="240" y="378" width="200" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="340" y="398" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Transitions from mount</text>
+  <text class="ts" x="340" y="418" text-anchor="middle" dominant-baseline="central" fill="#185FA5">→ back reactive / proactive</text>
+</g>
+<g class="node" onclick="sd('t-rear')">
+  <rect x="440" y="378" width="200" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="540" y="398" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Transitions from rear</text>
+  <text class="ts" x="540" y="418" text-anchor="middle" dominant-baseline="central" fill="#185FA5">→ mount · extract foot</text>
+</g>
+
+<path d="M145 434 L145 474 L340 474" fill="none" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr2)"/>
+<path d="M340 434 L340 474" fill="none" stroke="#B4B2A9" stroke-width="1"/>
+<path d="M540 434 L540 474 L340 474" fill="none" stroke="#B4B2A9" stroke-width="1"/>
+<line x1="340" y1="474" x2="340" y2="494" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr2)"/>
+
+<g class="node" onclick="sd('diag')">
+  <rect x="170" y="494" width="340" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+  <text class="th" x="340" y="514" text-anchor="middle" dominant-baseline="central" fill="#3C3489">Diagonal control</text>
+  <text class="ts" x="340" y="534" text-anchor="middle" dominant-baseline="central" fill="#534AB7">Minimum requirement of back control</text>
+</g>
+<line x1="340" y1="550" x2="340" y2="580" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr2)"/>
+
+<g class="node" onclick="sd('back')">
+  <rect x="170" y="580" width="340" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text class="th" x="340" y="600" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Back control</text>
+  <text class="ts" x="340" y="620" text-anchor="middle" dominant-baseline="central" fill="#185FA5">Upper + lower body game</text>
+</g>
+
+<line x1="260" y1="636" x2="180" y2="676" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr2)"/>
+<line x1="420" y1="636" x2="500" y2="676" stroke="#B4B2A9" stroke-width="1" marker-end="url(#arr2)"/>
+
+<g class="node" onclick="sd('retain')">
+  <rect x="60" y="676" width="230" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="175" y="696" text-anchor="middle" dominant-baseline="central" fill="#712B13">Retaining the pin</text>
+  <text class="ts" x="175" y="716" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Practical applications</text>
+</g>
+<g class="node" onclick="sd('score')">
+  <rect x="390" y="676" width="230" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text class="th" x="505" y="696" text-anchor="middle" dominant-baseline="central" fill="#712B13">Point scoring</text>
+  <text class="ts" x="505" y="716" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Scoring vs non-scoring transitions</text>
+</g>
+
+<text class="ts" x="12" y="40" fill="#888780">Vol 6</text>
+<text class="ts" x="12" y="200" fill="#888780">Vol 6</text>
+<text class="ts" x="12" y="340" fill="#888780">Vol 7</text>
+<text class="ts" x="12" y="430" fill="#888780">Vol 7-8</text>
+<text class="ts" x="12" y="530" fill="#888780">Vol 8</text>
+<text class="ts" x="12" y="710" fill="#888780">Vol 8</text>
+</svg>
+</div>
+
+<div class="detail" id="detail-box">
+  <div style="color:var(--color-text-secondary)">Click any node to see details from the transcripts.</div>
+</div>
+
+<script>
+const D = {
+  goal:    {t:"Goal: 4 dominant positions",v:"Vol 1 — Overview",d:"Danaher's entire system is built around attaining one of four dominant passing positions from half guard. He states explicitly: if you can get into any of these four, the pass becomes near-inevitable. The system is called the 4.6.3 — 4 positions, 6 skills, 3 passing families."},
+  force:   {t:"1st skill: force half guard",v:"Vol 1 — Ch 3–6",d:"Rather than waiting for half guard, Danaher advocates forcing your way in. Primary methods: split squat (headquarters position), using standard open guard passes that 'accidentally' land you in half guard, and the double knee position. The key insight: half guard is safer than full guard for the passer."},
+  kshield: {t:"2nd skill: clear defenses",v:"Vol 1 — Ch 8–10",d:"Three main defensive structures to clear: knee shield (most common — clear by attacking from the correct angle), scorpion/lockdown (requires specific mechanics to neutralize the leg lock), and deep half guard (opponent has gotten underneath — requires re-establishing chest-to-chest from below)."},
+  c2c:     {t:"Chest-to-chest contact",v:"Vol 1 — Ch 11–13",d:"The foundational goal of half guard passing. Once chest-to-chest, establish the fundamental starting position (FSP): gripping stance, head control, hip alignment. Negate the opponent's immediate attacks — mostly underhook battles and frame creation."},
+  hbfly:   {t:"Half butterfly variant",v:"Vol 5",d:"Half butterfly guard is treated as an entirely separate problem from regular half guard. The opponent has a butterfly hook inserted which changes the leverage equation. The golden rule: you cannot approach it with the same mechanics as regular half guard passing."},
+  xface:   {t:"3rd skill: crossface",v:"Vol 2–3",d:"Danaher describes the crossface as perhaps the most important upper body skill in half guard passing. The crossface controls the opponent's head, which controls their spine, which controls their hips. Without it, every passing technique fails. Setting it from different upper body configurations is covered extensively in Vol 3."},
+  uhood:   {t:"4th skill: underhook battle",v:"Vol 2–3",d:"The opponent's primary weapon is the underhook (whizzer). Danaher's response: either counter the underhook directly or set your own. The cliche of half guard — the athlete on bottom needs the underhook — is addressed with specific counters for each underhook variation."},
+  hbgrip:  {t:"HB: upper + lower body",v:"Vol 5",d:"Half butterfly requires a completely different upper body gripping strategy. Lower body positioning is split into two long chapters — positioning 1 (feet/ankle control) and positioning 2 (advanced configurations) — each covering how to neutralize the butterfly hook without giving up passing angles."},
+  freeleg: {t:"5th skill: free the knee",v:"Vol 2",d:"The trapped leg must be freed to complete the pass. Five main methods: shoelace (most fundamental), ball of foot, hand post, elbow post, square tripod. The zig-zag knee direction is a subtle but critical directional principle that multiplies the effectiveness of all five methods."},
+  freeleg2:{t:"Configure the free leg",v:"Vol 4",d:"Once the knee is freed, the free leg must be configured optimally. Three configurations covered in detail. The near-side/far-side knee wedge insight: there is a crucial distinction between where the knee lands and how it creates leverage that determines pass success."},
+  hball:   {t:"HB: putting it together",v:"Vol 5",d:"The synthesis chapter for half butterfly. The golden rule is applied: maintain perpendicularity while managing the butterfly hook. Upper and lower body work must integrate simultaneously — this is the final chapter of the half butterfly passing module."},
+  '4dom':  {t:"4 dominant passing positions",v:"Vol 2",d:"3/4 side sit-out (very strong, often overlooked), 3/4 side (among the most powerful positions in grappling), reverse 3/4 side, and 3/4 mount. Danaher argues these four cover every realistic half guard passing scenario. The skill of moving fluidly between them is covered explicitly."},
+  p1:      {t:"Half kata gatame",v:"Vol 4 — Pass 1",d:"Danaher's personal favorite. Head-arm control with the body weight applied across the head. He calls it one of the most powerful methods of passing half guard. The arm trap creates both a submission threat (arm triangle) and a structural advantage that makes the pass nearly unavoidable."},
+  p2:      {t:"Lapel crossface",v:"Vol 4 — Pass 2",d:"Uses the gi lapel to enhance crossface control beyond what is possible with a standard grip. The lapel creates a rigid lever that locks the head in place while the passer completes the pass. Very effective in gi, has a modified no-gi version."},
+  p3:      {t:"Top head and arm",v:"Vol 4 — Pass 3",d:"One of the most foundational passes in the sport. Danaher notes this is an 'interesting' entry — it's not the pass he personally favors but he recognizes it as fundamental curriculum. Head and arm control from above rather than the side."},
+  p4:      {t:"Head block + double underhook",v:"Vol 4 — Pass 4+5",d:"Head block: Danaher's personal preference — blocking the head creates a passing angle without requiring the crossface to be set first. Double underhook: arguably the strongest passing form, incorporating all the general principles from the curriculum simultaneously."},
+  law:     {t:"Law of perpendicularity",v:"Vol 2 — Final chapter",d:"The unifying principle of the entire passing system: always move perpendicular to the opponent's spine. This determines direction, explains why certain techniques work from certain positions, and resolves confusion about which way to pressure when multiple options exist."},
+  pass:    {t:"Half guard passed",v:"Outcome",d:"Successful pass leads to side control, mount, or back — depending on which of the 4 dominant positions was used and which passing technique was applied. Danaher emphasizes the pass is not complete until a stable pin is established — which is why Dynamic Pinning (Vol 6–8) is the direct sequel."},
+  pindef:  {t:"Theory of pinning",v:"Vol 6 — Ch 1–4",d:"Danaher defines a pin mechanically: placing wedges around the opponent's body to restrict movement. Three foundations: location of wedges (where to place them), base of support (your own stability), and inside position (the battle for wedge superiority that determines who controls the space)."},
+  '3rules':{t:"3 golden rules of dynamic pinning",v:"Vol 6 — Ch 7",d:"The central thesis: no pin is perfect. Every pin has vulnerabilities. Dynamic pinning is the skill of moving between pins faster than the opponent can exploit each vulnerability. The 3 rules govern when and how to transition. The main directive: always be moving toward a better position."},
+  escape:  {t:"4 lines of escape resistance",v:"Vol 6 — Ch 12–15",d:"Danaher catalogs exactly how trapped opponents escape: pushing (naive, easy to counter), shrimping (the expert escape — most dangerous to the pinner), bridging (explosive, must be anticipated and redirected), knee escape (turning up to knees — requires a specific counter-response)."},
+  side:    {t:"Side pin",v:"Vol 7",d:"The most commonly achieved pin in competition. Danaher covers all major upper body configurations for side control and the corresponding lower body setups. North-south is treated as a variation within the side pin family rather than a separate category."},
+  mount:   {t:"Mount",v:"Vol 7",d:"High mount, low mount, S-mount, and variation transitions are all covered. The mounted position has the highest point value in competition. The transitions from mount — particularly mount to back — are covered in the greatest depth because they represent the highest-value transition in the sport."},
+  rmount:  {t:"Rear mount",v:"Vol 7–8",d:"Seatbelt grip + body triangle or leg hook configurations. Danaher argues this is the single most dominant position in Jiu-Jitsu. Retaining it is given an entire chapter in Vol 8. The lower body game (securing legs to prevent escape) is the critical skill for maintaining it."},
+  't-side':{t:"Transitions from side",v:"Vol 7–8",d:"Side to mount (kneeling step over and A-sit are the two primary methods), side to knee on belly (scoring transition), side to side (non-scoring, repositioning), and side to rear mount (one of Danaher's personal favorites — uses opponent's escape attempt against them)."},
+  't-mount':{t:"Transitions from mount",v:"Vol 7–8",d:"Mount to back is the marquee transition — covered in three variants: reactive (when opponent tries to escape), proactive (forcing the transition), and leg entry (more technical, bypasses certain defenses). All three are scoring transitions in competition."},
+  't-rear': {t:"Transitions from rear",v:"Vol 8",d:"Rear mount to mount (the reverse transition — common when opponent defends the back), side to rear mount reactive (using opponent's bridge to take the back), and extracting the foot (the technical skill of withdrawing the hooks cleanly to reposition)."},
+  diag:    {t:"Diagonal control",v:"Vol 8",d:"The minimum requirement of back control. Danaher argues most practitioners lose the back because they don't understand the diagonal principle — control must be applied across the diagonal of the opponent's body, not straight across. Without this, upper body control fails."},
+  back:    {t:"Back control",v:"Vol 8",d:"Split into upper body game (seatbelt + diagonal) and lower body game (hook management and the three most important moves). Retaining the rear mount is given an entire dedicated chapter because it's the hardest dominant position to maintain despite being the most dominant."},
+  retain:  {t:"Retaining and maintaining",v:"Vol 8",d:"Practical applications for mounted position maintenance and side position maintenance — real rolling scenarios where the theory is applied. The emphasis: maintaining is a skill distinct from achieving. Most practitioners achieve the position but cannot hold it because they have not practiced maintenance as a separate skill."},
+  score:   {t:"Point scoring system",v:"Vol 6–7",d:"Danaher maps the entire pinning curriculum onto the competition scoring system. A key distinction: scoring transitions vs non-scoring transitions. Side to side (non-scoring) vs side to mount (scoring — 4 pts). Understanding which transitions generate points shapes the entire dynamic pinning strategy."},
+};
+
+function sd(id) {
+  const d = D[id]; if(!d) return;
+  document.getElementById('detail-box').innerHTML =
+    `<div class="dt">${d.t} <span style="font-size:11px;font-weight:400;color:var(--color-text-secondary)">${d.v}</span></div><div>${d.d}</div>`;
+}
+
+function showView(v, btn) {
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('view-hgp').style.display = v==='hgp' ? 'block' : 'none';
+  document.getElementById('view-pin').style.display = v==='pin' ? 'block' : 'none';
+  document.getElementById('detail-box').innerHTML = '<div style="color:var(--color-text-secondary)">Click any node to see details from the transcripts.</div>';
+}
+</script>
